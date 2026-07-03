@@ -37,11 +37,11 @@ maturity and UI/export readiness so an operator console can show them.
 Current state (full 193/193 current-UN-member country coverage + 19/19
 Japan agency-level coverage, ADR-2607040100 through ADR-2607040500 — Japan
 agency blueprint coverage is COMPLETE, 19/19 — plus ADR-2607040600 /
-ADR-2607040700 / ADR-2607040900 country promotion batches, BRA/GBR/SGP +
-ARE/AUS/KOR + POL/MEX/SAU):
+ADR-2607040700 / ADR-2607040900 / ADR-2607041000 country promotion
+batches, BRA/GBR/SGP + ARE/AUS/KOR + POL/MEX/SAU + CAN/NZL/ZAF):
 
 - Total entries: 212 (193 countries + 19 Japan agencies)
-- `:implemented` 0 · `:blueprint` 33 (14 country + 19 Japan agency) · `:spec` 179
+- `:implemented` 0 · `:blueprint` 36 (17 country + 19 Japan agency) · `:spec` 176
 
 `kotoba.iso3166/children` resolves the agency-level entries under a country
 (currently non-empty only for `"JPN"`), mirroring the shared organism

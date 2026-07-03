@@ -65,11 +65,14 @@ countries stay flat until this pattern is validated.
 | POL | Poland | Independent Public-Sector Market-Entry & Procurement Compliance Service -- Poland |
 | MEX | United Mexican States | Independent Public-Sector Market-Entry & Procurement Compliance Service -- Mexico |
 | SAU | Kingdom of Saudi Arabia | Independent Public-Sector Market-Entry & Procurement Compliance Service -- Saudi Arabia |
+| CAN | Canada | Independent Public-Sector Market-Entry & Procurement Compliance Service -- Canada |
+| NZL | New Zealand | Independent Public-Sector Market-Entry & Procurement Compliance Service -- New Zealand |
+| ZAF | Republic of South Africa | Independent Public-Sector Market-Entry & Procurement Compliance Service -- South Africa |
 
-14 countries spanning East Asia / North America / Western Europe /
-Sub-Saharan Africa / South Asia / South America / common-law Europe /
-Southeast Asia / Middle East (x2) / Oceania / Central Europe / Latin
-America (x2) are `:maturity :blueprint`. The remaining 179 entries (full
+17 countries spanning East Asia / North America (x2) / Western Europe /
+Sub-Saharan Africa (x2) / South Asia / South America / common-law Europe /
+Southeast Asia / Middle East (x2) / Oceania (x2) / Central Europe / Latin
+America (x2) are `:maturity :blueprint`. The remaining 176 entries (full
 193/193 current-UN-member coverage) are
 registered at `:maturity :spec`
 (registry-only stub) for future promotion, following the same `:spec` ->
