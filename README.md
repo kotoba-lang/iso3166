@@ -85,12 +85,16 @@ backbone.
 | JPN-MAFF | Ministry of Agriculture, Forestry and Fisheries (農林水産省) | `gov.jpn.maff` | Independent MAFF Food-Safety & JAS-Certification Compliance Service -- Japan |
 | JPN-MLIT | Ministry of Land, Infrastructure, Transport and Tourism (国土交通省) | `gov.jpn.mlit` | Independent MLIT Construction-Business Licensing Compliance Service -- Japan |
 | JPN-MOE | Ministry of the Environment (環境省) | `gov.jpn.moe` | Independent MOE Environmental-Assessment & Waste-Permit Compliance Service -- Japan |
+| JPN-MOFA | Ministry of Foreign Affairs (外務省) | `gov.jpn.mofa` | Independent MOFA ODA/JICA Tender-Eligibility Compliance Service -- Japan |
+| JPN-MOD | Ministry of Defense (防衛省) | `gov.jpn.mod` | Independent MOD Defense-Equipment Transfer & Security-Clearance Compliance Service -- Japan |
+| JPN-AUDIT | Board of Audit (会計検査院) | `gov.jpn.audit` | Independent Board-of-Audit Readiness Compliance Service -- Japan |
 
-11/19 Japan agencies are now `:maturity :blueprint` (ADR-2607040100 +
-ADR-2607040200 + ADR-2607040300 follow-ups), spanning all three agency
-types (ministry / agency / independent commission). The remaining 8
-Japanese central-government bodies (5 ministries, 1 more agency, 2 more
-independent commissions) are `:maturity :spec`. Every agency entry's
+14/19 Japan agencies are now `:maturity :blueprint` (ADR-2607040100 +
+ADR-2607040200 + ADR-2607040300 + ADR-2607040400 follow-ups), spanning all
+three agency types (ministry / agency / independent commission). The
+remaining 5 Japanese central-government bodies (3 ministries, 1 more
+agency, 1 more independent commission) are `:maturity :spec`. Every agency
+entry's
 `:ooyake-id` cross-references the source record in `com-etzhayyim-ooyake`'s
 `gov-units.jp-central.seed.edn` / `gov-units.seed.edn` /
 `gov-units.oversight-*.edn` (IDs, names, and official URLs reused verbatim,
