@@ -211,7 +211,13 @@
   {:code "IRN" :name "Iran" :name-local "ایران" :wikidata "Q794" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "IRQ" :name "Iraq" :name-local "العراق" :wikidata "Q796" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "ISL" :name "Iceland" :name-local "Ísland" :wikidata "Q189" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
-  {:code "ISR" :name "Israel" :name-local "ישראל" :wikidata "Q801" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "ISR" :name "Israel" :name-local "ישראל" :wikidata "Q801"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-isr"
+   :business-id "cloud-itonami-iso3166-isr"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-gpa-tender-portal :verify-companies-registrar :draft-filing :approve :file :audit]}
   {:code "ITA" :name "Italian Republic" :name-local "Repubblica Italiana" :wikidata "Q38"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-ita"
    :business-id "cloud-itonami-iso3166-ita"
@@ -562,8 +568,20 @@
   {:code "TUV" :name "Tuvalu" :wikidata "Q672" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "TZA" :name "Tanzania" :wikidata "Q924" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "UGA" :name "Uganda" :wikidata "Q1036" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
-  {:code "UKR" :name "Ukraine" :name-local "Україна" :wikidata "Q212" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
-  {:code "URY" :name "Uruguay" :wikidata "Q77" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "UKR" :name "Ukraine" :name-local "Україна" :wikidata "Q212"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-ukr"
+   :business-id "cloud-itonami-iso3166-ukr"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-prozorro-portal :verify-edr-registration :draft-filing :approve :file :audit]}
+  {:code "URY" :name "Uruguay" :wikidata "Q77"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-ury"
+   :business-id "cloud-itonami-iso3166-ury"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-comprasestatales-portal :verify-rupe-registration :draft-filing :approve :file :audit]}
   {:code "USA" :name "United States of America" :wikidata "Q30"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-usa"
    :business-id "cloud-itonami-iso3166-usa"

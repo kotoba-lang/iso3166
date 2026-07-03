@@ -95,10 +95,13 @@ countries stay flat until this pattern is validated.
 | CHN | People's Republic of China | Independent Public-Sector Market-Entry & Procurement Compliance Service -- China |
 | CRI | Costa Rica | Independent Public-Sector Market-Entry & Procurement Compliance Service -- Costa Rica |
 | CZE | Czech Republic | Independent Public-Sector Market-Entry & Procurement Compliance Service -- Czech Republic |
+| UKR | Ukraine | Independent Public-Sector Market-Entry & Procurement Compliance Service -- Ukraine |
+| ISR | Israel | Independent Public-Sector Market-Entry & Procurement Compliance Service -- Israel |
+| URY | Uruguay | Independent Public-Sector Market-Entry & Procurement Compliance Service -- Uruguay |
 
-44/193 countries are `:maturity :blueprint`, spanning every populated
+47/193 countries are `:maturity :blueprint`, spanning every populated
 continent and a mix of civil-law, common-law, and mixed legal traditions
-(see codes above). The remaining 149 entries (full 193/193 current-UN-
+(see codes above). The remaining 146 entries (full 193/193 current-UN-
 member coverage) are
 registered at `:maturity :spec`
 (registry-only stub) for future promotion, following the same `:spec` ->
