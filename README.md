@@ -59,11 +59,15 @@ countries stay flat until this pattern is validated.
 | BRA | Federative Republic of Brazil | Independent Public-Sector Market-Entry & Procurement Compliance Service -- Brazil |
 | GBR | United Kingdom | Independent Public-Sector Market-Entry & Procurement Compliance Service -- United Kingdom |
 | SGP | Singapore | Independent Public-Sector Market-Entry & Procurement Compliance Service -- Singapore |
+| ARE | United Arab Emirates | Independent Public-Sector Market-Entry & Procurement Compliance Service -- United Arab Emirates |
+| AUS | Commonwealth of Australia | Independent Public-Sector Market-Entry & Procurement Compliance Service -- Australia |
+| KOR | Republic of Korea | Independent Public-Sector Market-Entry & Procurement Compliance Service -- South Korea |
 
-8 countries spanning East Asia / North America / Western Europe /
+11 countries spanning East Asia / North America / Western Europe /
 Sub-Saharan Africa / South Asia / South America / common-law Europe /
-Southeast Asia are `:maturity :blueprint`. The remaining 185 entries (full
-193/193 current-UN-member coverage) are registered at `:maturity :spec`
+Southeast Asia / Middle East / Oceania are `:maturity :blueprint`. The
+remaining 182 entries (full 193/193 current-UN-member coverage) are
+registered at `:maturity :spec`
 (registry-only stub) for future promotion, following the same `:spec` ->
 `:blueprint` -> `:implemented` path `kotoba-industry` / `kotoba-occupation`
 / `kotoba-cofog` use.
