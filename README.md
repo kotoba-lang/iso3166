@@ -86,10 +86,13 @@ countries stay flat until this pattern is validated.
 | FRA | French Republic | Independent Public-Sector Market-Entry & Procurement Compliance Service -- France |
 | EGY | Egypt | Independent Public-Sector Market-Entry & Procurement Compliance Service -- Egypt |
 | PAK | Pakistan | Independent Public-Sector Market-Entry & Procurement Compliance Service -- Pakistan |
+| TUR | Republic of Türkiye | Independent Public-Sector Market-Entry & Procurement Compliance Service -- Turkey |
+| MAR | Morocco | Independent Public-Sector Market-Entry & Procurement Compliance Service -- Morocco |
+| ETH | Ethiopia | Independent Public-Sector Market-Entry & Procurement Compliance Service -- Ethiopia |
 
-35/193 countries are `:maturity :blueprint`, spanning every populated
+38/193 countries are `:maturity :blueprint`, spanning every populated
 continent and a mix of civil-law, common-law, and mixed legal traditions
-(see codes above). The remaining 158 entries (full 193/193 current-UN-
+(see codes above). The remaining 155 entries (full 193/193 current-UN-
 member coverage) are
 registered at `:maturity :spec`
 (registry-only stub) for future promotion, following the same `:spec` ->
