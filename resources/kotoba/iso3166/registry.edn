@@ -246,7 +246,13 @@
    :operating-states [:intake :assess-etenders-portal :verify-cro-registration :draft-filing :approve :file :audit]}
   {:code "IRN" :name "Iran" :name-local "ایران" :wikidata "Q794" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "IRQ" :name "Iraq" :name-local "العراق" :wikidata "Q796" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
-  {:code "ISL" :name "Iceland" :name-local "Ísland" :wikidata "Q189" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "ISL" :name "Iceland" :name-local "Ísland" :wikidata "Q189"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-isl"
+   :business-id "cloud-itonami-iso3166-isl"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-utbodsvefur-portal :verify-fyrirtaekjaskra-registration :draft-filing :approve :file :audit]}
   {:code "ISR" :name "Israel" :name-local "ישראל" :wikidata "Q801"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-isr"
    :business-id "cloud-itonami-iso3166-isr"
@@ -449,7 +455,13 @@
    :optional-technologies []
    :operating-states [:intake :assess-e-gp-portal :verify-eroc-registration :draft-filing :approve :file :audit]}
   {:code "LSO" :name "Lesotho" :wikidata "Q1013" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
-  {:code "LTU" :name "Lithuania" :name-local "Lietuva" :wikidata "Q37" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "LTU" :name "Lithuania" :name-local "Lietuva" :wikidata "Q37"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-ltu"
+   :business-id "cloud-itonami-iso3166-ltu"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-cvp-is-portal :verify-register-of-legal-entities :draft-filing :approve :file :audit]}
   {:code "LUX" :name "Luxembourg" :name-local "Lëtzebuerg" :wikidata "Q32" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "LVA" :name "Latvia" :name-local "Latvija" :wikidata "Q211"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-lva"
@@ -699,5 +711,11 @@
    :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
    :optional-technologies []
    :operating-states [:intake :verify-csd-registration :assess-b-bbee-scorecard :draft-filing :approve :file :audit]}
-  {:code "ZMB" :name "Zambia" :wikidata "Q953" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "ZMB" :name "Zambia" :wikidata "Q953"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-zmb"
+   :business-id "cloud-itonami-iso3166-zmb"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-zppa-e-gp-portal :verify-pacra-registration :draft-filing :approve :file :audit]}
   {:code "ZWE" :name "Zimbabwe" :wikidata "Q954" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}]}
