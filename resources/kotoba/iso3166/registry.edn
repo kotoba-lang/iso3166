@@ -173,7 +173,13 @@
    :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
    :optional-technologies []
    :operating-states [:intake :assess-find-a-tender-portal :verify-companies-house-registration :draft-filing :approve :file :audit]}
-  {:code "GEO" :name "Georgia" :name-local "საქართველო" :wikidata "Q230" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "GEO" :name "Georgia" :name-local "საქართველო" :wikidata "Q230"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-geo"
+   :business-id "cloud-itonami-iso3166-geo"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-state-procurement-agency-portal :verify-napr-registration :draft-filing :approve :file :audit]}
   {:code "GHA" :name "Ghana" :wikidata "Q117"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-gha"
    :business-id "cloud-itonami-iso3166-gha"
@@ -232,7 +238,13 @@
    :optional-technologies []
    :operating-states [:intake :assess-mepa-portal :verify-registro-imprese :draft-filing :approve :file :audit]}
   {:code "JAM" :name "Jamaica" :wikidata "Q766" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
-  {:code "JOR" :name "Jordan" :name-local "الأردن" :wikidata "Q810" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "JOR" :name "Jordan" :name-local "الأردن" :wikidata "Q810"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-jor"
+   :business-id "cloud-itonami-iso3166-jor"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-joneps-portal :verify-ccd-registration :draft-filing :approve :file :audit]}
   {:code "JPN" :name "Japan" :name-local "日本国" :wikidata "Q17"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-jpn"
    :business-id "cloud-itonami-iso3166-jpn"
@@ -532,7 +544,13 @@
    :optional-technologies []
    :operating-states [:intake :assess-etimad-portal :verify-commercial-registration :draft-filing :approve :file :audit]}
   {:code "SDN" :name "Sudan" :name-local "السودان" :wikidata "Q1049" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
-  {:code "SEN" :name "Senegal" :name-local "Sénégal" :wikidata "Q1041" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "SEN" :name "Senegal" :name-local "Sénégal" :wikidata "Q1041"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-sen"
+   :business-id "cloud-itonami-iso3166-sen"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-marchespublics-sn-portal :verify-rccm-registration :draft-filing :approve :file :audit]}
   {:code "SGP" :name "Singapore" :name-local "Singapura" :wikidata "Q334"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-sgp"
    :business-id "cloud-itonami-iso3166-sgp"
