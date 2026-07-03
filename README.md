@@ -82,13 +82,16 @@ backbone.
 | JPN-MOJ | Ministry of Justice (法務省) | `gov.jpn.moj` | Independent MOJ-Regulated Corporate Registry & Status-of-Residence Compliance Service -- Japan |
 | JPN-MHLW | Ministry of Health, Labour and Welfare (厚生労働省) | `gov.jpn.mhlw` | Independent MHLW-Regulated Labor-Standards Compliance Service -- Japan |
 | JPN-FSA | Financial Services Agency (金融庁) | `gov.jpn.finreg` | Independent FSA Payment-Services & Financial-Regulatory Compliance Service -- Japan |
+| JPN-MAFF | Ministry of Agriculture, Forestry and Fisheries (農林水産省) | `gov.jpn.maff` | Independent MAFF Food-Safety & JAS-Certification Compliance Service -- Japan |
+| JPN-MLIT | Ministry of Land, Infrastructure, Transport and Tourism (国土交通省) | `gov.jpn.mlit` | Independent MLIT Construction-Business Licensing Compliance Service -- Japan |
+| JPN-MOE | Ministry of the Environment (環境省) | `gov.jpn.moe` | Independent MOE Environmental-Assessment & Waste-Permit Compliance Service -- Japan |
 
-8/19 Japan agencies are now `:maturity :blueprint` (ADR-2607040100 + the
-ADR-2607040200 follow-up), spanning all three agency types (ministry /
-agency / independent commission). The remaining 11 Japanese
-central-government bodies (8 ministries, 1 more agency, 2 more independent
-commissions) are `:maturity :spec`. Every agency entry's `:ooyake-id`
-cross-references the source record in `com-etzhayyim-ooyake`'s
+11/19 Japan agencies are now `:maturity :blueprint` (ADR-2607040100 +
+ADR-2607040200 + ADR-2607040300 follow-ups), spanning all three agency
+types (ministry / agency / independent commission). The remaining 8
+Japanese central-government bodies (5 ministries, 1 more agency, 2 more
+independent commissions) are `:maturity :spec`. Every agency entry's
+`:ooyake-id` cross-references the source record in `com-etzhayyim-ooyake`'s
 `gov-units.jp-central.seed.edn` / `gov-units.seed.edn` /
 `gov-units.oversight-*.edn` (IDs, names, and official URLs reused verbatim,
 not re-derived).
