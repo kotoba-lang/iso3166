@@ -74,12 +74,15 @@ countries stay flat until this pattern is validated.
 | IRL | Ireland | Independent Public-Sector Market-Entry & Procurement Compliance Service -- Ireland |
 | NLD | Kingdom of the Netherlands | Independent Public-Sector Market-Entry & Procurement Compliance Service -- Netherlands |
 | VNM | Vietnam | Independent Public-Sector Market-Entry & Procurement Compliance Service -- Vietnam |
+| THA | Thailand | Independent Public-Sector Market-Entry & Procurement Compliance Service -- Thailand |
+| COL | Colombia | Independent Public-Sector Market-Entry & Procurement Compliance Service -- Colombia |
+| ESP | Spain | Independent Public-Sector Market-Entry & Procurement Compliance Service -- Spain |
 
-23 countries spanning East Asia / North America (x2) / Western Europe
-(x3) / Sub-Saharan Africa (x3) / South Asia / South America (x3) /
-common-law Europe / Southeast Asia (x3) / Middle East (x2) / Oceania (x2)
+26 countries spanning East Asia / North America (x2) / Western Europe
+(x4) / Sub-Saharan Africa (x3) / South Asia / South America (x4) /
+common-law Europe / Southeast Asia (x4) / Middle East (x2) / Oceania (x2)
 / Central Europe / Latin America (x2) are `:maturity :blueprint`. The
-remaining 170 entries (full 193/193 current-UN-member coverage) are
+remaining 167 entries (full 193/193 current-UN-member coverage) are
 registered at `:maturity :spec`
 (registry-only stub) for future promotion, following the same `:spec` ->
 `:blueprint` -> `:implemented` path `kotoba-industry` / `kotoba-occupation`

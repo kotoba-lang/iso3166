@@ -9,7 +9,8 @@
 
 (deftest curated-countries-resolve
   (doseq [code ["JPN" "USA" "DEU" "KEN" "IND" "BRA" "GBR" "SGP" "ARE" "AUS" "KOR"
-                "POL" "MEX" "SAU" "CAN" "NZL" "ZAF" "CHL" "NGA" "IDN" "IRL" "NLD" "VNM"]]
+                "POL" "MEX" "SAU" "CAN" "NZL" "ZAF" "CHL" "NGA" "IDN" "IRL" "NLD" "VNM"
+                "THA" "COL" "ESP"]]
     (is (:business-id (iso3166/get-country code)))
     (is (seq (iso3166/required-technologies code)))
     (is (seq (:technology-stack (iso3166/execution-plan code))))))
@@ -95,7 +96,10 @@
     (is (= :blueprint (iso3166/maturity "IDN")))
     (is (= :blueprint (iso3166/maturity "IRL")))
     (is (= :blueprint (iso3166/maturity "NLD")))
-    (is (= :blueprint (iso3166/maturity "VNM"))))
+    (is (= :blueprint (iso3166/maturity "VNM")))
+    (is (= :blueprint (iso3166/maturity "THA")))
+    (is (= :blueprint (iso3166/maturity "COL")))
+    (is (= :blueprint (iso3166/maturity "ESP"))))
   (testing "a registry-only country entry is :spec"
     (is (= :spec (iso3166/maturity "AFG")))
     (is (= :spec (iso3166/maturity "FRA"))))
@@ -103,7 +107,7 @@
     (let [m (iso3166/maturity-summary)]
       (is (= (:total m) (+ (:spec m) (:blueprint m) (:implemented m))))
       (is (= 212 (:total m)))
-      (is (= 42 (:blueprint m)))
+      (is (= 45 (:blueprint m)))
       (is (= 0 (:implemented m))))))
 
 (deftest maturity-roadmap-next-step
