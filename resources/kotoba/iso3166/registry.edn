@@ -14,7 +14,13 @@
    :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
    :optional-technologies []
    :operating-states [:intake :verify-ded-or-freezone-license :assess-icv-certification :draft-filing :approve :file :audit]}
-  {:code "ARG" :name "Argentine Republic" :name-local "República Argentina" :wikidata "Q414" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "ARG" :name "Argentine Republic" :name-local "República Argentina" :wikidata "Q414"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-arg"
+   :business-id "cloud-itonami-iso3166-arg"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-compr-ar-portal :verify-cuit-registration :draft-filing :approve :file :audit]}
   {:code "ARM" :name "Armenia" :name-local "Հայաստան" :wikidata "Q399" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "ATG" :name "Antigua and Barbuda" :wikidata "Q781" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "AUS" :name "Commonwealth of Australia" :wikidata "Q408"
@@ -30,7 +36,13 @@
   {:code "BEL" :name "Belgium" :name-local "België / Belgique" :wikidata "Q31" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "BEN" :name "Benin" :name-local "Bénin" :wikidata "Q962" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "BFA" :name "Burkina Faso" :wikidata "Q965" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
-  {:code "BGD" :name "Bangladesh" :name-local "বাংলাদেশ" :wikidata "Q902" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "BGD" :name "Bangladesh" :name-local "বাংলাদেশ" :wikidata "Q902"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-bgd"
+   :business-id "cloud-itonami-iso3166-bgd"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-e-gp-portal :verify-rjsc-registration :draft-filing :approve :file :audit]}
   {:code "BGR" :name "Bulgaria" :name-local "България" :wikidata "Q219" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "BHR" :name "Bahrain" :name-local "البحرين" :wikidata "Q398" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "BHS" :name "The Bahamas" :wikidata "Q778" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
@@ -120,7 +132,13 @@
    :optional-technologies []
    :operating-states [:intake :assess-find-a-tender-portal :verify-companies-house-registration :draft-filing :approve :file :audit]}
   {:code "GEO" :name "Georgia" :name-local "საქართველო" :wikidata "Q230" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
-  {:code "GHA" :name "Ghana" :wikidata "Q117" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "GHA" :name "Ghana" :wikidata "Q117"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-gha"
+   :business-id "cloud-itonami-iso3166-gha"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-ghaneps-portal :verify-registrar-general-registration :draft-filing :approve :file :audit]}
   {:code "GIN" :name "Guinea" :name-local "Guinée" :wikidata "Q1006" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "GMB" :name "The Gambia" :wikidata "Q1005" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "GNB" :name "Guinea-Bissau" :name-local "Guiné-Bissau" :wikidata "Q1007" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}

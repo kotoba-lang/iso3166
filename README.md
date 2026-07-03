@@ -80,10 +80,13 @@ countries stay flat until this pattern is validated.
 | PHL | Philippines | Independent Public-Sector Market-Entry & Procurement Compliance Service -- Philippines |
 | PER | Peru | Independent Public-Sector Market-Entry & Procurement Compliance Service -- Peru |
 | ITA | Italian Republic | Independent Public-Sector Market-Entry & Procurement Compliance Service -- Italy |
+| BGD | Bangladesh | Independent Public-Sector Market-Entry & Procurement Compliance Service -- Bangladesh |
+| ARG | Argentine Republic | Independent Public-Sector Market-Entry & Procurement Compliance Service -- Argentina |
+| GHA | Ghana | Independent Public-Sector Market-Entry & Procurement Compliance Service -- Ghana |
 
-29/193 countries are `:maturity :blueprint`, spanning every populated
+32/193 countries are `:maturity :blueprint`, spanning every populated
 continent and a mix of civil-law, common-law, and mixed legal traditions
-(see codes above). The remaining 164 entries (full 193/193 current-UN-
+(see codes above). The remaining 161 entries (full 193/193 current-UN-
 member coverage) are
 registered at `:maturity :spec`
 (registry-only stub) for future promotion, following the same `:spec` ->
