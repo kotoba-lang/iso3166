@@ -1,7 +1,7 @@
 {:kotoba.registry/id :kotoba/iso3166
  :kotoba.registry/version 1
  :kotoba.registry/updated "2026-07-03"
- :kotoba.registry/note "ISO 3166-1 alpha-3 country registry for kotoba-lang and itonami open businesses -- the jurisdiction/market-entry counterpart to kotoba-lang/industry (ISIC), kotoba-lang/occupation (ISCO-08), and kotoba-lang/cofog (COFOG). Full 193/193 current-UN-member-state coverage. Alpha-3 code + English name reused verbatim from com-etzhayyim-ooyake's Wikidata-verified gov-units registries (gov-units.seed.edn / gov-units.g20.edn / gov-units.world-countries.edn, pulled 2026-06-03: CURRENT UN members with an ISO 3166-1 alpha-3 code + official site, dissolved/historical states excluded), not re-derived -- same reuse discipline kotoba-lang/cofog applied to matsurigoto's COFOG backbone. Entries are FLAT (no division/group hierarchy the way COFOG has; a country is not itself a business-function taxonomy, so unlike COFOG this registry does not gate blueprint-eligibility by level). Most entries are :maturity :spec (registry-only stub); curated entries have a published cloud-itonami-iso3166-{code} blueprint repo."
+ :kotoba.registry/note "ISO 3166-1 alpha-3 country registry for kotoba-lang and itonami open businesses -- the jurisdiction/market-entry counterpart to kotoba-lang/industry (ISIC), kotoba-lang/occupation (ISCO-08), and kotoba-lang/cofog (COFOG). Full 193/193 current-UN-member-state coverage. Alpha-3 code + English name reused verbatim from com-etzhayyim-ooyake's Wikidata-verified gov-units registries (gov-units.seed.edn / gov-units.g20.edn / gov-units.world-countries.edn, pulled 2026-06-03: CURRENT UN members with an ISO 3166-1 alpha-3 code + official site, dissolved/historical states excluded), not re-derived -- same reuse discipline kotoba-lang/cofog applied to matsurigoto's COFOG backbone. Country entries are FLAT (a country is not itself a business-function taxonomy the way a COFOG code is). ADR-2607040100 adds a SECOND level for Japan only (:level :ministry / :agency / :independent-commission, :parent \"JPN\"): 19 gov.jpn.* administrative bodies (12 ministries, 2 agencies, 5 independent commissions), IDs/names/URLs reused verbatim from com-etzhayyim-ooyake's gov-units.jp-central.seed.edn / gov-units.seed.edn / gov-units.oversight-*.edn (cross-referenced via :ooyake-id), mirroring the COFOG division/group coordinator+leaf pattern (ADR-2606301900) -- one country coordinator (cloud-itonami-iso3166-jpn) + per-agency leaf blueprints. Other countries remain flat until this pattern is validated. Most entries are :maturity :spec (registry-only stub); curated entries have a published cloud-itonami-iso3166-{code} / cloud-itonami-iso3166-jpn-{code} blueprint repo."
  :iso3166
  [{:code "AFG" :name "Afghanistan" :name-local "افغانستان" :wikidata "Q889" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "AGO" :name "Angola" :wikidata "Q916" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
@@ -108,6 +108,55 @@
    :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
    :optional-technologies []
    :operating-states [:intake :assess-toshi-shoko-portal :draft-filing :approve :file :audit]}
+  {:code "JPN-CAO" :level :ministry :parent "JPN" :name "Cabinet Office" :name-local "内閣府" :name-romanized "Naikaku-fu" :wikidata "Q6005" :ooyake-id "gov.jpn.cao" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "JPN-MIC" :level :ministry :parent "JPN" :name "Ministry of Internal Affairs and Communications" :name-local "総務省" :name-romanized "Sōmu-shō" :wikidata "Q1322293" :ooyake-id "gov.jpn.mic" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "JPN-MOJ" :level :ministry :parent "JPN" :name "Ministry of Justice" :name-local "法務省" :name-romanized "Hōmu-shō" :wikidata "Q1031145" :ooyake-id "gov.jpn.moj" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "JPN-MOFA" :level :ministry :parent "JPN" :name "Ministry of Foreign Affairs" :name-local "外務省" :name-romanized "Gaimu-shō" :wikidata "Q222241" :ooyake-id "gov.jpn.mofa" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "JPN-MOF" :level :ministry :parent "JPN" :name "Ministry of Finance" :name-local "財務省" :name-romanized "Zaimu-shō" :wikidata "Q1322605" :ooyake-id "gov.jpn.mof"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-jpn-mof"
+   :business-id "cloud-itonami-iso3166-jpn-mof"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :classify-tariff :assess-invoice-registration :draft-filing :approve :file :audit]}
+  {:code "JPN-MEXT" :level :ministry :parent "JPN" :name "Ministry of Education, Culture, Sports, Science and Technology" :name-local "文部科学省" :name-romanized "Monbu-kagaku-shō" :wikidata "Q1054379" :ooyake-id "gov.jpn.mext" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "JPN-MHLW" :level :ministry :parent "JPN" :name "Ministry of Health, Labour and Welfare" :name-local "厚生労働省" :name-romanized "Kōsei-rōdō-shō" :wikidata "Q1191238" :ooyake-id "gov.jpn.mhlw" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "JPN-MAFF" :level :ministry :parent "JPN" :name "Ministry of Agriculture, Forestry and Fisheries" :name-local "農林水産省" :name-romanized "Nōrin-suisan-shō" :wikidata "Q1376786" :ooyake-id "gov.jpn.maff" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "JPN-METI" :level :ministry :parent "JPN" :name "Ministry of Economy, Trade and Industry" :name-local "経済産業省" :name-romanized "Keizai-sangyō-shō" :wikidata "Q1197264" :ooyake-id "gov.jpn.meti"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-jpn-meti"
+   :business-id "cloud-itonami-iso3166-jpn-meti"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :classify-export-control :assess-subsidy-eligibility :draft-filing :approve :file :audit]}
+  {:code "JPN-MLIT" :level :ministry :parent "JPN" :name "Ministry of Land, Infrastructure, Transport and Tourism" :name-local "国土交通省" :name-romanized "Kokudo-kōtsū-shō" :wikidata "Q1376196" :ooyake-id "gov.jpn.mlit" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "JPN-MOE" :level :ministry :parent "JPN" :name "Ministry of the Environment" :name-local "環境省" :name-romanized "Kankyō-shō" :wikidata "Q1125558" :ooyake-id "gov.jpn.moe" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "JPN-MOD" :level :ministry :parent "JPN" :name "Ministry of Defense" :name-local "防衛省" :name-romanized "Bōei-shō" :wikidata "Q1062689" :ooyake-id "gov.jpn.mod" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "JPN-RECONSTRUCTION" :level :agency :parent "JPN" :name "Reconstruction Agency" :name-local "復興庁" :name-romanized "Fukkō-chō" :wikidata "Q1056221" :ooyake-id "gov.jpn.reconstruction" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "JPN-DIGITAL" :level :agency :parent "JPN" :name "Digital Agency" :name-local "デジタル庁" :name-romanized "Dejitaru-chō" :wikidata "Q107291492" :ooyake-id "gov.jpn.digital"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-jpn-digital"
+   :business-id "cloud-itonami-iso3166-jpn-digital"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :verify-gbizid :assess-govcloud-standards :draft-filing :approve :file :audit]}
+  {:code "JPN-JFTC" :level :independent-commission :parent "JPN" :name "Fair Trade Commission" :name-local "公正取引委員会" :name-romanized "Kōsei Torihiki Iinkai" :wikidata "Q842043" :ooyake-id "gov.jpn.competition"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-jpn-jftc"
+   :business-id "cloud-itonami-iso3166-jpn-jftc"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :screen-bid-rigging-risk :assess-subcontract-act :draft-compliance-program :approve :file :audit]}
+  {:code "JPN-PPC" :level :independent-commission :parent "JPN" :name "Personal Information Protection Commission" :name-local "個人情報保護委員会" :name-romanized "Kojin Jōhō Hogo Iinkai" :wikidata "Q17221586" :ooyake-id "gov.jpn.dataprotection"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-jpn-ppc"
+   :business-id "cloud-itonami-iso3166-jpn-ppc"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :classify-personal-data :assess-cross-border-transfer :draft-compliance-program :approve :file :audit]}
+  {:code "JPN-FSA" :level :independent-commission :parent "JPN" :name "Financial Services Agency" :name-local "金融庁" :name-romanized "Kin'yūchō" :wikidata "Q615316" :ooyake-id "gov.jpn.finreg" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "JPN-AUDIT" :level :independent-commission :parent "JPN" :name "Board of Audit" :name-local "会計検査院" :name-romanized "Kaikei Kensain" :wikidata "Q615225" :ooyake-id "gov.jpn.audit" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "JPN-STATISTICS" :level :independent-commission :parent "JPN" :name "Statistics Japan" :name-local "総務省統計局" :name-romanized "Sōmushō Tōkeikyoku" :wikidata "Q11606829" :ooyake-id "gov.jpn.statistics" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "KAZ" :name "Kazakhstan" :name-local "Қазақстан" :wikidata "Q232" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "KEN" :name "Kenya" :wikidata "Q114"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-ken"

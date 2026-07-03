@@ -30,6 +30,13 @@
   ([code] (optional-technologies (registry) code))
   ([reg code] (:optional-technologies (get-country reg code))))
 
+(defn children
+  "Return the agency-level entries (:level :ministry / :agency / :independent-commission)
+  whose :parent is the given country code. Empty for countries with no agency-level
+  breakdown yet (only JPN has one as of ADR-2607040100)."
+  ([code] (children (registry) code))
+  ([reg code] (filterv #(= (str/upper-case (str code)) (:parent %)) (countries reg))))
+
 (defn technology-stack
   "Resolve the required technology records for a country's market-entry business."
   ([code] (technology-stack (registry) code))

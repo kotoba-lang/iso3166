@@ -37,11 +37,17 @@ public-sector contract in that specific country -- distinct from
 ONE public function). See `docs/cloud-itonami.md` for the full boundary with
 adjacent etzhayyim/cloud-itonami actors.
 
-Unlike COFOG (division/group hierarchy), a country is not itself a
-business-function taxonomy, so entries here are FLAT -- every one of the
-193 current UN-member states is independently blueprint-eligible.
+At the COUNTRY level, a country is not itself a business-function taxonomy,
+so entries are FLAT -- every one of the 193 current UN-member states is
+independently blueprint-eligible. ADR-2607040100 adds a SECOND, AGENCY level
+for Japan only (`:level :ministry` / `:agency` / `:independent-commission`,
+`:parent "JPN"`), mirroring COFOG's division/group coordinator+leaf pattern
+(ADR-2606301900): `cloud-itonami-iso3166-jpn` is the country-level
+coordinator, and per-agency blueprints (`cloud-itonami-iso3166-jpn-meti`,
+etc.) are leaves under it. Use `(iso3166/children "JPN")` to list them. Other
+countries stay flat until this pattern is validated.
 
-## Current ISO 3166 Blueprints
+## Current ISO 3166 Blueprints (country level)
 
 | Code | Country | Blueprint |
 |---|---|---|
@@ -63,6 +69,24 @@ Alpha-3 code + English/local name are reused verbatim from
 one-time maintainer pull of CURRENT UN members, 2026-06-03), not re-derived
 -- same reuse discipline `kotoba-cofog` applied to `matsurigoto`'s COFOG
 backbone.
+
+## Current ISO 3166 Blueprints (Japan agency level)
+
+| Code | Agency | Ooyake ID | Blueprint |
+|---|---|---|---|
+| JPN-METI | Ministry of Economy, Trade and Industry (経済産業省) | `gov.jpn.meti` | Independent METI-Regulated Trade & Industrial-Policy Compliance Service -- Japan |
+| JPN-MOF | Ministry of Finance (財務省) | `gov.jpn.mof` | Independent MOF-Regulated Customs & Tax Compliance Service -- Japan |
+| JPN-DIGITAL | Digital Agency (デジタル庁) | `gov.jpn.digital` | Independent Digital-Agency-Regulated GovTech Procurement Compliance Service -- Japan |
+| JPN-JFTC | Fair Trade Commission / 公正取引委員会 | `gov.jpn.competition` | Independent JFTC Antitrust & Bid-Rigging Compliance Service -- Japan |
+| JPN-PPC | Personal Information Protection Commission / 個人情報保護委員会 | `gov.jpn.dataprotection` | Independent PPC Personal-Data Compliance Service -- Japan |
+
+These 5 span all three agency types (ministry / agency / independent
+commission). The remaining 14 Japanese central-government bodies (12
+ministries, 1 more agency, 3 more independent commissions) are `:maturity
+:spec`. Every agency entry's `:ooyake-id` cross-references the source record
+in `com-etzhayyim-ooyake`'s `gov-units.jp-central.seed.edn` /
+`gov-units.seed.edn` / `gov-units.oversight-*.edn` (IDs, names, and official
+URLs reused verbatim, not re-derived).
 
 ## Test
 

@@ -34,10 +34,15 @@ maturity and UI/export readiness so an operator console can show them.
 | `:blueprint` | blueprint repo published (`:repo` set) |
 | `:spec` | registry entry only (blueprint repo pending) |
 
-Current state (full 193/193 current-UN-member coverage):
+Current state (full 193/193 current-UN-member country coverage + 19/19
+Japan agency-level coverage, ADR-2607040100):
 
-- Total entries: 193
-- `:implemented` 0 · `:blueprint` 5 · `:spec` 188
+- Total entries: 212 (193 countries + 19 Japan agencies)
+- `:implemented` 0 · `:blueprint` 10 (5 country + 5 Japan agency) · `:spec` 202
+
+`kotoba.iso3166/children` resolves the agency-level entries under a country
+(currently non-empty only for `"JPN"`), mirroring the shared organism
+substrate's `children(family, code)` contract (ADR-2606301900).
 
 No `:robotics` requirement on any entry: this is a data/compliance service,
 not a physical-domain business (same digital-service exemption class as
@@ -88,3 +93,17 @@ touch "country" or "government" and must not be conflated:
   compose: an operator forks a COFOG-function blueprint AND an ISO3166
   jurisdiction blueprint to actually operate a licensed civic-tech business
   in a given country.
+
+## Coordinator + leaf: `cloud-itonami-iso3166-jpn-{code}` (Japan only, ADR-2607040100)
+
+`cloud-itonami-iso3166-jpn` remains the COUNTRY-level coordinator (general
+Japan market-entry). `cloud-itonami-iso3166-jpn-{code}` repos are AGENCY-level
+leaves for a specific ministry/agency/independent-commission's regulatory
+domain within Japan -- narrower and deeper than the country-level blueprint,
+not a replacement for it. An operator typically needs the country-level
+blueprint (general market entry) plus zero or more agency-level blueprints
+(only the agencies whose regulatory domain actually applies to that
+operator's specific contract). This mirrors `com-etzhayyim-isco` /
+`com-etzhayyim-cofog`'s coordinator + per-code-organism split
+(ADR-2606301900), applied to the commercial-operator side instead of the
+non-adjudicating organism-actor side.
