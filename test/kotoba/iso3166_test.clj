@@ -11,7 +11,8 @@
   (doseq [code ["JPN" "USA" "DEU" "KEN" "IND" "BRA" "GBR" "SGP" "ARE" "AUS" "KOR"
                 "POL" "MEX" "SAU" "CAN" "NZL" "ZAF" "CHL" "NGA" "IDN" "IRL" "NLD" "VNM"
                 "THA" "COL" "ESP" "PHL" "PER" "ITA" "BGD" "ARG" "GHA" "FRA" "EGY" "PAK"
-                "TUR" "MAR" "ETH" "SWE" "KAZ" "QAT" "CHN" "CRI" "CZE" "UKR" "ISR" "URY"]]
+                "TUR" "MAR" "ETH" "SWE" "KAZ" "QAT" "CHN" "CRI" "CZE" "UKR" "ISR" "URY"
+                "EST" "RWA" "PAN"]]
     (is (:business-id (iso3166/get-country code)))
     (is (seq (iso3166/required-technologies code)))
     (is (seq (:technology-stack (iso3166/execution-plan code))))))
@@ -121,7 +122,10 @@
     (is (= :blueprint (iso3166/maturity "CZE")))
     (is (= :blueprint (iso3166/maturity "UKR")))
     (is (= :blueprint (iso3166/maturity "ISR")))
-    (is (= :blueprint (iso3166/maturity "URY"))))
+    (is (= :blueprint (iso3166/maturity "URY")))
+    (is (= :blueprint (iso3166/maturity "EST")))
+    (is (= :blueprint (iso3166/maturity "RWA")))
+    (is (= :blueprint (iso3166/maturity "PAN"))))
   (testing "a registry-only country entry is :spec"
     (is (= :spec (iso3166/maturity "AFG")))
     (is (= :spec (iso3166/maturity "DZA"))))
@@ -129,7 +133,7 @@
     (let [m (iso3166/maturity-summary)]
       (is (= (:total m) (+ (:spec m) (:blueprint m) (:implemented m))))
       (is (= 212 (:total m)))
-      (is (= 66 (:blueprint m)))
+      (is (= 69 (:blueprint m)))
       (is (= 0 (:implemented m))))))
 
 (deftest maturity-roadmap-next-step

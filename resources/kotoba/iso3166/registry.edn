@@ -141,7 +141,13 @@
    :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
    :optional-technologies []
    :operating-states [:intake :assess-placsp-portal :verify-registro-mercantil :draft-filing :approve :file :audit]}
-  {:code "EST" :name "Estonia" :name-local "Eesti" :wikidata "Q191" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "EST" :name "Estonia" :name-local "Eesti" :wikidata "Q191"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-est"
+   :business-id "cloud-itonami-iso3166-est"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-rhr-portal :verify-e-business-register :draft-filing :approve :file :audit]}
   {:code "ETH" :name "Ethiopia" :name-local "ኢትዮጵያ" :wikidata "Q115"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-eth"
    :business-id "cloud-itonami-iso3166-eth"
@@ -469,7 +475,13 @@
    :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
    :optional-technologies []
    :operating-states [:intake :assess-ppra-portal :verify-secp-ntn-registration :draft-filing :approve :file :audit]}
-  {:code "PAN" :name "Panama" :name-local "Panamá" :wikidata "Q804" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "PAN" :name "Panama" :name-local "Panamá" :wikidata "Q804"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-pan"
+   :business-id "cloud-itonami-iso3166-pan"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-panamacompra-portal :verify-registro-publico :draft-filing :approve :file :audit]}
   {:code "PER" :name "Peru" :name-local "Perú" :wikidata "Q419"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-per"
    :business-id "cloud-itonami-iso3166-per"
@@ -505,7 +517,13 @@
    :operating-states [:intake :assess-monaqasat-portal :verify-moci-commercial-registration :draft-filing :approve :file :audit]}
   {:code "ROU" :name "Romania" :name-local "România" :wikidata "Q218" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "RUS" :name "Russian Federation" :name-local "Российская Федерация" :wikidata "Q159" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
-  {:code "RWA" :name "Rwanda" :name-local "u Rwanda" :wikidata "Q1037" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "RWA" :name "Rwanda" :name-local "u Rwanda" :wikidata "Q1037"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-rwa"
+   :business-id "cloud-itonami-iso3166-rwa"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-umucyo-portal :verify-rdb-registration :draft-filing :approve :file :audit]}
   {:code "SAU" :name "Kingdom of Saudi Arabia" :name-local "المملكة العربية السعودية" :wikidata "Q851"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-sau"
    :business-id "cloud-itonami-iso3166-sau"
