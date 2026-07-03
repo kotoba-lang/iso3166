@@ -68,12 +68,15 @@ countries stay flat until this pattern is validated.
 | CAN | Canada | Independent Public-Sector Market-Entry & Procurement Compliance Service -- Canada |
 | NZL | New Zealand | Independent Public-Sector Market-Entry & Procurement Compliance Service -- New Zealand |
 | ZAF | Republic of South Africa | Independent Public-Sector Market-Entry & Procurement Compliance Service -- South Africa |
+| CHL | Chile | Independent Public-Sector Market-Entry & Procurement Compliance Service -- Chile |
+| NGA | Nigeria | Independent Public-Sector Market-Entry & Procurement Compliance Service -- Nigeria |
+| IDN | Republic of Indonesia | Independent Public-Sector Market-Entry & Procurement Compliance Service -- Indonesia |
 
-17 countries spanning East Asia / North America (x2) / Western Europe /
-Sub-Saharan Africa (x2) / South Asia / South America / common-law Europe /
-Southeast Asia / Middle East (x2) / Oceania (x2) / Central Europe / Latin
-America (x2) are `:maturity :blueprint`. The remaining 176 entries (full
-193/193 current-UN-member coverage) are
+20 countries spanning East Asia / North America (x2) / Western Europe /
+Sub-Saharan Africa (x3) / South Asia / South America (x2) / common-law
+Europe / Southeast Asia (x2) / Middle East (x2) / Oceania (x2) / Central
+Europe / Latin America (x2) are `:maturity :blueprint`. The remaining 173
+entries (full 193/193 current-UN-member coverage) are
 registered at `:maturity :spec`
 (registry-only stub) for future promotion, following the same `:spec` ->
 `:blueprint` -> `:implemented` path `kotoba-industry` / `kotoba-occupation`
