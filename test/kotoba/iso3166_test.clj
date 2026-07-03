@@ -13,14 +13,24 @@
     (is (seq (iso3166/required-technologies code)))
     (is (seq (:technology-stack (iso3166/execution-plan code))))))
 
+(def all-19-jpn-agency-codes
+  ["JPN-CAO" "JPN-MIC" "JPN-MOJ" "JPN-MOFA" "JPN-MOF" "JPN-MEXT" "JPN-MHLW"
+   "JPN-MAFF" "JPN-METI" "JPN-MLIT" "JPN-MOE" "JPN-MOD" "JPN-RECONSTRUCTION"
+   "JPN-DIGITAL" "JPN-JFTC" "JPN-PPC" "JPN-FSA" "JPN-AUDIT" "JPN-STATISTICS"])
+
 (deftest curated-jpn-agencies-resolve
-  (doseq [code ["JPN-METI" "JPN-MOF" "JPN-DIGITAL" "JPN-JFTC" "JPN-PPC"
-                "JPN-MOJ" "JPN-MHLW" "JPN-FSA" "JPN-MAFF" "JPN-MLIT" "JPN-MOE"
-                "JPN-MOFA" "JPN-MOD" "JPN-AUDIT"]]
+  (doseq [code all-19-jpn-agency-codes]
     (is (:business-id (iso3166/get-country code)))
     (is (seq (iso3166/required-technologies code)))
     (is (seq (:technology-stack (iso3166/execution-plan code))))
     (is (= "JPN" (:parent (iso3166/get-country code))))))
+
+(deftest all-19-jpn-agencies-are-blueprint
+  (testing "full Japan agency-level coverage complete (ADR-2607040100 through ADR-2607040500)"
+    (doseq [code all-19-jpn-agency-codes]
+      (is (= :blueprint (iso3166/maturity code)) (str code " should be :blueprint"))))
+  (is (= 19 (count all-19-jpn-agency-codes)))
+  (is (= (set all-19-jpn-agency-codes) (set (map :code (iso3166/children "JPN"))))))
 
 (deftest jpn-children-resolve-to-19-agencies
   (let [kids (iso3166/children "JPN")]
@@ -61,18 +71,20 @@
     (is (= :blueprint (iso3166/maturity "JPN-MOE")))
     (is (= :blueprint (iso3166/maturity "JPN-MOFA")))
     (is (= :blueprint (iso3166/maturity "JPN-MOD")))
-    (is (= :blueprint (iso3166/maturity "JPN-AUDIT"))))
+    (is (= :blueprint (iso3166/maturity "JPN-AUDIT")))
+    (is (= :blueprint (iso3166/maturity "JPN-CAO")))
+    (is (= :blueprint (iso3166/maturity "JPN-MIC")))
+    (is (= :blueprint (iso3166/maturity "JPN-MEXT")))
+    (is (= :blueprint (iso3166/maturity "JPN-RECONSTRUCTION")))
+    (is (= :blueprint (iso3166/maturity "JPN-STATISTICS"))))
   (testing "a registry-only country entry is :spec"
     (is (= :spec (iso3166/maturity "AFG")))
     (is (= :spec (iso3166/maturity "BRA"))))
-  (testing "a registry-only jpn agency entry is :spec"
-    (is (= :spec (iso3166/maturity "JPN-CAO")))
-    (is (= :spec (iso3166/maturity "JPN-MEXT"))))
   (testing "maturity-summary counts tiers"
     (let [m (iso3166/maturity-summary)]
       (is (= (:total m) (+ (:spec m) (:blueprint m) (:implemented m))))
       (is (= 212 (:total m)))
-      (is (= 19 (:blueprint m)))
+      (is (= 24 (:blueprint m)))
       (is (= 0 (:implemented m))))))
 
 (deftest maturity-roadmap-next-step

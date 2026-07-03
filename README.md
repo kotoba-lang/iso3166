@@ -88,13 +88,16 @@ backbone.
 | JPN-MOFA | Ministry of Foreign Affairs (外務省) | `gov.jpn.mofa` | Independent MOFA ODA/JICA Tender-Eligibility Compliance Service -- Japan |
 | JPN-MOD | Ministry of Defense (防衛省) | `gov.jpn.mod` | Independent MOD Defense-Equipment Transfer & Security-Clearance Compliance Service -- Japan |
 | JPN-AUDIT | Board of Audit (会計検査院) | `gov.jpn.audit` | Independent Board-of-Audit Readiness Compliance Service -- Japan |
+| JPN-CAO | Cabinet Office (内閣府) | `gov.jpn.cao` | Independent Cabinet-Office Cross-Ministerial Program Compliance Service -- Japan |
+| JPN-MIC | Ministry of Internal Affairs and Communications (総務省) | `gov.jpn.mic` | Independent MIC Telecom & Broadcasting Licensing Compliance Service -- Japan |
+| JPN-MEXT | Ministry of Education, Culture, Sports, Science and Technology (文部科学省) | `gov.jpn.mext` | Independent MEXT Research-Grant & School-Accreditation Compliance Service -- Japan |
+| JPN-RECONSTRUCTION | Reconstruction Agency (復興庁) | `gov.jpn.reconstruction` | Independent Reconstruction-Agency Special-Zone Procurement Compliance Service -- Japan |
+| JPN-STATISTICS | Statistics Japan (総務省統計局) | `gov.jpn.statistics` | Independent Statistics-Japan Reporting-Obligation Compliance Service -- Japan |
 
-14/19 Japan agencies are now `:maturity :blueprint` (ADR-2607040100 +
-ADR-2607040200 + ADR-2607040300 + ADR-2607040400 follow-ups), spanning all
-three agency types (ministry / agency / independent commission). The
-remaining 5 Japanese central-government bodies (3 ministries, 1 more
-agency, 1 more independent commission) are `:maturity :spec`. Every agency
-entry's
+**19/19 Japan agencies are now `:maturity :blueprint` — full coverage
+complete** (ADR-2607040100 + ADR-2607040200 + ADR-2607040300 +
+ADR-2607040400 + ADR-2607040500), spanning all three agency types
+(ministry / agency / independent commission). Every agency entry's
 `:ooyake-id` cross-references the source record in `com-etzhayyim-ooyake`'s
 `gov-units.jp-central.seed.edn` / `gov-units.seed.edn` /
 `gov-units.oversight-*.edn` (IDs, names, and official URLs reused verbatim,
