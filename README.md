@@ -56,13 +56,17 @@ countries stay flat until this pattern is validated.
 | DEU | Federal Republic of Germany | Independent Public-Sector Market-Entry & Procurement Compliance Service -- Germany |
 | KEN | Kenya | Independent Public-Sector Market-Entry & Procurement Compliance Service -- Kenya |
 | IND | Republic of India | Independent Public-Sector Market-Entry & Procurement Compliance Service -- India |
+| BRA | Federative Republic of Brazil | Independent Public-Sector Market-Entry & Procurement Compliance Service -- Brazil |
+| GBR | United Kingdom | Independent Public-Sector Market-Entry & Procurement Compliance Service -- United Kingdom |
+| SGP | Singapore | Independent Public-Sector Market-Entry & Procurement Compliance Service -- Singapore |
 
-5 countries spanning East Asia / North America / Western Europe /
-Sub-Saharan Africa / South Asia are `:maturity :blueprint`. The remaining
-188 entries (full 193/193 current-UN-member coverage) are registered at
-`:maturity :spec` (registry-only stub) for future promotion, following the
-same `:spec` -> `:blueprint` -> `:implemented` path `kotoba-industry` /
-`kotoba-occupation` / `kotoba-cofog` use.
+8 countries spanning East Asia / North America / Western Europe /
+Sub-Saharan Africa / South Asia / South America / common-law Europe /
+Southeast Asia are `:maturity :blueprint`. The remaining 185 entries (full
+193/193 current-UN-member coverage) are registered at `:maturity :spec`
+(registry-only stub) for future promotion, following the same `:spec` ->
+`:blueprint` -> `:implemented` path `kotoba-industry` / `kotoba-occupation`
+/ `kotoba-cofog` use.
 
 Alpha-3 code + English/local name are reused verbatim from
 `com-etzhayyim-ooyake`'s Wikidata-verified `gov-units.*.edn` registries (a
