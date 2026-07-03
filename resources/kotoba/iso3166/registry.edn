@@ -128,10 +128,22 @@
    :operating-states [:intake :assess-evergabe-portal :draft-filing :approve :file :audit]}
   {:code "DJI" :name "Djibouti" :wikidata "Q977" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "DMA" :name "Dominica" :wikidata "Q784" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
-  {:code "DNK" :name "Denmark" :wikidata "Q35" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "DNK" :name "Denmark" :wikidata "Q35"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-dnk"
+   :business-id "cloud-itonami-iso3166-dnk"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-udbud-dk-portal :verify-cvr-registration :draft-filing :approve :file :audit]}
   {:code "DOM" :name "Dominican Republic" :name-local "República Dominicana" :wikidata "Q786" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "DZA" :name "Algeria" :name-local "الجزائر" :wikidata "Q262" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
-  {:code "ECU" :name "Ecuador" :wikidata "Q736" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "ECU" :name "Ecuador" :wikidata "Q736"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-ecu"
+   :business-id "cloud-itonami-iso3166-ecu"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-sercop-portal :verify-ruc-registration :draft-filing :approve :file :audit]}
   {:code "EGY" :name "Egypt" :name-local "مصر" :wikidata "Q79"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-egy"
    :business-id "cloud-itonami-iso3166-egy"
@@ -439,7 +451,13 @@
   {:code "LSO" :name "Lesotho" :wikidata "Q1013" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "LTU" :name "Lithuania" :name-local "Lietuva" :wikidata "Q37" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "LUX" :name "Luxembourg" :name-local "Lëtzebuerg" :wikidata "Q32" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
-  {:code "LVA" :name "Latvia" :name-local "Latvija" :wikidata "Q211" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "LVA" :name "Latvia" :name-local "Latvija" :wikidata "Q211"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-lva"
+   :business-id "cloud-itonami-iso3166-lva"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-eis-portal :verify-register-of-enterprises :draft-filing :approve :file :audit]}
   {:code "MAR" :name "Morocco" :name-local "المغرب" :wikidata "Q1028"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-mar"
    :business-id "cloud-itonami-iso3166-mar"
