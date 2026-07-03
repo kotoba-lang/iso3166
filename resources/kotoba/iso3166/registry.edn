@@ -60,7 +60,13 @@
   {:code "BRB" :name "Barbados" :wikidata "Q244" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "BRN" :name "Brunei" :wikidata "Q921" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "BTN" :name "Bhutan" :name-local "འབྲུག" :wikidata "Q917" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
-  {:code "BWA" :name "Botswana" :wikidata "Q963" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "BWA" :name "Botswana" :wikidata "Q963"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-bwa"
+   :business-id "cloud-itonami-iso3166-bwa"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-ipms-portal :verify-cipa-registration :draft-filing :approve :file :audit]}
   {:code "CAF" :name "Central African Republic" :name-local "Centrafrique" :wikidata "Q929" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "CAN" :name "Canada" :wikidata "Q16"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-can"
@@ -423,7 +429,13 @@
   {:code "LBY" :name "Libya" :name-local "ليبيا" :wikidata "Q1016" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "LCA" :name "Saint Lucia" :wikidata "Q760" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "LIE" :name "Liechtenstein" :wikidata "Q347" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
-  {:code "LKA" :name "Sri Lanka" :name-local "ශ්‍රී ලංකාව" :wikidata "Q854" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "LKA" :name "Sri Lanka" :name-local "ශ්‍රී ලංකාව" :wikidata "Q854"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-lka"
+   :business-id "cloud-itonami-iso3166-lka"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-e-gp-portal :verify-eroc-registration :draft-filing :approve :file :audit]}
   {:code "LSO" :name "Lesotho" :wikidata "Q1013" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "LTU" :name "Lithuania" :name-local "Lietuva" :wikidata "Q37" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "LUX" :name "Luxembourg" :name-local "Lëtzebuerg" :wikidata "Q32" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
@@ -475,7 +487,13 @@
    :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
    :optional-technologies []
    :operating-states [:intake :assess-tenderned-portal :verify-kvk-registration :draft-filing :approve :file :audit]}
-  {:code "NOR" :name "Norway" :name-local "Norge" :wikidata "Q20" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "NOR" :name "Norway" :name-local "Norge" :wikidata "Q20"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-nor"
+   :business-id "cloud-itonami-iso3166-nor"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-doffin-portal :verify-bronnoysund-registration :draft-filing :approve :file :audit]}
   {:code "NPL" :name "Nepal" :name-local "नेपाल" :wikidata "Q837"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-npl"
    :business-id "cloud-itonami-iso3166-npl"
