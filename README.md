@@ -79,14 +79,19 @@ backbone.
 | JPN-DIGITAL | Digital Agency (デジタル庁) | `gov.jpn.digital` | Independent Digital-Agency-Regulated GovTech Procurement Compliance Service -- Japan |
 | JPN-JFTC | Fair Trade Commission / 公正取引委員会 | `gov.jpn.competition` | Independent JFTC Antitrust & Bid-Rigging Compliance Service -- Japan |
 | JPN-PPC | Personal Information Protection Commission / 個人情報保護委員会 | `gov.jpn.dataprotection` | Independent PPC Personal-Data Compliance Service -- Japan |
+| JPN-MOJ | Ministry of Justice (法務省) | `gov.jpn.moj` | Independent MOJ-Regulated Corporate Registry & Status-of-Residence Compliance Service -- Japan |
+| JPN-MHLW | Ministry of Health, Labour and Welfare (厚生労働省) | `gov.jpn.mhlw` | Independent MHLW-Regulated Labor-Standards Compliance Service -- Japan |
+| JPN-FSA | Financial Services Agency (金融庁) | `gov.jpn.finreg` | Independent FSA Payment-Services & Financial-Regulatory Compliance Service -- Japan |
 
-These 5 span all three agency types (ministry / agency / independent
-commission). The remaining 14 Japanese central-government bodies (12
-ministries, 1 more agency, 3 more independent commissions) are `:maturity
-:spec`. Every agency entry's `:ooyake-id` cross-references the source record
-in `com-etzhayyim-ooyake`'s `gov-units.jp-central.seed.edn` /
-`gov-units.seed.edn` / `gov-units.oversight-*.edn` (IDs, names, and official
-URLs reused verbatim, not re-derived).
+8/19 Japan agencies are now `:maturity :blueprint` (ADR-2607040100 + the
+ADR-2607040200 follow-up), spanning all three agency types (ministry /
+agency / independent commission). The remaining 11 Japanese
+central-government bodies (8 ministries, 1 more agency, 2 more independent
+commissions) are `:maturity :spec`. Every agency entry's `:ooyake-id`
+cross-references the source record in `com-etzhayyim-ooyake`'s
+`gov-units.jp-central.seed.edn` / `gov-units.seed.edn` /
+`gov-units.oversight-*.edn` (IDs, names, and official URLs reused verbatim,
+not re-derived).
 
 ## Test
 

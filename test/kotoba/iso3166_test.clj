@@ -14,7 +14,8 @@
     (is (seq (:technology-stack (iso3166/execution-plan code))))))
 
 (deftest curated-jpn-agencies-resolve
-  (doseq [code ["JPN-METI" "JPN-MOF" "JPN-DIGITAL" "JPN-JFTC" "JPN-PPC"]]
+  (doseq [code ["JPN-METI" "JPN-MOF" "JPN-DIGITAL" "JPN-JFTC" "JPN-PPC"
+                "JPN-MOJ" "JPN-MHLW" "JPN-FSA"]]
     (is (:business-id (iso3166/get-country code)))
     (is (seq (iso3166/required-technologies code)))
     (is (seq (:technology-stack (iso3166/execution-plan code))))
@@ -50,18 +51,21 @@
     (is (= :blueprint (iso3166/maturity "JPN-MOF")))
     (is (= :blueprint (iso3166/maturity "JPN-DIGITAL")))
     (is (= :blueprint (iso3166/maturity "JPN-JFTC")))
-    (is (= :blueprint (iso3166/maturity "JPN-PPC"))))
+    (is (= :blueprint (iso3166/maturity "JPN-PPC")))
+    (is (= :blueprint (iso3166/maturity "JPN-MOJ")))
+    (is (= :blueprint (iso3166/maturity "JPN-MHLW")))
+    (is (= :blueprint (iso3166/maturity "JPN-FSA"))))
   (testing "a registry-only country entry is :spec"
     (is (= :spec (iso3166/maturity "AFG")))
     (is (= :spec (iso3166/maturity "BRA"))))
   (testing "a registry-only jpn agency entry is :spec"
-    (is (= :spec (iso3166/maturity "JPN-MOJ")))
-    (is (= :spec (iso3166/maturity "JPN-FSA"))))
+    (is (= :spec (iso3166/maturity "JPN-MOFA")))
+    (is (= :spec (iso3166/maturity "JPN-MEXT"))))
   (testing "maturity-summary counts tiers"
     (let [m (iso3166/maturity-summary)]
       (is (= (:total m) (+ (:spec m) (:blueprint m) (:implemented m))))
       (is (= 212 (:total m)))
-      (is (= 10 (:blueprint m)))
+      (is (= 13 (:blueprint m)))
       (is (= 0 (:implemented m))))))
 
 (deftest maturity-roadmap-next-step
