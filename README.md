@@ -104,10 +104,13 @@ countries stay flat until this pattern is validated.
 | GEO | Georgia | Independent Public-Sector Market-Entry & Procurement Compliance Service -- Georgia |
 | JOR | Jordan | Independent Public-Sector Market-Entry & Procurement Compliance Service -- Jordan |
 | SEN | Senegal | Independent Public-Sector Market-Entry & Procurement Compliance Service -- Senegal |
+| NPL | Nepal | Independent Public-Sector Market-Entry & Procurement Compliance Service -- Nepal |
+| FIN | Finland | Independent Public-Sector Market-Entry & Procurement Compliance Service -- Finland |
+| TUN | Tunisia | Independent Public-Sector Market-Entry & Procurement Compliance Service -- Tunisia |
 
-53/193 countries are `:maturity :blueprint`, spanning every populated
+56/193 countries are `:maturity :blueprint`, spanning every populated
 continent and a mix of civil-law, common-law, and mixed legal traditions
-(see codes above). The remaining 140 entries (full 193/193 current-UN-
+(see codes above). The remaining 137 entries (full 193/193 current-UN-
 member coverage) are
 registered at `:maturity :spec`
 (registry-only stub) for future promotion, following the same `:spec` ->

@@ -155,7 +155,13 @@
    :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
    :optional-technologies []
    :operating-states [:intake :assess-egp-portal :verify-tin-registration :draft-filing :approve :file :audit]}
-  {:code "FIN" :name "Finland" :name-local "Suomi" :wikidata "Q33" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "FIN" :name "Finland" :name-local "Suomi" :wikidata "Q33"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-fin"
+   :business-id "cloud-itonami-iso3166-fin"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-hilma-portal :verify-prh-trade-register :draft-filing :approve :file :audit]}
   {:code "FJI" :name "Fiji" :wikidata "Q712" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "FRA" :name "French Republic" :name-local "République française" :wikidata "Q142"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-fra"
@@ -470,7 +476,13 @@
    :optional-technologies []
    :operating-states [:intake :assess-tenderned-portal :verify-kvk-registration :draft-filing :approve :file :audit]}
   {:code "NOR" :name "Norway" :name-local "Norge" :wikidata "Q20" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
-  {:code "NPL" :name "Nepal" :name-local "नेपाल" :wikidata "Q837" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "NPL" :name "Nepal" :name-local "नेपाल" :wikidata "Q837"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-npl"
+   :business-id "cloud-itonami-iso3166-npl"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-bolpatra-portal :verify-ocr-registration :draft-filing :approve :file :audit]}
   {:code "NRU" :name "Nauru" :name-local "Naoero" :wikidata "Q697" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "NZL" :name "New Zealand" :name-local "Aotearoa" :wikidata "Q664"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-nzl"
@@ -593,7 +605,13 @@
   {:code "TLS" :name "Timor-Leste" :name-local "Timor-Leste / Timór-Leste" :wikidata "Q574" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "TON" :name "Tonga" :wikidata "Q678" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "TTO" :name "Trinidad and Tobago" :wikidata "Q754" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
-  {:code "TUN" :name "Tunisia" :name-local "تونس" :wikidata "Q948" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "TUN" :name "Tunisia" :name-local "تونس" :wikidata "Q948"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-tun"
+   :business-id "cloud-itonami-iso3166-tun"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-tuneps-portal :verify-rne-registration :draft-filing :approve :file :audit]}
   {:code "TUR" :name "Republic of Türkiye" :name-local "Türkiye Cumhuriyeti" :wikidata "Q43"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-tur"
    :business-id "cloud-itonami-iso3166-tur"
