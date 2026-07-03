@@ -77,12 +77,14 @@ countries stay flat until this pattern is validated.
 | THA | Thailand | Independent Public-Sector Market-Entry & Procurement Compliance Service -- Thailand |
 | COL | Colombia | Independent Public-Sector Market-Entry & Procurement Compliance Service -- Colombia |
 | ESP | Spain | Independent Public-Sector Market-Entry & Procurement Compliance Service -- Spain |
+| PHL | Philippines | Independent Public-Sector Market-Entry & Procurement Compliance Service -- Philippines |
+| PER | Peru | Independent Public-Sector Market-Entry & Procurement Compliance Service -- Peru |
+| ITA | Italian Republic | Independent Public-Sector Market-Entry & Procurement Compliance Service -- Italy |
 
-26 countries spanning East Asia / North America (x2) / Western Europe
-(x4) / Sub-Saharan Africa (x3) / South Asia / South America (x4) /
-common-law Europe / Southeast Asia (x4) / Middle East (x2) / Oceania (x2)
-/ Central Europe / Latin America (x2) are `:maturity :blueprint`. The
-remaining 167 entries (full 193/193 current-UN-member coverage) are
+29/193 countries are `:maturity :blueprint`, spanning every populated
+continent and a mix of civil-law, common-law, and mixed legal traditions
+(see codes above). The remaining 164 entries (full 193/193 current-UN-
+member coverage) are
 registered at `:maturity :spec`
 (registry-only stub) for future promotion, following the same `:spec` ->
 `:blueprint` -> `:implemented` path `kotoba-industry` / `kotoba-occupation`

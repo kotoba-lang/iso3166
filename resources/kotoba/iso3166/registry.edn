@@ -158,7 +158,13 @@
   {:code "IRQ" :name "Iraq" :name-local "العراق" :wikidata "Q796" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "ISL" :name "Iceland" :name-local "Ísland" :wikidata "Q189" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "ISR" :name "Israel" :name-local "ישראל" :wikidata "Q801" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
-  {:code "ITA" :name "Italian Republic" :name-local "Repubblica Italiana" :wikidata "Q38" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "ITA" :name "Italian Republic" :name-local "Repubblica Italiana" :wikidata "Q38"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-ita"
+   :business-id "cloud-itonami-iso3166-ita"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-mepa-portal :verify-registro-imprese :draft-filing :approve :file :audit]}
   {:code "JAM" :name "Jamaica" :wikidata "Q766" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "JOR" :name "Jordan" :name-local "الأردن" :wikidata "Q810" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "JPN" :name "Japan" :name-local "日本国" :wikidata "Q17"
@@ -386,8 +392,20 @@
   {:code "OMN" :name "Oman" :name-local "عُمان" :wikidata "Q842" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "PAK" :name "Pakistan" :name-local "پاکستان" :wikidata "Q843" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "PAN" :name "Panama" :name-local "Panamá" :wikidata "Q804" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
-  {:code "PER" :name "Peru" :name-local "Perú" :wikidata "Q419" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
-  {:code "PHL" :name "Philippines" :name-local "Pilipinas" :wikidata "Q928" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "PER" :name "Peru" :name-local "Perú" :wikidata "Q419"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-per"
+   :business-id "cloud-itonami-iso3166-per"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-seace-portal :verify-ruc-registration :draft-filing :approve :file :audit]}
+  {:code "PHL" :name "Philippines" :name-local "Pilipinas" :wikidata "Q928"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-phl"
+   :business-id "cloud-itonami-iso3166-phl"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-philgeps-portal :verify-dti-sec-registration :draft-filing :approve :file :audit]}
   {:code "PLW" :name "Palau" :wikidata "Q695" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "PNG" :name "Papua New Guinea" :wikidata "Q691" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "POL" :name "Poland" :name-local "Polska" :wikidata "Q36"
