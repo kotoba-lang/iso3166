@@ -49,7 +49,13 @@
   {:code "BIH" :name "Bosnia and Herzegovina" :name-local "Bosna i Hercegovina" :wikidata "Q225" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "BLR" :name "Belarus" :name-local "Беларусь" :wikidata "Q184" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "BLZ" :name "Belize" :wikidata "Q242" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
-  {:code "BOL" :name "Bolivia" :wikidata "Q750" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "BOL" :name "Bolivia" :wikidata "Q750"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-bol"
+   :business-id "cloud-itonami-iso3166-bol"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-sicoes-portal :verify-seprec-nit-registration :draft-filing :approve :file :audit]}
   {:code "BRA" :name "Federative Republic of Brazil" :name-local "República Federativa do Brasil" :wikidata "Q155"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-bra"
    :business-id "cloud-itonami-iso3166-bra"
@@ -442,7 +448,13 @@
    :optional-technologies []
    :operating-states [:intake :assess-agpo-ppra-registration :draft-filing :approve :file :audit]}
   {:code "KGZ" :name "Kyrgyzstan" :name-local "Кыргызстан" :wikidata "Q813" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
-  {:code "KHM" :name "Cambodia" :name-local "កម្ពុជា" :wikidata "Q424" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "KHM" :name "Cambodia" :name-local "កម្ពុជា" :wikidata "Q424"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-khm"
+   :business-id "cloud-itonami-iso3166-khm"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-mef-procurement-portal :verify-moc-camdx-registration :draft-filing :approve :file :audit]}
   {:code "KIR" :name "Kiribati" :wikidata "Q710" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "KNA" :name "Saint Kitts and Nevis" :wikidata "Q763" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "KOR" :name "Republic of Korea" :name-local "대한민국" :wikidata "Q884"
@@ -645,7 +657,13 @@
   {:code "SSD" :name "South Sudan" :wikidata "Q958" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "STP" :name "São Tomé and Príncipe" :name-local "São Tomé e Príncipe" :wikidata "Q1039" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "SUR" :name "Suriname" :wikidata "Q730" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
-  {:code "SVK" :name "Slovakia" :name-local "Slovensko" :wikidata "Q214" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "SVK" :name "Slovakia" :name-local "Slovensko" :wikidata "Q214"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-svk"
+   :business-id "cloud-itonami-iso3166-svk"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-uvo-list-of-economic-operators :verify-obchodny-register :draft-filing :approve :file :audit]}
   {:code "SVN" :name "Slovenia" :name-local "Slovenija" :wikidata "Q215" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "SWE" :name "Sweden" :name-local "Sverige" :wikidata "Q34"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-swe"

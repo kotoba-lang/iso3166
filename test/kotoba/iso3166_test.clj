@@ -13,7 +13,7 @@
                 "THA" "COL" "ESP" "PHL" "PER" "ITA" "BGD" "ARG" "GHA" "FRA" "EGY" "PAK"
                 "TUR" "MAR" "ETH" "SWE" "KAZ" "QAT" "CHN" "CRI" "CZE" "UKR" "ISR" "URY"
                 "EST" "RWA" "PAN" "GEO" "JOR" "SEN" "NPL" "FIN" "TUN" "NOR" "LKA" "BWA"
-                "DNK" "LVA" "ECU" "ISL" "LTU" "ZMB" "HUN" "HRV" "NAM"]]
+                "DNK" "LVA" "ECU" "ISL" "LTU" "ZMB" "HUN" "HRV" "NAM" "SVK" "BOL" "KHM"]]
     (is (:business-id (iso3166/get-country code)))
     (is (seq (iso3166/required-technologies code)))
     (is (seq (:technology-stack (iso3166/execution-plan code))))))
@@ -144,7 +144,10 @@
     (is (= :blueprint (iso3166/maturity "ZMB")))
     (is (= :blueprint (iso3166/maturity "HUN")))
     (is (= :blueprint (iso3166/maturity "HRV")))
-    (is (= :blueprint (iso3166/maturity "NAM"))))
+    (is (= :blueprint (iso3166/maturity "NAM")))
+    (is (= :blueprint (iso3166/maturity "SVK")))
+    (is (= :blueprint (iso3166/maturity "BOL")))
+    (is (= :blueprint (iso3166/maturity "KHM"))))
   (testing "a registry-only country entry is :spec"
     (is (= :spec (iso3166/maturity "AFG")))
     (is (= :spec (iso3166/maturity "DZA"))))
@@ -152,7 +155,7 @@
     (let [m (iso3166/maturity-summary)]
       (is (= (:total m) (+ (:spec m) (:blueprint m) (:implemented m))))
       (is (= 212 (:total m)))
-      (is (= 87 (:blueprint m)))
+      (is (= 90 (:blueprint m)))
       (is (= 0 (:implemented m))))))
 
 (deftest maturity-roadmap-next-step
