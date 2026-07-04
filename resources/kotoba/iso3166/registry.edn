@@ -220,9 +220,21 @@
   {:code "GTM" :name "Guatemala" :wikidata "Q774" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "GUY" :name "Guyana" :wikidata "Q734" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "HND" :name "Honduras" :wikidata "Q783" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
-  {:code "HRV" :name "Croatia" :name-local "Hrvatska" :wikidata "Q224" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "HRV" :name "Croatia" :name-local "Hrvatska" :wikidata "Q224"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-hrv"
+   :business-id "cloud-itonami-iso3166-hrv"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-eojn-portal :verify-sudski-registar :draft-filing :approve :file :audit]}
   {:code "HTI" :name "Haiti" :name-local "Haïti" :wikidata "Q790" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
-  {:code "HUN" :name "Hungary" :name-local "Magyarország" :wikidata "Q28" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "HUN" :name "Hungary" :name-local "Magyarország" :wikidata "Q28"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-hun"
+   :business-id "cloud-itonami-iso3166-hun"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-ekr-portal :verify-cegjegyzek-registration :draft-filing :approve :file :audit]}
   {:code "IDN" :name "Republic of Indonesia" :name-local "Republik Indonesia" :wikidata "Q252"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-idn"
    :business-id "cloud-itonami-iso3166-idn"
@@ -500,7 +512,13 @@
   {:code "MUS" :name "Mauritius" :wikidata "Q1027" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "MWI" :name "Malawi" :wikidata "Q1020" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "MYS" :name "Malaysia" :wikidata "Q833" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
-  {:code "NAM" :name "Namibia" :wikidata "Q1030" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "NAM" :name "Namibia" :wikidata "Q1030"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-nam"
+   :business-id "cloud-itonami-iso3166-nam"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-cpbn-eprocurement-portal :verify-bipa-registration :draft-filing :approve :file :audit]}
   {:code "NER" :name "Niger" :wikidata "Q1032" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "NGA" :name "Nigeria" :wikidata "Q1033"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-nga"

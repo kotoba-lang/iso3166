@@ -116,10 +116,13 @@ countries stay flat until this pattern is validated.
 | ISL | Iceland | Independent Public-Sector Market-Entry & Procurement Compliance Service -- Iceland |
 | LTU | Lithuania | Independent Public-Sector Market-Entry & Procurement Compliance Service -- Lithuania |
 | ZMB | Zambia | Independent Public-Sector Market-Entry & Procurement Compliance Service -- Zambia |
+| HUN | Hungary | Independent Public-Sector Market-Entry & Procurement Compliance Service -- Hungary |
+| HRV | Croatia | Independent Public-Sector Market-Entry & Procurement Compliance Service -- Croatia |
+| NAM | Namibia | Independent Public-Sector Market-Entry & Procurement Compliance Service -- Namibia |
 
-65/193 countries are `:maturity :blueprint`, spanning every populated
+68/193 countries are `:maturity :blueprint`, spanning every populated
 continent and a mix of civil-law, common-law, and mixed legal traditions
-(see codes above). The remaining 128 entries (full 193/193 current-UN-
+(see codes above). The remaining 125 entries (full 193/193 current-UN-
 member coverage) are
 registered at `:maturity :spec`
 (registry-only stub) for future promotion, following the same `:spec` ->
