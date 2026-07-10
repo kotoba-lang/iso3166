@@ -6,9 +6,23 @@
             [kotoba.technology :as technology]))
 
 (def registry-resource "kotoba/iso3166/registry.edn")
+(def contacts-resource "kotoba/iso3166/contacts.edn")
 
 (defn registry []
   (edn/read-string (slurp (io/resource registry-resource))))
+
+(defn contacts
+  "Organization HQ / contact directory keyed by ISO 3166 (or agency) code.
+  Values include :official-url, :hq {:line-local :line-en :phone ...},
+  and :head-role (institutional office title only — never a personal name)."
+  []
+  (:kotoba.iso3166/contacts
+   (edn/read-string (slurp (io/resource contacts-resource)))))
+
+(defn get-contact
+  "Return the organization contact map for `code`, or nil."
+  [code]
+  (get (contacts) (str/upper-case (str code))))
 
 (defn countries
   ([] (:iso3166 (registry)))

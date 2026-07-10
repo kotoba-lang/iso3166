@@ -161,7 +161,13 @@
     (is (= :blueprint (iso3166/maturity "BHR")))
     (is (= :blueprint (iso3166/maturity "PRT")))
     (is (= :blueprint (iso3166/maturity "SRB")))
-    (is (= :blueprint (iso3166/maturity "PRY"))))
+    (is (= :blueprint (iso3166/maturity "PRY")))
+    (is (= :blueprint (iso3166/maturity "BGR")))
+    (is (= :blueprint (iso3166/maturity "CYP")))
+    (is (= :blueprint (iso3166/maturity "SVN")))
+    (is (= :blueprint (iso3166/maturity "LUX")))
+    (is (= :blueprint (iso3166/maturity "MLT")))
+    (is (= :blueprint (iso3166/maturity "ROU"))))
   (testing "a registry-only country entry is :spec"
     (is (= :spec (iso3166/maturity "AFG")))
     (is (= :spec (iso3166/maturity "DZA"))))
@@ -169,9 +175,9 @@
     (let [m (iso3166/maturity-summary)]
       (is (= (:total m) (+ (:spec m) (:blueprint m) (:implemented m))))
       (is (= 227 (:total m)))
-      (is (= 111 (:blueprint m)))
+      (is (= 117 (:blueprint m)))
       (is (= 3 (:implemented m)))
-      (is (= 113 (:spec m))))))
+      (is (= 107 (:spec m))))))
 
 (deftest maturity-roadmap-next-step
   (is (nil? (:next-step (iso3166/maturity-roadmap "JPN"))))
@@ -203,3 +209,26 @@
     (is (every? #(= "USA" (:parent %)) cs))
     (is (some #(= "USA-GSA" (:code %)) cs))))
 
+(deftest contacts-load
+  (let [c (iso3166/contacts)]
+    (is (>= (count c) 34))
+    (let [meti (iso3166/get-contact "JPN-METI")]
+      (is (some? meti))
+      (is (= "経済産業大臣" (:head-role meti)))
+      (is (string? (get-in meti [:hq :line-local])))
+      (is (string? (get-in meti [:hq :phone]))))
+    (let [gsa (iso3166/get-contact "USA-GSA")]
+      (is (some? gsa))
+      (is (string? (:head-role gsa)))
+      (is (string? (get-in gsa [:hq :line-en]))))
+    (is (nil? (iso3166/get-contact "ZZZ-NOPE")))))
+
+(deftest agency-registry-carries-hq-fields
+  (let [meti (iso3166/get-country "JPN-METI")]
+    (is (string? (:hq-phone meti)))
+    (is (string? (:hq-line-local meti)))
+    (is (string? (:head-role meti)))
+    (is (string? (:official-url meti))))
+  (let [gsa (iso3166/get-country "USA-GSA")]
+    (is (string? (:hq-line-en gsa)))
+    (is (string? (:head-role gsa)))))

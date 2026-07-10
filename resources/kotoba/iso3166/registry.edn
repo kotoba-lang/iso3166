@@ -58,7 +58,12 @@
    :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
    :optional-technologies []
    :operating-states [:intake :assess-e-gp-portal :verify-rjsc-registration :draft-filing :approve :file :audit]}
-  {:code "BGR" :name "Bulgaria" :name-local "България" :wikidata "Q219" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "BGR" :name "Bulgaria" :name-local "България" :wikidata "Q219" :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-bgr"
+   :business-id "cloud-itonami-iso3166-bgr"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-cais-eop :verify-bulstat-registration :draft-filing :approve :file :audit]}
   {:code "BHR" :name "Bahrain" :name-local "البحرين" :wikidata "Q398" :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-bhr"
    :business-id "cloud-itonami-iso3166-bhr"
    :maturity :blueprint
@@ -142,7 +147,12 @@
    :optional-technologies []
    :operating-states [:intake :assess-sicop-portal :verify-registro-nacional :draft-filing :approve :file :audit]}
   {:code "CUB" :name "Cuba" :wikidata "Q241" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
-  {:code "CYP" :name "Cyprus" :name-local "Κύπρος" :wikidata "Q229" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "CYP" :name "Cyprus" :name-local "Κύπρος" :wikidata "Q229" :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-cyp"
+   :business-id "cloud-itonami-iso3166-cyp"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-eps-portal :verify-companies-registrar :draft-filing :approve :file :audit]}
   {:code "CZE" :name "Czech Republic" :name-local "Česko" :wikidata "Q213"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-cze"
    :business-id "cloud-itonami-iso3166-cze"
@@ -326,6 +336,14 @@
    :optional-technologies []
    :operating-states [:intake :assess-toshi-shoko-portal :draft-filing :approve :file :audit]}
   {:code "JPN-CAO" :level :ministry :parent "JPN" :name "Cabinet Office" :name-local "内閣府" :name-romanized "Naikaku-fu" :wikidata "Q6005" :ooyake-id "gov.jpn.cao"
+   :official-url "https://www.cao.go.jp/"
+   :head-role "内閣総理大臣（主任の大臣）/ 内閣府特命担当大臣"
+   :hq-line-local "東京都千代田区永田町1-6-1"
+   :hq-line-en "1-6-1 Nagatacho, Chiyoda-ku, Tokyo"
+   :hq-postal-code "100-8914"
+   :hq-phone "03-5253-2111"
+   :hq-hours "平日 9:30-18:15"
+   :contact-page "https://www.cao.go.jp/"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-jpn-cao"
    :business-id "cloud-itonami-iso3166-jpn-cao"
    :maturity :blueprint
@@ -333,6 +351,14 @@
    :optional-technologies []
    :operating-states [:intake :classify-cross-ministerial-program :assess-regulatory-reform-fit :draft-filing :approve :file :audit]}
   {:code "JPN-MIC" :level :ministry :parent "JPN" :name "Ministry of Internal Affairs and Communications" :name-local "総務省" :name-romanized "Sōmu-shō" :wikidata "Q1322293" :ooyake-id "gov.jpn.mic"
+   :official-url "https://www.soumu.go.jp/"
+   :head-role "総務大臣"
+   :hq-line-local "東京都千代田区霞が関2-1-2 中央合同庁舎第2号館"
+   :hq-line-en "2-1-2 Kasumigaseki, Chiyoda-ku, Tokyo (Central Gov't Bldg No.2)"
+   :hq-postal-code "100-8926"
+   :hq-phone "03-5253-5111"
+   :hq-hours "平日 9:30-18:15"
+   :contact-page "https://www.soumu.go.jp/"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-jpn-mic"
    :business-id "cloud-itonami-iso3166-jpn-mic"
    :maturity :blueprint
@@ -340,6 +366,14 @@
    :optional-technologies []
    :operating-states [:intake :classify-telecom-license :assess-broadcasting-rules :draft-filing :approve :file :audit]}
   {:code "JPN-MOJ" :level :ministry :parent "JPN" :name "Ministry of Justice" :name-local "法務省" :name-romanized "Hōmu-shō" :wikidata "Q1031145" :ooyake-id "gov.jpn.moj"
+   :official-url "https://www.moj.go.jp/"
+   :head-role "法務大臣"
+   :hq-line-local "東京都千代田区霞が関1-1-1"
+   :hq-line-en "1-1-1 Kasumigaseki, Chiyoda-ku, Tokyo"
+   :hq-postal-code "100-8977"
+   :hq-phone "03-3580-4111"
+   :hq-hours "平日 9:30-18:15"
+   :contact-page "https://www.moj.go.jp/"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-jpn-moj"
    :business-id "cloud-itonami-iso3166-jpn-moj"
    :maturity :blueprint
@@ -347,6 +381,14 @@
    :optional-technologies []
    :operating-states [:intake :verify-corporate-registry :assess-status-of-residence :draft-filing :approve :file :audit]}
   {:code "JPN-MOFA" :level :ministry :parent "JPN" :name "Ministry of Foreign Affairs" :name-local "外務省" :name-romanized "Gaimu-shō" :wikidata "Q222241" :ooyake-id "gov.jpn.mofa"
+   :official-url "https://www.mofa.go.jp/"
+   :head-role "外務大臣"
+   :hq-line-local "東京都千代田区霞が関2-2-1"
+   :hq-line-en "2-2-1 Kasumigaseki, Chiyoda-ku, Tokyo"
+   :hq-postal-code "100-8919"
+   :hq-phone "03-3580-3311"
+   :hq-hours "平日 9:30-18:15"
+   :contact-page "https://www.mofa.go.jp/"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-jpn-mofa"
    :business-id "cloud-itonami-iso3166-jpn-mofa"
    :maturity :blueprint
@@ -354,6 +396,14 @@
    :optional-technologies []
    :operating-states [:intake :classify-oda-eligibility :assess-jica-tender-rules :draft-filing :approve :file :audit]}
   {:code "JPN-MOF" :level :ministry :parent "JPN" :name "Ministry of Finance" :name-local "財務省" :name-romanized "Zaimu-shō" :wikidata "Q1322605" :ooyake-id "gov.jpn.mof"
+   :official-url "https://www.mof.go.jp/"
+   :head-role "財務大臣"
+   :hq-line-local "東京都千代田区霞が関3-1-1"
+   :hq-line-en "3-1-1 Kasumigaseki, Chiyoda-ku, Tokyo"
+   :hq-postal-code "100-8940"
+   :hq-phone "03-3581-4111"
+   :hq-hours "平日 9:30-18:15 (土日祝休)"
+   :contact-page "https://www.mof.go.jp/"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-jpn-mof"
    :business-id "cloud-itonami-iso3166-jpn-mof"
    :maturity :blueprint
@@ -361,6 +411,14 @@
    :optional-technologies []
    :operating-states [:intake :classify-tariff :assess-invoice-registration :draft-filing :approve :file :audit]}
   {:code "JPN-MEXT" :level :ministry :parent "JPN" :name "Ministry of Education, Culture, Sports, Science and Technology" :name-local "文部科学省" :name-romanized "Monbu-kagaku-shō" :wikidata "Q1054379" :ooyake-id "gov.jpn.mext"
+   :official-url "https://www.mext.go.jp/"
+   :head-role "文部科学大臣"
+   :hq-line-local "東京都千代田区霞が関3-2-2"
+   :hq-line-en "3-2-2 Kasumigaseki, Chiyoda-ku, Tokyo"
+   :hq-postal-code "100-8959"
+   :hq-phone "03-5253-4111"
+   :hq-hours "平日 9:30-18:15"
+   :contact-page "https://www.mext.go.jp/"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-jpn-mext"
    :business-id "cloud-itonami-iso3166-jpn-mext"
    :maturity :blueprint
@@ -368,6 +426,14 @@
    :optional-technologies []
    :operating-states [:intake :classify-research-grant :assess-school-accreditation :draft-filing :approve :file :audit]}
   {:code "JPN-MHLW" :level :ministry :parent "JPN" :name "Ministry of Health, Labour and Welfare" :name-local "厚生労働省" :name-romanized "Kōsei-rōdō-shō" :wikidata "Q1191238" :ooyake-id "gov.jpn.mhlw"
+   :official-url "https://www.mhlw.go.jp/"
+   :head-role "厚生労働大臣"
+   :hq-line-local "東京都千代田区霞が関1-2-2"
+   :hq-line-en "1-2-2 Kasumigaseki, Chiyoda-ku, Tokyo"
+   :hq-postal-code "100-8916"
+   :hq-phone "03-5253-1111"
+   :hq-hours "平日 9:30-18:15"
+   :contact-page "https://www.mhlw.go.jp/"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-jpn-mhlw"
    :business-id "cloud-itonami-iso3166-jpn-mhlw"
    :maturity :blueprint
@@ -375,6 +441,14 @@
    :optional-technologies []
    :operating-states [:intake :assess-labor-standards :verify-36-agreement :draft-filing :approve :file :audit]}
   {:code "JPN-MAFF" :level :ministry :parent "JPN" :name "Ministry of Agriculture, Forestry and Fisheries" :name-local "農林水産省" :name-romanized "Nōrin-suisan-shō" :wikidata "Q1376786" :ooyake-id "gov.jpn.maff"
+   :official-url "https://www.maff.go.jp/"
+   :head-role "農林水産大臣"
+   :hq-line-local "東京都千代田区霞が関1-2-1"
+   :hq-line-en "1-2-1 Kasumigaseki, Chiyoda-ku, Tokyo"
+   :hq-postal-code "100-8950"
+   :hq-phone "03-3502-8111"
+   :hq-hours "平日 9:30-18:15"
+   :contact-page "https://www.maff.go.jp/"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-jpn-maff"
    :business-id "cloud-itonami-iso3166-jpn-maff"
    :maturity :blueprint
@@ -382,6 +456,14 @@
    :optional-technologies []
    :operating-states [:intake :classify-food-safety :assess-jas-certification :draft-filing :approve :file :audit]}
   {:code "JPN-METI" :level :ministry :parent "JPN" :name "Ministry of Economy, Trade and Industry" :name-local "経済産業省" :name-romanized "Keizai-sangyō-shō" :wikidata "Q1197264" :ooyake-id "gov.jpn.meti"
+   :official-url "https://www.meti.go.jp/"
+   :head-role "経済産業大臣"
+   :hq-line-local "東京都千代田区霞が関1-3-1"
+   :hq-line-en "1-3-1 Kasumigaseki, Chiyoda-ku, Tokyo"
+   :hq-postal-code "100-8901"
+   :hq-phone "03-3501-1511"
+   :hq-hours "平日 9:30-18:15"
+   :contact-page "https://www.meti.go.jp/"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-jpn-meti"
    :business-id "cloud-itonami-iso3166-jpn-meti"
    :maturity :blueprint
@@ -389,6 +471,14 @@
    :optional-technologies []
    :operating-states [:intake :classify-export-control :assess-subsidy-eligibility :draft-filing :approve :file :audit]}
   {:code "JPN-MLIT" :level :ministry :parent "JPN" :name "Ministry of Land, Infrastructure, Transport and Tourism" :name-local "国土交通省" :name-romanized "Kokudo-kōtsū-shō" :wikidata "Q1376196" :ooyake-id "gov.jpn.mlit"
+   :official-url "https://www.mlit.go.jp/"
+   :head-role "国土交通大臣"
+   :hq-line-local "東京都千代田区霞が関2-1-3 中央合同庁舎第3号館"
+   :hq-line-en "2-1-3 Kasumigaseki, Chiyoda-ku, Tokyo (Central Gov't Bldg No.3)"
+   :hq-postal-code "100-8918"
+   :hq-phone "03-5253-8111"
+   :hq-hours "平日 9:30-18:15"
+   :contact-page "https://www.mlit.go.jp/"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-jpn-mlit"
    :business-id "cloud-itonami-iso3166-jpn-mlit"
    :maturity :blueprint
@@ -396,6 +486,14 @@
    :optional-technologies []
    :operating-states [:intake :verify-construction-license :assess-building-code :draft-filing :approve :file :audit]}
   {:code "JPN-MOE" :level :ministry :parent "JPN" :name "Ministry of the Environment" :name-local "環境省" :name-romanized "Kankyō-shō" :wikidata "Q1125558" :ooyake-id "gov.jpn.moe"
+   :official-url "https://www.env.go.jp/"
+   :head-role "環境大臣"
+   :hq-line-local "東京都千代田区霞が関1-2-2 中央合同庁舎第5号館"
+   :hq-line-en "1-2-2 Kasumigaseki, Chiyoda-ku, Tokyo (Central Gov't Bldg No.5)"
+   :hq-postal-code "100-8975"
+   :hq-phone "03-3581-3351"
+   :hq-hours "平日 9:30-18:15"
+   :contact-page "https://www.env.go.jp/"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-jpn-moe"
    :business-id "cloud-itonami-iso3166-jpn-moe"
    :maturity :blueprint
@@ -403,6 +501,14 @@
    :optional-technologies []
    :operating-states [:intake :assess-eia-requirement :verify-waste-permit :draft-filing :approve :file :audit]}
   {:code "JPN-MOD" :level :ministry :parent "JPN" :name "Ministry of Defense" :name-local "防衛省" :name-romanized "Bōei-shō" :wikidata "Q1062689" :ooyake-id "gov.jpn.mod"
+   :official-url "https://www.mod.go.jp/"
+   :head-role "防衛大臣"
+   :hq-line-local "東京都新宿区市谷本村町5-1"
+   :hq-line-en "5-1 Ichigaya-honmuracho, Shinjuku-ku, Tokyo"
+   :hq-postal-code "162-8801"
+   :hq-phone "03-3268-3111"
+   :hq-hours "平日 9:30-18:15"
+   :contact-page "https://www.mod.go.jp/"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-jpn-mod"
    :business-id "cloud-itonami-iso3166-jpn-mod"
    :maturity :blueprint
@@ -410,6 +516,14 @@
    :optional-technologies []
    :operating-states [:intake :classify-defense-equipment-transfer :assess-security-clearance :draft-filing :approve :file :audit]}
   {:code "JPN-RECONSTRUCTION" :level :agency :parent "JPN" :name "Reconstruction Agency" :name-local "復興庁" :name-romanized "Fukkō-chō" :wikidata "Q1056221" :ooyake-id "gov.jpn.reconstruction"
+   :official-url "https://www.reconstruction.go.jp/"
+   :head-role "復興大臣"
+   :hq-line-local "東京都千代田区霞が関3-1-1 中央合同庁舎第4号館"
+   :hq-line-en "3-1-1 Kasumigaseki, Chiyoda-ku, Tokyo (Central Gov't Bldg No.4)"
+   :hq-postal-code "100-0013"
+   :hq-phone "03-6328-1111"
+   :hq-hours "平日 9:30-18:15"
+   :contact-page "https://www.reconstruction.go.jp/"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-jpn-reconstruction"
    :business-id "cloud-itonami-iso3166-jpn-reconstruction"
    :maturity :blueprint
@@ -417,6 +531,13 @@
    :optional-technologies []
    :operating-states [:intake :classify-reconstruction-zone :assess-special-procurement-rules :draft-filing :approve :file :audit]}
   {:code "JPN-DIGITAL" :level :agency :parent "JPN" :name "Digital Agency" :name-local "デジタル庁" :name-romanized "Dejitaru-chō" :wikidata "Q107291492" :ooyake-id "gov.jpn.digital"
+   :official-url "https://www.digital.go.jp/"
+   :head-role "デジタル大臣"
+   :hq-line-local "東京都千代田区紀尾井町1-3 東京ガーデンテラス紀尾井町"
+   :hq-line-en "1-3 Kioicho, Chiyoda-ku, Tokyo (Tokyo Garden Terrace Kioicho)"
+   :hq-postal-code "102-0094"
+   :hq-hours "平日 9:30-18:15"
+   :contact-page "https://www.digital.go.jp/"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-jpn-digital"
    :business-id "cloud-itonami-iso3166-jpn-digital"
    :maturity :blueprint
@@ -424,6 +545,10 @@
    :optional-technologies []
    :operating-states [:intake :verify-gbizid :assess-govcloud-standards :draft-filing :approve :file :audit]}
   {:code "JPN-JFTC" :level :independent-commission :parent "JPN" :name "Fair Trade Commission" :name-local "公正取引委員会" :name-romanized "Kōsei Torihiki Iinkai" :wikidata "Q842043" :ooyake-id "gov.jpn.competition"
+   :official-url "http://www.jftc.go.jp/"
+   :head-role "公正取引委員会委員長"
+   :hq-line-en "Chiyoda"
+   :contact-page "https://www.wikidata.org/wiki/Q842043"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-jpn-jftc"
    :business-id "cloud-itonami-iso3166-jpn-jftc"
    :maturity :blueprint
@@ -431,6 +556,10 @@
    :optional-technologies []
    :operating-states [:intake :screen-bid-rigging-risk :assess-subcontract-act :draft-compliance-program :approve :file :audit]}
   {:code "JPN-PPC" :level :independent-commission :parent "JPN" :name "Personal Information Protection Commission" :name-local "個人情報保護委員会" :name-romanized "Kojin Jōhō Hogo Iinkai" :wikidata "Q17221586" :ooyake-id "gov.jpn.dataprotection"
+   :official-url "https://www.ppc.go.jp/"
+   :head-role "個人情報保護委員会委員長"
+   :hq-line-en "Chiyoda"
+   :contact-page "https://www.wikidata.org/wiki/Q17221586"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-jpn-ppc"
    :business-id "cloud-itonami-iso3166-jpn-ppc"
    :maturity :blueprint
@@ -438,6 +567,10 @@
    :optional-technologies []
    :operating-states [:intake :classify-personal-data :assess-cross-border-transfer :draft-compliance-program :approve :file :audit]}
   {:code "JPN-FSA" :level :independent-commission :parent "JPN" :name "Financial Services Agency" :name-local "金融庁" :name-romanized "Kin'yūchō" :wikidata "Q615316" :ooyake-id "gov.jpn.finreg"
+   :official-url "http://www.fsa.go.jp"
+   :head-role "金融庁長官"
+   :hq-line-en "Central Government Building No. 7"
+   :contact-page "https://www.wikidata.org/wiki/Q615316"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-jpn-fsa"
    :business-id "cloud-itonami-iso3166-jpn-fsa"
    :maturity :blueprint
@@ -445,6 +578,10 @@
    :optional-technologies []
    :operating-states [:intake :classify-payment-services :assess-registration-tier :draft-filing :approve :file :audit]}
   {:code "JPN-AUDIT" :level :independent-commission :parent "JPN" :name "Board of Audit" :name-local "会計検査院" :name-romanized "Kaikei Kensain" :wikidata "Q615225" :ooyake-id "gov.jpn.audit"
+   :official-url "https://www.jbaudit.go.jp/"
+   :head-role "会計検査院長"
+   :hq-line-en "Central Government Building No. 7"
+   :contact-page "https://www.wikidata.org/wiki/Q615225"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-jpn-audit"
    :business-id "cloud-itonami-iso3166-jpn-audit"
    :maturity :blueprint
@@ -452,6 +589,10 @@
    :optional-technologies []
    :operating-states [:intake :assess-audit-readiness :verify-record-keeping-standard :draft-filing :approve :file :audit]}
   {:code "JPN-STATISTICS" :level :independent-commission :parent "JPN" :name "Statistics Japan" :name-local "総務省統計局" :name-romanized "Sōmushō Tōkeikyoku" :wikidata "Q11606829" :ooyake-id "gov.jpn.statistics"
+   :official-url "https://www.stat.go.jp/"
+   :head-role "総務省統計局長"
+   :hq-line-en "Wakamatsuchō"
+   :contact-page "https://www.wikidata.org/wiki/Q11606829"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-jpn-statistics"
    :business-id "cloud-itonami-iso3166-jpn-statistics"
    :maturity :blueprint
@@ -511,7 +652,12 @@
    :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
    :optional-technologies []
    :operating-states [:intake :assess-cvp-is-portal :verify-register-of-legal-entities :draft-filing :approve :file :audit]}
-  {:code "LUX" :name "Luxembourg" :name-local "Lëtzebuerg" :wikidata "Q32" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "LUX" :name "Luxembourg" :name-local "Lëtzebuerg" :wikidata "Q32" :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-lux"
+   :business-id "cloud-itonami-iso3166-lux"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-pmp-portal :verify-rcsl-registration :draft-filing :approve :file :audit]}
   {:code "LVA" :name "Latvia" :name-local "Latvija" :wikidata "Q211"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-lva"
    :business-id "cloud-itonami-iso3166-lva"
@@ -540,7 +686,12 @@
   {:code "MHL" :name "Marshall Islands" :wikidata "Q709" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "MKD" :name "North Macedonia" :name-local "Северна Македонија" :wikidata "Q221" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "MLI" :name "Mali" :wikidata "Q912" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
-  {:code "MLT" :name "Malta" :wikidata "Q233" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "MLT" :name "Malta" :wikidata "Q233" :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-mlt"
+   :business-id "cloud-itonami-iso3166-mlt"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-epps-portal :verify-roc-registration :draft-filing :approve :file :audit]}
   {:code "MMR" :name "Myanmar" :name-local "မြန်မာ" :wikidata "Q836" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "MNE" :name "Montenegro" :name-local "Crna Gora" :wikidata "Q236" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "MNG" :name "Mongolia" :name-local "Монгол Улс" :wikidata "Q711" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
@@ -652,7 +803,12 @@
    :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
    :optional-technologies []
    :operating-states [:intake :assess-monaqasat-portal :verify-moci-commercial-registration :draft-filing :approve :file :audit]}
-  {:code "ROU" :name "Romania" :name-local "România" :wikidata "Q218" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "ROU" :name "Romania" :name-local "România" :wikidata "Q218" :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-rou"
+   :business-id "cloud-itonami-iso3166-rou"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-seap-portal :verify-onrc-registration :draft-filing :approve :file :audit]}
   {:code "RUS" :name "Russian Federation" :name-local "Российская Федерация" :wikidata "Q159" :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-rus"
    :business-id "cloud-itonami-iso3166-rus"
    :maturity :blueprint
@@ -709,7 +865,12 @@
    :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
    :optional-technologies []
    :operating-states [:intake :assess-uvo-list-of-economic-operators :verify-obchodny-register :draft-filing :approve :file :audit]}
-  {:code "SVN" :name "Slovenia" :name-local "Slovenija" :wikidata "Q215" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "SVN" :name "Slovenia" :name-local "Slovenija" :wikidata "Q215" :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-svn"
+   :business-id "cloud-itonami-iso3166-svn"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-ejn-portal :verify-ajpes-registration :draft-filing :approve :file :audit]}
   {:code "SWE" :name "Sweden" :name-local "Sverige" :wikidata "Q34"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-swe"
    :business-id "cloud-itonami-iso3166-swe"
@@ -773,6 +934,13 @@
    :optional-technologies []
    :operating-states [:intake :assess-sam-gov-registration :draft-filing :approve :file :audit]}
   {:code "USA-GSA" :level :agency :parent "USA" :name "General Services Administration" :ooyake-id "gov.usa.gsa"
+   :official-url "https://www.gsa.gov/"
+   :head-role "Administrator of General Services"
+   :hq-line-local "1800 F Street NW, Washington, DC 20405"
+   :hq-line-en "1800 F Street NW, Washington, DC 20405"
+   :hq-postal-code "20405"
+   :hq-phone "1-844-472-4111"
+   :contact-page "https://www.gsa.gov/about-us/contact-us"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-usa-gsa"
    :business-id "cloud-itonami-iso3166-usa-gsa"
    :maturity :blueprint
@@ -780,6 +948,13 @@
    :optional-technologies []
    :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "USA-SBA" :level :agency :parent "USA" :name "Small Business Administration" :ooyake-id "gov.usa.sba"
+   :official-url "https://www.sba.gov/"
+   :head-role "Administrator of the Small Business Administration"
+   :hq-line-local "409 3rd St SW, Washington, DC 20416"
+   :hq-line-en "409 3rd St SW, Washington, DC 20416"
+   :hq-postal-code "20416"
+   :hq-phone "1-800-827-5722"
+   :contact-page "https://www.sba.gov/about-sba/organization/contact-sba"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-usa-sba"
    :business-id "cloud-itonami-iso3166-usa-sba"
    :maturity :blueprint
@@ -787,6 +962,14 @@
    :optional-technologies []
    :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "USA-TREASURY" :level :ministry :parent "USA" :name "Department of the Treasury" :ooyake-id "gov.usa.treasury"
+   :official-url "https://home.treasury.gov/"
+   :head-role "Secretary of the Treasury"
+   :hq-line-local "1500 Pennsylvania Avenue NW, Washington, DC"
+   :hq-line-en "1500 Pennsylvania Avenue NW, Washington, DC 20220"
+   :hq-postal-code "20220"
+   :hq-phone "+1-202-622-2000"
+   :hq-hours "Mon-Fri 9:00-17:00 ET"
+   :contact-page "https://home.treasury.gov/"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-usa-treasury"
    :business-id "cloud-itonami-iso3166-usa-treasury"
    :maturity :blueprint
@@ -794,6 +977,10 @@
    :optional-technologies []
    :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "USA-DOC" :level :ministry :parent "USA" :name "Department of Commerce" :ooyake-id "gov.usa.doc"
+   :official-url "https://ced.ky.gov/"
+   :head-role "Secretary of Commerce"
+   :hq-line-en "Frankfort"
+   :contact-page "https://www.wikidata.org/wiki/Q133810378"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-usa-doc"
    :business-id "cloud-itonami-iso3166-usa-doc"
    :maturity :blueprint
@@ -801,6 +988,10 @@
    :optional-technologies []
    :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "USA-DOD" :level :ministry :parent "USA" :name "Department of Defense" :ooyake-id "gov.usa.dod"
+   :official-url "https://war.gov/"
+   :head-role "Secretary of Defense"
+   :hq-line-en "The Pentagon"
+   :contact-page "https://www.wikidata.org/wiki/Q11209"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-usa-dod"
    :business-id "cloud-itonami-iso3166-usa-dod"
    :maturity :blueprint
@@ -808,6 +999,12 @@
    :optional-technologies []
    :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "USA-DHS" :level :ministry :parent "USA" :name "Department of Homeland Security" :ooyake-id "gov.usa.dhs"
+   :official-url "https://www.dhs.gov/"
+   :head-role "Secretary of Homeland Security"
+   :hq-line-local "2707 Martin Luther King Jr Ave SE, Washington, DC 20528"
+   :hq-line-en "2707 Martin Luther King Jr Ave SE, Washington, DC 20528"
+   :hq-postal-code "20528"
+   :contact-page "https://www.dhs.gov/contact-us"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-usa-dhs"
    :business-id "cloud-itonami-iso3166-usa-dhs"
    :maturity :blueprint
@@ -815,6 +1012,10 @@
    :optional-technologies []
    :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "USA-DOL" :level :ministry :parent "USA" :name "Department of Labor" :ooyake-id "gov.usa.dol"
+   :official-url "https://www.dol.gov/"
+   :head-role "Secretary of Labor"
+   :hq-line-en "Frances Perkins Building"
+   :contact-page "https://www.wikidata.org/wiki/Q628807"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-usa-dol"
    :business-id "cloud-itonami-iso3166-usa-dol"
    :maturity :blueprint
@@ -822,6 +1023,10 @@
    :optional-technologies []
    :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "USA-HHS" :level :ministry :parent "USA" :name "Department of Health and Human Services" :ooyake-id "gov.usa.hhs"
+   :official-url "http://www.alabamapublichealth.gov/"
+   :head-role "Secretary of Health and Human Services"
+   :hq-line-en "Hubert H. Humphrey Building, 200 Independence Ave SW, Washington DC"
+   :contact-page "Wikipedia"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-usa-hhs"
    :business-id "cloud-itonami-iso3166-usa-hhs"
    :maturity :blueprint
@@ -829,6 +1034,10 @@
    :optional-technologies []
    :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "USA-DOT" :level :ministry :parent "USA" :name "Department of Transportation" :ooyake-id "gov.usa.dot"
+   :official-url "https://transportation.gov"
+   :head-role "Secretary of Transportation"
+   :hq-line-en "Washington, D.C."
+   :contact-page "https://www.wikidata.org/wiki/Q852211"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-usa-dot"
    :business-id "cloud-itonami-iso3166-usa-dot"
    :maturity :blueprint
@@ -836,6 +1045,10 @@
    :optional-technologies []
    :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "USA-DOE" :level :ministry :parent "USA" :name "Department of Energy" :ooyake-id "gov.usa.doe"
+   :official-url "https://www.energy.gov/"
+   :head-role "Secretary of Energy"
+   :hq-line-en "Washington, D.C."
+   :contact-page "https://www.wikidata.org/wiki/Q217810"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-usa-doe"
    :business-id "cloud-itonami-iso3166-usa-doe"
    :maturity :blueprint
@@ -843,6 +1056,13 @@
    :optional-technologies []
    :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "USA-VA" :level :ministry :parent "USA" :name "Department of Veterans Affairs" :ooyake-id "gov.usa.va"
+   :official-url "https://www.va.gov/"
+   :head-role "Secretary of Veterans Affairs"
+   :hq-line-local "810 Vermont Avenue NW, Washington, DC 20420"
+   :hq-line-en "810 Vermont Avenue NW, Washington, DC 20420"
+   :hq-postal-code "20420"
+   :hq-phone "1-800-698-2411"
+   :contact-page "https://www.va.gov/contact-us/"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-usa-va"
    :business-id "cloud-itonami-iso3166-usa-va"
    :maturity :blueprint
@@ -850,6 +1070,7 @@
    :optional-technologies []
    :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "USA-EPA" :level :independent-commission :parent "USA" :name "Environmental Protection Agency" :ooyake-id "gov.usa.epa"
+   :head-role "Administrator of the Environmental Protection Agency"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-usa-epa"
    :business-id "cloud-itonami-iso3166-usa-epa"
    :maturity :blueprint
@@ -857,6 +1078,10 @@
    :optional-technologies []
    :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "USA-FTC" :level :independent-commission :parent "USA" :name "Federal Trade Commission" :ooyake-id "gov.usa.ftc"
+   :official-url "https://www.justice.gov/atr"
+   :head-role "Chair of the Federal Trade Commission"
+   :hq-line-en "US DOJ Antitrust Division, 950 Pennsylvania Avenue NW, Washington DC"
+   :contact-page "official site + OSM/Wikidata"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-usa-ftc"
    :business-id "cloud-itonami-iso3166-usa-ftc"
    :maturity :blueprint
@@ -864,6 +1089,9 @@
    :optional-technologies []
    :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "USA-SEC" :level :independent-commission :parent "USA" :name "Securities and Exchange Commission" :ooyake-id "gov.usa.sec"
+   :official-url "https://www.sec.gov/"
+   :head-role "Chair of the Securities and Exchange Commission"
+   :contact-page "https://www.sec.gov/"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-usa-sec"
    :business-id "cloud-itonami-iso3166-usa-sec"
    :maturity :blueprint
@@ -871,6 +1099,7 @@
    :optional-technologies []
    :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "USA-FCC" :level :independent-commission :parent "USA" :name "Federal Communications Commission" :ooyake-id "gov.usa.fcc"
+   :head-role "Chair of the Federal Communications Commission"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-usa-fcc"
    :business-id "cloud-itonami-iso3166-usa-fcc"
    :maturity :blueprint

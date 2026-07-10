@@ -41,12 +41,21 @@ promotion batches through ADR-2607042800; see the README's blueprint
 table for the current full country list):
 
 - Total entries: 227 (193 countries + 19 Japan agencies + 15 USA agencies)
-- `:implemented` 3 (JPN, USA, CHN) · `:blueprint` 111 (77 country + 19 Japan agency + 15 USA agency) · `:spec` 113
+- `:implemented` 3 (JPN, USA, CHN) · `:blueprint` 117 · `:spec` 107 · total 227
 - Total entries: 227 (193 countries + 19 Japan agencies + 15 USA agencies)
 
 `kotoba.iso3166/children` resolves the agency-level entries under a country
 (currently non-empty only for `"JPN"`), mirroring the shared organism
 substrate's `children(family, code)` contract (ADR-2606301900).
+
+## Organization contacts (HQ / phone / head-role)
+
+`kotoba.iso3166/contacts` and `get-contact` load
+`resources/kotoba/iso3166/contacts.edn` — real HQ line/phone/hours and
+**institutional** `:head-role` titles. Personal names of current
+office-holders are intentionally absent. Agency registry entries also
+carry flat `:hq-line-local` / `:hq-phone` / `:head-role` /
+`:official-url`. Blueprint repos may ship `organization.edn`.
 
 No `:robotics` requirement on any entry: this is a data/compliance service,
 not a physical-domain business (same digital-service exemption class as
