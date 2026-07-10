@@ -2,6 +2,16 @@
 ;; :head-role = institutional office title ONLY (no personal names).
 {:kotoba.iso3166/contacts
  {
+  "AGO"
+  {:ooyake-id "gov.ago"
+    :official-url "https://www.governo.gov.ao/"
+    :name-en "Angola"
+    :wikidata "Q916"
+    :head-role-note "institutional office title only; personal names of current office-holders are intentionally NOT stored"
+    :contact-page "https://www.wikidata.org/wiki/Q3897"
+    :sourced-from "com-etzhayyim-ooyake gov-units (verbatim where present)"
+    :hq {:line-en "Luanda" :country "ago" :kind "capital" :provenance "https://www.wikidata.org/wiki/Q3897" :last-verified "2026-06-04" :sourcing "authoritative"}
+  }
   "ALB"
   {:ooyake-id "gov.alb"
     :official-url "https://www.kryeministria.al/en/"
@@ -52,7 +62,7 @@
     :name-en "Commonwealth of Australia"
     :name-local "Commonwealth of Australia"
     :wikidata "Q408"
-    :head-role "Minister for Finance (Commonwealth procurement)"
+    :head-role "Minister for Finance"
     :head-role-note "institutional office title only; personal names of current office-holders are intentionally NOT stored"
     :contact-page "official site + Wikidata/OSM"
     :sourced-from "com-etzhayyim-ooyake gov-units (verbatim where present)"
@@ -162,7 +172,7 @@
     :name-en "Federative Republic of Brazil"
     :name-local "República Federativa do Brasil"
     :wikidata "Q155"
-    :head-role "Ministro da Gestão e da Inovação / Compras.gov.br"
+    :head-role "Ministro da Gestão e da Inovação"
     :head-role-note "institutional office title only; personal names of current office-holders are intentionally NOT stored"
     :contact-page "https://www.wikidata.org/wiki/Q8678"
     :sourced-from "com-etzhayyim-ooyake gov-units (verbatim where present)"
@@ -177,6 +187,17 @@
     :contact-page "https://www.wikidata.org/wiki/Q9279"
     :sourced-from "com-etzhayyim-ooyake gov-units (verbatim where present)"
     :hq {:line-en "Bandar Seri Begawan" :country "brn" :kind "capital" :provenance "https://www.wikidata.org/wiki/Q9279" :last-verified "2026-06-04" :sourcing "authoritative"}
+  }
+  "BTN"
+  {:ooyake-id "gov.btn"
+    :official-url "http://www.bhutan.gov.bt"
+    :name-en "Bhutan"
+    :name-local "འབྲུག"
+    :wikidata "Q917"
+    :head-role-note "institutional office title only; personal names of current office-holders are intentionally NOT stored"
+    :contact-page "https://www.wikidata.org/wiki/Q9270"
+    :sourced-from "com-etzhayyim-ooyake gov-units (verbatim where present)"
+    :hq {:line-en "Thimphu" :country "btn" :kind "capital" :provenance "https://www.wikidata.org/wiki/Q9270" :last-verified "2026-06-04" :sourcing "authoritative"}
   }
   "BWA"
   {:ooyake-id "gov.bwa"
@@ -227,11 +248,33 @@
     :name-en "People's Republic of China"
     :name-local "中华人民共和国"
     :wikidata "Q148"
-    :head-role "财政部部长 (Government Procurement Law administration)"
+    :head-role "财政部部长"
     :head-role-note "institutional office title only; personal names of current office-holders are intentionally NOT stored"
     :contact-page "https://www.wikidata.org/wiki/Q956"
     :sourced-from "com-etzhayyim-ooyake gov-units (verbatim where present)"
     :hq {:line-en "Beijing" :country "chn" :kind "capital" :provenance "https://www.wikidata.org/wiki/Q956" :last-verified "2026-06-04" :sourcing "authoritative"}
+  }
+  "CIV"
+  {:ooyake-id "gov.civ"
+    :official-url "https://www.gouv.ci"
+    :name-en "Ivory Coast"
+    :name-local "Côte d'Ivoire"
+    :wikidata "Q1008"
+    :head-role-note "institutional office title only; personal names of current office-holders are intentionally NOT stored"
+    :contact-page "https://www.wikidata.org/wiki/Q3768"
+    :sourced-from "com-etzhayyim-ooyake gov-units (verbatim where present)"
+    :hq {:line-en "Yamoussoukro" :country "civ" :kind "capital" :provenance "https://www.wikidata.org/wiki/Q3768" :last-verified "2026-06-04" :sourcing "authoritative"}
+  }
+  "CMR"
+  {:ooyake-id "gov.cmr"
+    :official-url "https://www.prc.cm"
+    :name-en "Cameroon"
+    :name-local "Cameroun"
+    :wikidata "Q1009"
+    :head-role-note "institutional office title only; personal names of current office-holders are intentionally NOT stored"
+    :contact-page "https://www.wikidata.org/wiki/Q3808"
+    :sourced-from "com-etzhayyim-ooyake gov-units (verbatim where present)"
+    :hq {:line-en "Yaoundé" :country "cmr" :kind "capital" :provenance "https://www.wikidata.org/wiki/Q3808" :last-verified "2026-06-04" :sourcing "authoritative"}
   }
   "COL"
   {:ooyake-id "gov.col"
@@ -291,7 +334,7 @@
     :name-en "Federal Republic of Germany"
     :name-local "Bundesrepublik Deutschland"
     :wikidata "Q183"
-    :head-role "Bundesminister des Innern und für Heimat (Beschaffung) / BMF"
+    :head-role "Bundesminister des Innern / BMF"
     :head-role-note "institutional office title only; personal names of current office-holders are intentionally NOT stored"
     :contact-page "https://www.wikidata.org/wiki/Q586"
     :sourced-from "com-etzhayyim-ooyake gov-units (verbatim where present)"
@@ -316,6 +359,17 @@
     :contact-page "https://www.wikidata.org/wiki/Q34820"
     :sourced-from "com-etzhayyim-ooyake gov-units (verbatim where present)"
     :hq {:line-en "Santo Domingo" :country "dom" :kind "capital" :provenance "https://www.wikidata.org/wiki/Q34820" :last-verified "2026-06-04" :sourcing "authoritative"}
+  }
+  "DZA"
+  {:ooyake-id "gov.dza"
+    :official-url "https://www.el-mouradia.dz/ar/home"
+    :name-en "Algeria"
+    :name-local "الجزائر"
+    :wikidata "Q262"
+    :head-role-note "institutional office title only; personal names of current office-holders are intentionally NOT stored"
+    :contact-page "https://www.wikidata.org/wiki/Q3561"
+    :sourced-from "com-etzhayyim-ooyake gov-units (verbatim where present)"
+    :hq {:line-en "Algiers" :country "dza" :kind "capital" :provenance "https://www.wikidata.org/wiki/Q3561" :last-verified "2026-06-04" :sourcing "authoritative"}
   }
   "ECU"
   {:ooyake-id "gov.ecu"
@@ -344,7 +398,7 @@
     :name-en "Spain"
     :name-local "España"
     :wikidata "Q29"
-    :head-role "Ministro de Hacienda / Plataforma de Contratación"
+    :head-role "Ministro de Hacienda"
     :head-role-note "institutional office title only; personal names of current office-holders are intentionally NOT stored"
     :contact-page "https://www.wikidata.org/wiki/Q2807"
     :sourced-from "com-etzhayyim-ooyake gov-units (verbatim where present)"
@@ -399,11 +453,21 @@
     :name-en "French Republic"
     :name-local "République française"
     :wikidata "Q142"
-    :head-role "Premier ministre / Ministre de l'Économie (commande publique)"
+    :head-role "Premier ministre / Ministre de l'Économie"
     :head-role-note "institutional office title only; personal names of current office-holders are intentionally NOT stored"
     :contact-page "https://www.wikidata.org/wiki/Q90"
     :sourced-from "com-etzhayyim-ooyake gov-units (verbatim where present)"
     :hq {:line-en "Paris" :country "fra" :kind "capital" :provenance "https://www.wikidata.org/wiki/Q90" :last-verified "2026-06-04" :sourcing "authoritative"}
+  }
+  "GAB"
+  {:ooyake-id "gov.gab"
+    :official-url "https://gouvernement.ga"
+    :name-en "Gabon"
+    :wikidata "Q1000"
+    :head-role-note "institutional office title only; personal names of current office-holders are intentionally NOT stored"
+    :contact-page "https://www.wikidata.org/wiki/Q3825"
+    :sourced-from "com-etzhayyim-ooyake gov-units (verbatim where present)"
+    :hq {:line-en "Libreville" :country "gab" :kind "capital" :provenance "https://www.wikidata.org/wiki/Q3825" :last-verified "2026-06-04" :sourcing "authoritative"}
   }
   "GBR"
   {:ooyake-id "gov.gbr"
@@ -411,7 +475,7 @@
     :name-en "United Kingdom"
     :name-local "United Kingdom"
     :wikidata "Q145"
-    :head-role "Minister for the Cabinet Office / Crown Commercial Service oversight"
+    :head-role "Minister for the Cabinet Office / CCS"
     :head-role-note "institutional office title only; personal names of current office-holders are intentionally NOT stored"
     :contact-page "https://www.wikidata.org/wiki/Q84"
     :sourced-from "com-etzhayyim-ooyake gov-units (verbatim where present)"
@@ -553,7 +617,7 @@
     :name-en "Italian Republic"
     :name-local "Repubblica Italiana"
     :wikidata "Q38"
-    :head-role "Ministro dell'Economia e delle Finanze / ANAC oversight"
+    :head-role "Ministro dell'Economia / ANAC"
     :head-role-note "institutional office title only; personal names of current office-holders are intentionally NOT stored"
     :contact-page "https://www.wikidata.org/wiki/Q220"
     :sourced-from "com-etzhayyim-ooyake gov-units (verbatim where present)"
@@ -586,7 +650,7 @@
     :name-en "Japan"
     :name-local "日本国"
     :wikidata "Q17"
-    :head-role "内閣総理大臣 / デジタル大臣（調達基盤）"
+    :head-role "内閣総理大臣 / デジタル大臣"
     :head-role-note "institutional office title only; personal names of current office-holders are intentionally NOT stored"
     :contact-page "https://www.wikidata.org/wiki/Q262438"
     :sourced-from "com-etzhayyim-ooyake gov-units (verbatim where present)"
@@ -925,7 +989,7 @@
     :name-en "United Mexican States"
     :name-local "Estados Unidos Mexicanos"
     :wikidata "Q96"
-    :head-role "Secretaría de Hacienda y Crédito Público / CompraNet"
+    :head-role "Secretaría de Hacienda / CompraNet"
     :head-role-note "institutional office title only; personal names of current office-holders are intentionally NOT stored"
     :contact-page "https://www.wikidata.org/wiki/Q1489"
     :sourced-from "com-etzhayyim-ooyake gov-units (verbatim where present)"
@@ -1056,7 +1120,7 @@
     :name-en "Poland"
     :name-local "Polska"
     :wikidata "Q36"
-    :head-role "Minister of Development Funds and Regional Policy / e-Zamówienia"
+    :head-role "Minister of Development Funds / e-Zamówienia"
     :head-role-note "institutional office title only; personal names of current office-holders are intentionally NOT stored"
     :contact-page "https://www.wikidata.org/wiki/Q270"
     :sourced-from "com-etzhayyim-ooyake gov-units (verbatim where present)"
@@ -1264,7 +1328,7 @@
     :name-en "United States of America"
     :name-local "United States of America"
     :wikidata "Q30"
-    :head-role "Administrator of General Services (federal procurement systems)"
+    :head-role "Administrator of General Services"
     :head-role-note "institutional office title only; personal names of current office-holders are intentionally NOT stored"
     :contact-page "https://www.wikidata.org/wiki/Q61"
     :sourced-from "com-etzhayyim-ooyake gov-units (verbatim where present)"
@@ -1316,7 +1380,7 @@
     :head-role-note "institutional office title only; personal names of current office-holders are intentionally NOT stored"
     :contact-page "https://www.epa.gov/aboutepa/epa-organization-chart"
     :sourced-from "official public contact page"
-    :hq {:line-en "1200 Pennsylvania Avenue NW, Washington, DC 20460" :line-local "1200 Pennsylvania Avenue NW, Washington, DC 20460" :phone "1-202-564-4700" :postal-code "20460" :kind "headquarters" :provenance "https://www.epa.gov/aboutepa/visiting-epa-headquarters" :last-verified "2026-07-10" :sourcing "official-site-public" :country "usa"}
+    :hq {:line-en "1200 Pennsylvania Avenue NW, Washington, DC 20460" :line-local "1200 Pennsylvania Avenue NW, Washington, DC 20460" :postal-code "20460" :phone "1-202-564-4700" :kind "headquarters" :provenance "https://www.epa.gov/aboutepa/visiting-epa-headquarters" :last-verified "2026-07-10" :sourcing "official-site-public" :country "usa"}
   }
   "USA-FCC"
   {:ooyake-id "gov.usa.fcc"
@@ -1325,7 +1389,7 @@
     :head-role-note "institutional office title only; personal names of current office-holders are intentionally NOT stored"
     :contact-page "https://www.fcc.gov/about/contact"
     :sourced-from "official public contact page"
-    :hq {:line-en "45 L Street NE, Washington, DC 20554" :line-local "45 L Street NE, Washington, DC 20554" :phone "1-888-225-5322" :postal-code "20554" :kind "headquarters" :provenance "https://www.fcc.gov/about/contact" :last-verified "2026-07-10" :sourcing "official-site-public" :country "usa"}
+    :hq {:line-en "45 L Street NE, Washington, DC 20554" :line-local "45 L Street NE, Washington, DC 20554" :postal-code "20554" :phone "1-888-225-5322" :kind "headquarters" :provenance "https://www.fcc.gov/about/contact" :last-verified "2026-07-10" :sourcing "official-site-public" :country "usa"}
   }
   "USA-FTC"
   {:ooyake-id "gov.usa.ftc"
@@ -1340,7 +1404,7 @@
     :head-role-note "institutional office title only; personal names of current office-holders are intentionally NOT stored"
     :contact-page "https://www.gsa.gov/about-us/contact-us"
     :sourced-from "official public contact page"
-    :hq {:line-en "1800 F Street NW, Washington, DC 20405" :line-local "1800 F Street NW, Washington, DC 20405" :phone "1-844-472-4111" :postal-code "20405" :kind "headquarters" :provenance "https://www.gsa.gov/about-us/contact-us" :last-verified "2026-07-10" :sourcing "official-site-public" :country "usa"}
+    :hq {:line-en "1800 F Street NW, Washington, DC 20405" :line-local "1800 F Street NW, Washington, DC 20405" :postal-code "20405" :phone "1-844-472-4111" :kind "headquarters" :provenance "https://www.gsa.gov/about-us/contact-us" :last-verified "2026-07-10" :sourcing "official-site-public" :country "usa"}
   }
   "USA-HHS"
   {:ooyake-id "gov.usa.hhs"
@@ -1355,7 +1419,7 @@
     :head-role-note "institutional office title only; personal names of current office-holders are intentionally NOT stored"
     :contact-page "https://www.sba.gov/about-sba/organization/contact-sba"
     :sourced-from "official public contact page"
-    :hq {:line-en "409 3rd St SW, Washington, DC 20416" :line-local "409 3rd St SW, Washington, DC 20416" :phone "1-800-827-5722" :postal-code "20416" :kind "headquarters" :provenance "https://www.sba.gov/about-sba/organization/contact-sba" :last-verified "2026-07-10" :sourcing "official-site-public" :country "usa"}
+    :hq {:line-en "409 3rd St SW, Washington, DC 20416" :line-local "409 3rd St SW, Washington, DC 20416" :postal-code "20416" :phone "1-800-827-5722" :kind "headquarters" :provenance "https://www.sba.gov/about-sba/organization/contact-sba" :last-verified "2026-07-10" :sourcing "official-site-public" :country "usa"}
   }
   "USA-SEC"
   {:ooyake-id "gov.usa.sec"
@@ -1366,7 +1430,7 @@
     :head-role-note "institutional office title only; personal names of current office-holders are intentionally NOT stored"
     :contact-page "https://www.sec.gov/about/contact-information"
     :sourced-from "official public contact page"
-    :hq {:line-en "100 F Street NE, Washington, DC 20549" :line-local "100 F Street NE, Washington, DC 20549" :phone "1-202-551-6551" :postal-code "20549" :kind "headquarters" :provenance "https://www.sec.gov/about/contact-information" :last-verified "2026-07-10" :sourcing "official-site-public" :country "usa"}
+    :hq {:line-en "100 F Street NE, Washington, DC 20549" :line-local "100 F Street NE, Washington, DC 20549" :postal-code "20549" :phone "1-202-551-6551" :kind "headquarters" :provenance "https://www.sec.gov/about/contact-information" :last-verified "2026-07-10" :sourcing "official-site-public" :country "usa"}
   }
   "USA-TREASURY"
   {:ooyake-id "gov.usa.treasury"
@@ -1387,7 +1451,7 @@
     :head-role-note "institutional office title only; personal names of current office-holders are intentionally NOT stored"
     :contact-page "https://www.va.gov/contact-us/"
     :sourced-from "official public contact page"
-    :hq {:line-en "810 Vermont Avenue NW, Washington, DC 20420" :line-local "810 Vermont Avenue NW, Washington, DC 20420" :phone "1-800-698-2411" :postal-code "20420" :kind "headquarters" :provenance "https://www.va.gov/contact-us/" :last-verified "2026-07-10" :sourcing "official-site-public" :country "usa"}
+    :hq {:line-en "810 Vermont Avenue NW, Washington, DC 20420" :line-local "810 Vermont Avenue NW, Washington, DC 20420" :postal-code "20420" :phone "1-800-698-2411" :kind "headquarters" :provenance "https://www.va.gov/contact-us/" :last-verified "2026-07-10" :sourcing "official-site-public" :country "usa"}
   }
   "VNM"
   {:ooyake-id "gov.vnm"

@@ -4,7 +4,12 @@
  :kotoba.registry/note "ISO 3166-1 alpha-3 country registry for kotoba-lang and itonami open businesses -- the jurisdiction/market-entry counterpart to kotoba-lang/industry (ISIC), kotoba-lang/occupation (ISCO-08), and kotoba-lang/cofog (COFOG). Full 193/193 current-UN-member-state coverage. Alpha-3 code + English name reused verbatim from com-etzhayyim-ooyake's Wikidata-verified gov-units registries (gov-units.seed.edn / gov-units.g20.edn / gov-units.world-countries.edn, pulled 2026-06-03: CURRENT UN members with an ISO 3166-1 alpha-3 code + official site, dissolved/historical states excluded), not re-derived -- same reuse discipline kotoba-lang/cofog applied to matsurigoto's COFOG backbone. Country entries are FLAT (a country is not itself a business-function taxonomy the way a COFOG code is). ADR-2607040100 adds a SECOND level for Japan only (:level :ministry / :agency / :independent-commission, :parent \"JPN\"): 19 gov.jpn.* administrative bodies (12 ministries, 2 agencies, 5 independent commissions), IDs/names/URLs reused verbatim from com-etzhayyim-ooyake's gov-units.jp-central.seed.edn / gov-units.seed.edn / gov-units.oversight-*.edn (cross-referenced via :ooyake-id), mirroring the COFOG division/group coordinator+leaf pattern (ADR-2606301900) -- one country coordinator (cloud-itonami-iso3166-jpn) + per-agency leaf blueprints. Japan agency coverage is COMPLETE (19/19) as of ADR-2607040500 (batches in ADR-2607040200 through -0500). Other countries remain flat until this pattern is validated elsewhere. Country-level maturity has been promoted incrementally in batches of 3 from ADR-2607040600 through ADR-2607041300 (see 90-docs/adr/ for the full batch history); current country-level count is tracked in :kotoba.registry/updated and this repo's README. Most COUNTRY entries remain :maturity :spec (registry-only stub); curated entries have a published cloud-itonami-iso3166-{code} / cloud-itonami-iso3166-jpn-{code} blueprint repo."
  :iso3166
  [{:code "AFG" :name "Afghanistan" :name-local "افغانستان" :wikidata "Q889" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
-  {:code "AGO" :name "Angola" :wikidata "Q916" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "AGO" :name "Angola" :wikidata "Q916" :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-ago"
+   :business-id "cloud-itonami-iso3166-ago"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-sncp-portal :verify-nif-registration :draft-filing :approve :file :audit]}
   {:code "ALB" :name "Albania" :name-local "Shqipëria" :wikidata "Q222" :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-alb"
    :business-id "cloud-itonami-iso3166-alb"
    :maturity :blueprint
@@ -104,7 +109,7 @@
   {:code "BRA" :name "Federative Republic of Brazil" :name-local "República Federativa do Brasil" :wikidata "Q155"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-bra"
    :business-id "cloud-itonami-iso3166-bra"
-   :maturity :blueprint
+   :maturity :implemented
    :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
    :optional-technologies []
    :operating-states [:intake :assess-pncp-portal :verify-sicaf-registration :draft-filing :approve :file :audit]}
@@ -115,7 +120,12 @@
    :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
    :optional-technologies []
    :operating-states [:intake :assess-eperolehan :verify-rocbn-registration :draft-filing :approve :file :audit]}
-  {:code "BTN" :name "Bhutan" :name-local "འབྲུག" :wikidata "Q917" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "BTN" :name "Bhutan" :name-local "འབྲུག" :wikidata "Q917" :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-btn"
+   :business-id "cloud-itonami-iso3166-btn"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-egp-portal :verify-cdb-registration :draft-filing :approve :file :audit]}
   {:code "BWA" :name "Botswana" :wikidata "Q963"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-bwa"
    :business-id "cloud-itonami-iso3166-bwa"
@@ -151,8 +161,18 @@
    :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
    :optional-technologies []
    :operating-states [:intake :assess-ccgp-portal :verify-uscc-registration :draft-filing :approve :file :audit]}
-  {:code "CIV" :name "Ivory Coast" :name-local "Côte d'Ivoire" :wikidata "Q1008" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
-  {:code "CMR" :name "Cameroon" :name-local "Cameroun" :wikidata "Q1009" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "CIV" :name "Ivory Coast" :name-local "Côte d'Ivoire" :wikidata "Q1008" :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-civ"
+   :business-id "cloud-itonami-iso3166-civ"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-anrmp-portal :verify-rccm-registration :draft-filing :approve :file :audit]}
+  {:code "CMR" :name "Cameroon" :name-local "Cameroun" :wikidata "Q1009" :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-cmr"
+   :business-id "cloud-itonami-iso3166-cmr"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-armp-portal :verify-rccm-registration :draft-filing :approve :file :audit]}
   {:code "COD" :name "Democratic Republic of the Congo" :name-local "RD Congo" :wikidata "Q974" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "COG" :name "Republic of the Congo" :name-local "Congo" :wikidata "Q971" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "COL" :name "Colombia" :wikidata "Q739"
@@ -212,7 +232,12 @@
    :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
    :optional-technologies []
    :operating-states [:intake :assess-dgcp-portal :verify-rnc-registration :draft-filing :approve :file :audit]}
-  {:code "DZA" :name "Algeria" :name-local "الجزائر" :wikidata "Q262" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "DZA" :name "Algeria" :name-local "الجزائر" :wikidata "Q262" :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-dza"
+   :business-id "cloud-itonami-iso3166-dza"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-bomop-portal :verify-cnrc-registration :draft-filing :approve :file :audit]}
   {:code "ECU" :name "Ecuador" :wikidata "Q736"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-ecu"
    :business-id "cloud-itonami-iso3166-ecu"
@@ -270,7 +295,12 @@
    :optional-technologies []
    :operating-states [:intake :assess-place-portal :verify-siret-registration :draft-filing :approve :file :audit]}
   {:code "FSM" :name "Federated States of Micronesia" :wikidata "Q702" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
-  {:code "GAB" :name "Gabon" :wikidata "Q1000" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "GAB" :name "Gabon" :wikidata "Q1000" :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-gab"
+   :business-id "cloud-itonami-iso3166-gab"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-dgmp-portal :verify-rccm-registration :draft-filing :approve :file :audit]}
   {:code "GBR" :name "United Kingdom" :wikidata "Q145"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-gbr"
    :business-id "cloud-itonami-iso3166-gbr"
@@ -341,7 +371,7 @@
   {:code "IND" :name "Republic of India" :name-local "भारत गणराज्य" :wikidata "Q668"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-ind"
    :business-id "cloud-itonami-iso3166-ind"
-   :maturity :blueprint
+   :maturity :implemented
    :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
    :optional-technologies []
    :operating-states [:intake :assess-gem-udyam-registration :draft-filing :approve :file :audit]}
@@ -686,7 +716,7 @@
   {:code "KOR" :name "Republic of Korea" :name-local "대한민국" :wikidata "Q884"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-kor"
    :business-id "cloud-itonami-iso3166-kor"
-   :maturity :blueprint
+   :maturity :implemented
    :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
    :optional-technologies []
    :operating-states [:intake :assess-koneps-portal :verify-business-registration :draft-filing :approve :file :audit]}
@@ -900,7 +930,7 @@
   {:code "SGP" :name "Singapore" :name-local "Singapura" :wikidata "Q334"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-sgp"
    :business-id "cloud-itonami-iso3166-sgp"
-   :maturity :blueprint
+   :maturity :implemented
    :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
    :optional-technologies []
    :operating-states [:intake :assess-gebiz-portal :verify-acra-registration :draft-filing :approve :file :audit]}
