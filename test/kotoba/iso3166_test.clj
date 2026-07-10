@@ -94,7 +94,7 @@
     (is (= :implemented (iso3166/maturity "AUS")))
     (is (= :implemented (iso3166/maturity "KOR")))
     (is (= :blueprint (iso3166/maturity "POL")))
-    (is (= :blueprint (iso3166/maturity "MEX")))
+    (is (= :implemented (iso3166/maturity "MEX")))
     (is (= :blueprint (iso3166/maturity "SAU")))
     (is (= :implemented (iso3166/maturity "CAN")))
     (is (= :blueprint (iso3166/maturity "NZL")))
@@ -103,14 +103,14 @@
     (is (= :blueprint (iso3166/maturity "NGA")))
     (is (= :blueprint (iso3166/maturity "IDN")))
     (is (= :blueprint (iso3166/maturity "IRL")))
-    (is (= :blueprint (iso3166/maturity "NLD")))
+    (is (= :implemented (iso3166/maturity "NLD")))
     (is (= :blueprint (iso3166/maturity "VNM")))
     (is (= :blueprint (iso3166/maturity "THA")))
     (is (= :blueprint (iso3166/maturity "COL")))
-    (is (= :blueprint (iso3166/maturity "ESP")))
+    (is (= :implemented (iso3166/maturity "ESP")))
     (is (= :blueprint (iso3166/maturity "PHL")))
     (is (= :blueprint (iso3166/maturity "PER")))
-    (is (= :blueprint (iso3166/maturity "ITA")))
+    (is (= :implemented (iso3166/maturity "ITA")))
     (is (= :blueprint (iso3166/maturity "BGD")))
     (is (= :blueprint (iso3166/maturity "ARG")))
     (is (= :blueprint (iso3166/maturity "GHA")))
@@ -185,7 +185,13 @@
     (is (= :blueprint (iso3166/maturity "CMR")))
     (is (= :blueprint (iso3166/maturity "DZA")))
     (is (= :blueprint (iso3166/maturity "GAB")))
-    (is (= :blueprint (iso3166/maturity "BTN"))))
+    (is (= :blueprint (iso3166/maturity "BTN")))
+    (is (= :blueprint (iso3166/maturity "BEN")))
+    (is (= :blueprint (iso3166/maturity "BFA")))
+    (is (= :blueprint (iso3166/maturity "MLI")))
+    (is (= :blueprint (iso3166/maturity "TGO")))
+    (is (= :blueprint (iso3166/maturity "NER")))
+    (is (= :blueprint (iso3166/maturity "MDG"))))
   (testing "a registry-only country entry is :spec"
     (is (= :spec (iso3166/maturity "AFG")))
     (is (= :spec (iso3166/maturity "ERI"))))
@@ -193,9 +199,9 @@
     (let [m (iso3166/maturity-summary)]
       (is (= (:total m) (+ (:spec m) (:blueprint m) (:implemented m))))
       (is (= 227 (:total m)))
-      (is (= 126 (:blueprint m)))
-      (is (= 12 (:implemented m)))
-      (is (= 89 (:spec m))))))
+      (is (= 128 (:blueprint m)))
+      (is (= 16 (:implemented m)))
+      (is (= 83 (:spec m))))))
 
 (deftest maturity-roadmap-next-step
   (is (nil? (:next-step (iso3166/maturity-roadmap "JPN"))))
@@ -210,6 +216,10 @@
   (is (nil? (:next-step (iso3166/maturity-roadmap "IND"))))
   (is (nil? (:next-step (iso3166/maturity-roadmap "BRA"))))
   (is (nil? (:next-step (iso3166/maturity-roadmap "SGP"))))
+  (is (nil? (:next-step (iso3166/maturity-roadmap "NLD"))))
+  (is (nil? (:next-step (iso3166/maturity-roadmap "ESP"))))
+  (is (nil? (:next-step (iso3166/maturity-roadmap "ITA"))))
+  (is (nil? (:next-step (iso3166/maturity-roadmap "MEX"))))
   (is (= :blueprint (:next-step (iso3166/maturity-roadmap "AFG"))))
   (is (= :implemented (:next-step (iso3166/maturity-roadmap "RUS")))))
 
@@ -238,7 +248,7 @@
 
 (deftest contacts-load
   (let [c (iso3166/contacts)]
-    (is (>= (count c) 110))
+    (is (>= (count c) 120))
     (let [meti (iso3166/get-contact "JPN-METI")]
       (is (some? meti))
       (is (= "経済産業大臣" (:head-role meti)))

@@ -101,6 +101,27 @@
     :sourced-from "com-etzhayyim-ooyake gov-units (verbatim where present)"
     :hq {:line-en "Brussels" :country "bel" :kind "capital" :provenance "https://www.wikidata.org/wiki/Q239" :last-verified "2026-06-04" :sourcing "authoritative"}
   }
+  "BEN"
+  {:ooyake-id "gov.ben"
+    :official-url "https://www.gouv.bj/"
+    :name-en "Benin"
+    :name-local "Bénin"
+    :wikidata "Q962"
+    :head-role-note "institutional office title only; personal names of current office-holders are intentionally NOT stored"
+    :contact-page "https://www.wikidata.org/wiki/Q3799"
+    :sourced-from "com-etzhayyim-ooyake gov-units (verbatim where present)"
+    :hq {:line-en "Porto-Novo" :country "ben" :kind "capital" :provenance "https://www.wikidata.org/wiki/Q3799" :last-verified "2026-06-04" :sourcing "authoritative"}
+  }
+  "BFA"
+  {:ooyake-id "gov.bfa"
+    :official-url "https://www.gouvernement.gov.bf/accueil"
+    :name-en "Burkina Faso"
+    :wikidata "Q965"
+    :head-role-note "institutional office title only; personal names of current office-holders are intentionally NOT stored"
+    :contact-page "https://www.wikidata.org/wiki/Q3777"
+    :sourced-from "com-etzhayyim-ooyake gov-units (verbatim where present)"
+    :hq {:line-en "Ouagadougou" :country "bfa" :kind "capital" :provenance "https://www.wikidata.org/wiki/Q3777" :last-verified "2026-06-04" :sourcing "authoritative"}
+  }
   "BGD"
   {:ooyake-id "gov.bgd"
     :official-url "http://www.bangladesh.gov.bd"
@@ -172,7 +193,7 @@
     :name-en "Federative Republic of Brazil"
     :name-local "República Federativa do Brasil"
     :wikidata "Q155"
-    :head-role "Ministro da Gestão e da Inovação"
+    :head-role "Ministro da Gestão"
     :head-role-note "institutional office title only; personal names of current office-holders are intentionally NOT stored"
     :contact-page "https://www.wikidata.org/wiki/Q8678"
     :sourced-from "com-etzhayyim-ooyake gov-units (verbatim where present)"
@@ -398,7 +419,7 @@
     :name-en "Spain"
     :name-local "España"
     :wikidata "Q29"
-    :head-role "Ministro de Hacienda"
+    :head-role "Ministro de Hacienda / PLACSP"
     :head-role-note "institutional office title only; personal names of current office-holders are intentionally NOT stored"
     :contact-page "https://www.wikidata.org/wiki/Q2807"
     :sourced-from "com-etzhayyim-ooyake gov-units (verbatim where present)"
@@ -572,7 +593,7 @@
     :name-en "Republic of India"
     :name-local "भारत गणराज्य"
     :wikidata "Q668"
-    :head-role "Minister of Finance / GeM administration"
+    :head-role "Minister of Finance / GeM"
     :head-role-note "institutional office title only; personal names of current office-holders are intentionally NOT stored"
     :contact-page "https://www.wikidata.org/wiki/Q987"
     :sourced-from "com-etzhayyim-ooyake gov-units (verbatim where present)"
@@ -617,7 +638,7 @@
     :name-en "Italian Republic"
     :name-local "Repubblica Italiana"
     :wikidata "Q38"
-    :head-role "Ministro dell'Economia / ANAC"
+    :head-role "Ministro dell'Economia / ANAC-Consip"
     :head-role-note "institutional office title only; personal names of current office-holders are intentionally NOT stored"
     :contact-page "https://www.wikidata.org/wiki/Q220"
     :sourced-from "com-etzhayyim-ooyake gov-units (verbatim where present)"
@@ -983,6 +1004,17 @@
     :sourced-from "com-etzhayyim-ooyake gov-units (verbatim where present)"
     :hq {:line-en "Rabat" :country "mar" :kind "capital" :provenance "https://www.wikidata.org/wiki/Q3551" :last-verified "2026-06-04" :sourcing "authoritative"}
   }
+  "MDG"
+  {:ooyake-id "gov.mdg"
+    :official-url "https://www.primature.gov.mg/"
+    :name-en "Madagascar"
+    :name-local "Madagasikara"
+    :wikidata "Q1019"
+    :head-role-note "institutional office title only; personal names of current office-holders are intentionally NOT stored"
+    :contact-page "https://www.wikidata.org/wiki/Q3915"
+    :sourced-from "com-etzhayyim-ooyake gov-units (verbatim where present)"
+    :hq {:line-en "Antananarivo" :country "mdg" :kind "capital" :provenance "https://www.wikidata.org/wiki/Q3915" :last-verified "2026-06-04" :sourcing "authoritative"}
+  }
   "MEX"
   {:ooyake-id "gov.mex"
     :official-url "https://www.gob.mx/"
@@ -994,6 +1026,16 @@
     :contact-page "https://www.wikidata.org/wiki/Q1489"
     :sourced-from "com-etzhayyim-ooyake gov-units (verbatim where present)"
     :hq {:line-en "Mexico City" :country "mex" :kind "capital" :provenance "https://www.wikidata.org/wiki/Q1489" :last-verified "2026-06-04" :sourcing "authoritative"}
+  }
+  "MLI"
+  {:ooyake-id "gov.mli"
+    :official-url "http://www.primature.gov.ml"
+    :name-en "Mali"
+    :wikidata "Q912"
+    :head-role-note "institutional office title only; personal names of current office-holders are intentionally NOT stored"
+    :contact-page "https://www.wikidata.org/wiki/Q3703"
+    :sourced-from "com-etzhayyim-ooyake gov-units (verbatim where present)"
+    :hq {:line-en "Bamako" :country "mli" :kind "capital" :provenance "https://www.wikidata.org/wiki/Q3703" :last-verified "2026-06-04" :sourcing "authoritative"}
   }
   "MLT"
   {:ooyake-id "gov.mlt"
@@ -1014,6 +1056,16 @@
     :contact-page "https://www.wikidata.org/wiki/Q3935"
     :sourced-from "com-etzhayyim-ooyake gov-units (verbatim where present)"
     :hq {:line-en "Windhoek" :country "nam" :kind "capital" :provenance "https://www.wikidata.org/wiki/Q3935" :last-verified "2026-06-04" :sourcing "authoritative"}
+  }
+  "NER"
+  {:ooyake-id "gov.ner"
+    :official-url "https://www.gouv.ne/"
+    :name-en "Niger"
+    :wikidata "Q1032"
+    :head-role-note "institutional office title only; personal names of current office-holders are intentionally NOT stored"
+    :contact-page "https://www.wikidata.org/wiki/Q3674"
+    :sourced-from "com-etzhayyim-ooyake gov-units (verbatim where present)"
+    :hq {:line-en "Niamey" :country "ner" :kind "capital" :provenance "https://www.wikidata.org/wiki/Q3674" :last-verified "2026-06-04" :sourcing "authoritative"}
   }
   "NGA"
   {:ooyake-id "gov.nga"
@@ -1218,7 +1270,7 @@
     :name-en "Singapore"
     :name-local "Singapura"
     :wikidata "Q334"
-    :head-role "Minister for Finance / GeBIZ administration"
+    :head-role "Minister for Finance / GeBIZ"
     :head-role-note "institutional office title only; personal names of current office-holders are intentionally NOT stored"
     :contact-page "https://www.wikidata.org/wiki/Q334"
     :sourced-from "com-etzhayyim-ooyake gov-units (verbatim where present)"
@@ -1267,6 +1319,16 @@
     :contact-page "https://www.wikidata.org/wiki/Q1754"
     :sourced-from "com-etzhayyim-ooyake gov-units (verbatim where present)"
     :hq {:line-en "Stockholm" :country "swe" :kind "capital" :provenance "https://www.wikidata.org/wiki/Q1754" :last-verified "2026-06-04" :sourcing "authoritative"}
+  }
+  "TGO"
+  {:ooyake-id "gov.tgo"
+    :official-url "https://www.republicoftogo.com"
+    :name-en "Togo"
+    :wikidata "Q945"
+    :head-role-note "institutional office title only; personal names of current office-holders are intentionally NOT stored"
+    :contact-page "https://www.wikidata.org/wiki/Q3792"
+    :sourced-from "com-etzhayyim-ooyake gov-units (verbatim where present)"
+    :hq {:line-en "Lomé" :country "tgo" :kind "capital" :provenance "https://www.wikidata.org/wiki/Q3792" :last-verified "2026-06-04" :sourcing "authoritative"}
   }
   "THA"
   {:ooyake-id "gov.tha"
