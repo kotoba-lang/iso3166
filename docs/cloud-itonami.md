@@ -41,7 +41,7 @@ promotion batches through ADR-2607042800; see the README's blueprint
 table for the current full country list):
 
 - Total entries: 212 (193 countries + 19 Japan agencies)
-- `:implemented` 0 · `:blueprint` 90 (71 country + 19 Japan agency) · `:spec` 122
+- `:implemented` 1 (JPN country — first running actor, `cloud-itonami-iso3166-jpn`) · `:blueprint` 92 (73 country + 19 Japan agency) · `:spec` 119
 
 `kotoba.iso3166/children` resolves the agency-level entries under a country
 (currently non-empty only for `"JPN"`), mirroring the shared organism

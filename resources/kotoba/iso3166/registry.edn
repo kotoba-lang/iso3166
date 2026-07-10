@@ -30,10 +30,20 @@
    :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
    :optional-technologies []
    :operating-states [:intake :assess-austender-portal :verify-abn-registration :draft-filing :approve :file :audit]}
-  {:code "AUT" :name "Austria" :name-local "Österreich" :wikidata "Q40" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "AUT" :name "Austria" :name-local "Österreich" :wikidata "Q40" :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-aut"
+   :business-id "cloud-itonami-iso3166-aut"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-usp-portal :verify-firmenbuch-registration :draft-filing :approve :file :audit]}
   {:code "AZE" :name "Azerbaijan" :name-local "Azərbaycan" :wikidata "Q227" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "BDI" :name "Burundi" :name-local "Uburundi" :wikidata "Q967" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
-  {:code "BEL" :name "Belgium" :name-local "België / Belgique" :wikidata "Q31" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "BEL" :name "Belgium" :name-local "België / Belgique" :wikidata "Q31" :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-bel"
+   :business-id "cloud-itonami-iso3166-bel"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-eprocurement-portal :verify-cbe-registration :draft-filing :approve :file :audit]}
   {:code "BEN" :name "Benin" :name-local "Bénin" :wikidata "Q962" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "BFA" :name "Burkina Faso" :wikidata "Q965" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "BGD" :name "Bangladesh" :name-local "বাংলাদেশ" :wikidata "Q902"
@@ -296,7 +306,7 @@
   {:code "JPN" :name "Japan" :name-local "日本国" :wikidata "Q17"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-jpn"
    :business-id "cloud-itonami-iso3166-jpn"
-   :maturity :blueprint
+   :maturity :implemented
    :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
    :optional-technologies []
    :operating-states [:intake :assess-toshi-shoko-portal :draft-filing :approve :file :audit]}
@@ -618,7 +628,12 @@
    :optional-technologies []
    :operating-states [:intake :assess-monaqasat-portal :verify-moci-commercial-registration :draft-filing :approve :file :audit]}
   {:code "ROU" :name "Romania" :name-local "România" :wikidata "Q218" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
-  {:code "RUS" :name "Russian Federation" :name-local "Российская Федерация" :wikidata "Q159" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "RUS" :name "Russian Federation" :name-local "Российская Федерация" :wikidata "Q159" :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-rus"
+   :business-id "cloud-itonami-iso3166-rus"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-eis-portal :verify-fns-registration :draft-filing :approve :file :audit]}
   {:code "RWA" :name "Rwanda" :name-local "u Rwanda" :wikidata "Q1037"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-rwa"
    :business-id "cloud-itonami-iso3166-rwa"

@@ -51,7 +51,7 @@ countries stay flat until this pattern is validated.
 
 | Code | Country | Blueprint |
 |---|---|---|
-| JPN | Japan | Independent Public-Sector Market-Entry & Procurement Compliance Service -- Japan |
+| JPN | Japan | **`:implemented`** Independent Public-Sector Market-Entry & Procurement Compliance Service -- Japan |
 | USA | United States of America | Independent Public-Sector Market-Entry & Procurement Compliance Service -- United States |
 | DEU | Federal Republic of Germany | Independent Public-Sector Market-Entry & Procurement Compliance Service -- Germany |
 | KEN | Kenya | Independent Public-Sector Market-Entry & Procurement Compliance Service -- Kenya |
@@ -122,15 +122,22 @@ countries stay flat until this pattern is validated.
 | SVK | Slovakia | Independent Public-Sector Market-Entry & Procurement Compliance Service -- Slovakia |
 | BOL | Bolivia | Independent Public-Sector Market-Entry & Procurement Compliance Service -- Bolivia |
 | KHM | Cambodia | Independent Public-Sector Market-Entry & Procurement Compliance Service -- Cambodia |
+| RUS | Russian Federation | Independent Public-Sector Market-Entry & Procurement Compliance Service -- Russia |
+| BEL | Belgium | Independent Public-Sector Market-Entry & Procurement Compliance Service -- Belgium |
+| AUT | Austria | Independent Public-Sector Market-Entry & Procurement Compliance Service -- Austria |
 
-71/193 countries are `:maturity :blueprint`, spanning every populated
-continent and a mix of civil-law, common-law, and mixed legal traditions
-(see codes above). The remaining 122 entries (full 193/193 current-UN-
-member coverage) are
-registered at `:maturity :spec`
-(registry-only stub) for future promotion, following the same `:spec` ->
-`:blueprint` -> `:implemented` path `kotoba-industry` / `kotoba-occupation`
-/ `kotoba-cofog` use.
+**`:implemented` (running actor)**: `JPN` is the first iso3166-family entry
+promoted to `:implemented` — see
+[`cloud-itonami/cloud-itonami-iso3166-jpn`](https://github.com/cloud-itonami/cloud-itonami-iso3166-jpn)
+(`marketentry` actor, Market-Entry Compliance Governor, 24 tests).
+
+74/193 countries are at or above `:blueprint` (73 `:blueprint` + 1
+`:implemented`), spanning every populated continent and a mix of
+civil-law, common-law, and mixed legal traditions (see codes above). The
+remaining 119 country entries (full 193/193 current-UN-member coverage)
+are registered at `:maturity :spec` (registry-only stub) for future
+promotion, following the same `:spec` -> `:blueprint` -> `:implemented`
+path `kotoba-industry` / `kotoba-occupation` / `kotoba-cofog` use.
 
 Alpha-3 code + English/local name are reused verbatim from
 `com-etzhayyim-ooyake`'s Wikidata-verified `gov-units.*.edn` registries (a

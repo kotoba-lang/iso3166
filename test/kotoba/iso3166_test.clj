@@ -58,7 +58,7 @@
 
 (deftest maturity-tier
   (testing "published blueprint repos are :blueprint"
-    (is (= :blueprint (iso3166/maturity "JPN")))
+    (is (= :implemented (iso3166/maturity "JPN")))
     (is (= :blueprint (iso3166/maturity "USA")))
     (is (= :blueprint (iso3166/maturity "DEU")))
     (is (= :blueprint (iso3166/maturity "KEN")))
@@ -147,7 +147,10 @@
     (is (= :blueprint (iso3166/maturity "NAM")))
     (is (= :blueprint (iso3166/maturity "SVK")))
     (is (= :blueprint (iso3166/maturity "BOL")))
-    (is (= :blueprint (iso3166/maturity "KHM"))))
+    (is (= :blueprint (iso3166/maturity "KHM")))
+    (is (= :blueprint (iso3166/maturity "RUS")))
+    (is (= :blueprint (iso3166/maturity "BEL")))
+    (is (= :blueprint (iso3166/maturity "AUT"))))
   (testing "a registry-only country entry is :spec"
     (is (= :spec (iso3166/maturity "AFG")))
     (is (= :spec (iso3166/maturity "DZA"))))
@@ -155,12 +158,14 @@
     (let [m (iso3166/maturity-summary)]
       (is (= (:total m) (+ (:spec m) (:blueprint m) (:implemented m))))
       (is (= 212 (:total m)))
-      (is (= 90 (:blueprint m)))
-      (is (= 0 (:implemented m))))))
+      (is (= 92 (:blueprint m)))
+      (is (= 1 (:implemented m)))
+      (is (= 119 (:spec m))))))
 
 (deftest maturity-roadmap-next-step
-  (is (= :implemented (:next-step (iso3166/maturity-roadmap "JPN"))))
-  (is (= :blueprint (:next-step (iso3166/maturity-roadmap "AFG")))))
+  (is (nil? (:next-step (iso3166/maturity-roadmap "JPN"))))
+  (is (= :blueprint (:next-step (iso3166/maturity-roadmap "AFG"))))
+  (is (= :implemented (:next-step (iso3166/maturity-roadmap "RUS")))))
 
 (deftest all-countries-have-a-code-and-name
   (doseq [{:keys [code name level]} (iso3166/countries)]
