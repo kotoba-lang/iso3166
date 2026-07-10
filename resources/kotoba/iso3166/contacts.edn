@@ -454,6 +454,7 @@
     :name-en "Ethiopia"
     :name-local "ኢትዮጵያ"
     :wikidata "Q115"
+    :head-role "FPPA / e-GP"
     :head-role-note "institutional office title only; personal names of current office-holders are intentionally NOT stored"
     :contact-page "https://www.wikidata.org/wiki/Q3624"
     :sourced-from "com-etzhayyim-ooyake gov-units (verbatim where present)"
@@ -1269,6 +1270,7 @@
     :name-en "Rwanda"
     :name-local "u Rwanda"
     :wikidata "Q1037"
+    :head-role "RPPA / Umucyo"
     :head-role-note "institutional office title only; personal names of current office-holders are intentionally NOT stored"
     :contact-page "https://www.wikidata.org/wiki/Q3859"
     :sourced-from "com-etzhayyim-ooyake gov-units (verbatim where present)"
@@ -2305,5 +2307,77 @@
     :contact-page "https://www.wikidata.org/wiki/Q36260"
     :sourced-from "com-etzhayyim-ooyake gov-units (verbatim where present)"
     :hq {:line-en "Apia" :country "wsm" :kind "capital" :provenance "https://www.wikidata.org/wiki/Q36260" :last-verified "2026-07-10" :sourcing "authoritative"}
+  }
+  "LIE"
+  {:ooyake-id "gov.lie"
+    :official-url "https://www.regierung.li/"
+    :name-en "Liechtenstein"
+    :name-local "Liechtenstein"
+    :wikidata "Q347"
+    :head-role "public procurement authority"
+    :head-role-note "institutional office title only; personal names of current office-holders are intentionally NOT stored"
+    :contact-page "https://www.wikidata.org/wiki/Q1844"
+    :sourced-from "com-etzhayyim-ooyake gov-units (verbatim where present)"
+    :hq {:line-en "Vaduz" :country "lie" :kind "capital" :provenance "https://www.wikidata.org/wiki/Q1844" :last-verified "2026-07-10" :sourcing "authoritative"}
+  }
+  "MCO"
+  {:ooyake-id "gov.mco"
+    :official-url "https://en.gouv.mc/"
+    :name-en "Monaco"
+    :name-local "Monaco"
+    :wikidata "Q235"
+    :head-role "public procurement authority"
+    :head-role-note "institutional office title only; personal names of current office-holders are intentionally NOT stored"
+    :contact-page "https://www.wikidata.org/wiki/Q235"
+    :sourced-from "com-etzhayyim-ooyake gov-units (verbatim where present)"
+    :hq {:line-en "Monaco" :country "mco" :kind "capital" :provenance "https://www.wikidata.org/wiki/Q235" :last-verified "2026-07-10" :sourcing "authoritative"}
+  }
+  "MDA"
+  {:ooyake-id "gov.mda"
+    :official-url "https://www.gov.md/"
+    :name-en "Moldova"
+    :name-local "Moldova"
+    :wikidata "Q217"
+    :head-role "public procurement agency"
+    :head-role-note "institutional office title only; personal names of current office-holders are intentionally NOT stored"
+    :contact-page "https://www.wikidata.org/wiki/Q21197"
+    :sourced-from "com-etzhayyim-ooyake gov-units (verbatim where present)"
+    :hq {:line-en "Chișinău" :country "mda" :kind "capital" :provenance "https://www.wikidata.org/wiki/Q21197" :last-verified "2026-07-10" :sourcing "authoritative"}
+  }
+  "MNE"
+  {:ooyake-id "gov.mne"
+    :official-url "https://www.gov.me/"
+    :name-en "Montenegro"
+    :name-local "Crna Gora"
+    :wikidata "Q236"
+    :head-role "public procurement authority"
+    :head-role-note "institutional office title only; personal names of current office-holders are intentionally NOT stored"
+    :contact-page "https://www.wikidata.org/wiki/Q23564"
+    :sourced-from "com-etzhayyim-ooyake gov-units (verbatim where present)"
+    :hq {:line-en "Podgorica" :country "mne" :kind "capital" :provenance "https://www.wikidata.org/wiki/Q23564" :last-verified "2026-07-10" :sourcing "authoritative"}
+  }
+  "SMR"
+  {:ooyake-id "gov.smr"
+    :official-url "https://www.gov.sm/"
+    :name-en "San Marino"
+    :name-local "San Marino"
+    :wikidata "Q238"
+    :head-role "public procurement authority"
+    :head-role-note "institutional office title only; personal names of current office-holders are intentionally NOT stored"
+    :contact-page "https://www.wikidata.org/wiki/Q1848"
+    :sourced-from "com-etzhayyim-ooyake gov-units (verbatim where present)"
+    :hq {:line-en "San Marino" :country "smr" :kind "capital" :provenance "https://www.wikidata.org/wiki/Q1848" :last-verified "2026-07-10" :sourcing "authoritative"}
+  }
+  "SUR"
+  {:ooyake-id "gov.sur"
+    :official-url "https://www.gov.sr/"
+    :name-en "Suriname"
+    :name-local "Suriname"
+    :wikidata "Q730"
+    :head-role "public procurement authority"
+    :head-role-note "institutional office title only; personal names of current office-holders are intentionally NOT stored"
+    :contact-page "https://www.wikidata.org/wiki/Q3001"
+    :sourced-from "com-etzhayyim-ooyake gov-units (verbatim where present)"
+    :hq {:line-en "Paramaribo" :country "sur" :kind "capital" :provenance "https://www.wikidata.org/wiki/Q3001" :last-verified "2026-07-10" :sourcing "authoritative"}
   }
  }}
