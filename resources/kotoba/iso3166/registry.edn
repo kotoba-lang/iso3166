@@ -216,8 +216,20 @@
    :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
    :optional-technologies []
    :operating-states [:intake :assess-secop-portal :verify-rup-registration :draft-filing :approve :file :audit]}
-  {:code "COM" :name "Comoros" :name-local "جزر القمر" :wikidata "Q970" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
-  {:code "CPV" :name "Cape Verde" :name-local "Cabo Verde" :wikidata "Q1011" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "COM" :name "Comoros" :wikidata "Q970"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-com"
+   :business-id "cloud-itonami-iso3166-com"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-armp-portal :verify-rccm-registration :draft-filing :approve :file :audit]}
+  {:code "CPV" :name "Cape Verde" :wikidata "Q1011"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-cpv"
+   :business-id "cloud-itonami-iso3166-cpv"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-armp-portal :verify-rccm-registration :draft-filing :approve :file :audit]}
   {:code "CRI" :name "Costa Rica" :wikidata "Q800"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-cri"
    :business-id "cloud-itonami-iso3166-cri"
@@ -240,7 +252,7 @@
   {:code "CZE" :name "Czech Republic" :name-local "Česko" :wikidata "Q213"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-cze"
    :business-id "cloud-itonami-iso3166-cze"
-   :maturity :blueprint
+   :maturity :implemented
    :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
    :optional-technologies []
    :operating-states [:intake :assess-nen-portal :verify-obchodni-rejstrik :draft-filing :approve :file :audit]}
@@ -251,7 +263,13 @@
    :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
    :optional-technologies []
    :operating-states [:intake :assess-evergabe-portal :draft-filing :approve :file :audit]}
-  {:code "DJI" :name "Djibouti" :wikidata "Q977" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "DJI" :name "Djibouti" :wikidata "Q977"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-dji"
+   :business-id "cloud-itonami-iso3166-dji"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-cnmp-portal :verify-rccm-registration :draft-filing :approve :file :audit]}
   {:code "DMA" :name "Dominica" :wikidata "Q784" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "DNK" :name "Denmark" :wikidata "Q35"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-dnk"
@@ -415,7 +433,7 @@
   {:code "HUN" :name "Hungary" :name-local "Magyarország" :wikidata "Q28"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-hun"
    :business-id "cloud-itonami-iso3166-hun"
-   :maturity :blueprint
+   :maturity :implemented
    :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
    :optional-technologies []
    :operating-states [:intake :assess-ekr-portal :verify-cegjegyzek-registration :draft-filing :approve :file :audit]}
@@ -436,7 +454,7 @@
   {:code "IRL" :name "Ireland" :name-local "Éire" :wikidata "Q27"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-irl"
    :business-id "cloud-itonami-iso3166-irl"
-   :maturity :blueprint
+   :maturity :implemented
    :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
    :optional-technologies []
    :operating-states [:intake :assess-etenders-portal :verify-cro-registration :draft-filing :approve :file :audit]}
@@ -985,7 +1003,7 @@
   {:code "PRK" :name "North Korea" :name-local "조선" :wikidata "Q423" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "PRT" :name "Portugal" :wikidata "Q45" :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-prt"
    :business-id "cloud-itonami-iso3166-prt"
-   :maturity :blueprint
+   :maturity :implemented
    :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
    :optional-technologies []
    :operating-states [:intake :assess-base-portal :verify-nif-registration :draft-filing :approve :file :audit]}
@@ -1028,7 +1046,13 @@
    :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
    :optional-technologies []
    :operating-states [:intake :assess-etimad-portal :verify-commercial-registration :draft-filing :approve :file :audit]}
-  {:code "SDN" :name "Sudan" :name-local "السودان" :wikidata "Q1049" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "SDN" :name "Sudan" :wikidata "Q1049"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-sdn"
+   :business-id "cloud-itonami-iso3166-sdn"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-procurement-portal :verify-company-registry :draft-filing :approve :file :audit]}
   {:code "SEN" :name "Senegal" :name-local "Sénégal" :wikidata "Q1041"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-sen"
    :business-id "cloud-itonami-iso3166-sen"
@@ -1053,14 +1077,26 @@
    :operating-states [:intake :assess-nppa-portal :verify-cac-registration :draft-filing :approve :file :audit]}
   {:code "SLV" :name "El Salvador" :wikidata "Q792" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "SMR" :name "San Marino" :wikidata "Q238" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
-  {:code "SOM" :name "Somalia" :name-local "Soomaaliya" :wikidata "Q1045" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "SOM" :name "Somalia" :wikidata "Q1045"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-som"
+   :business-id "cloud-itonami-iso3166-som"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-ppda-portal :verify-company-registry :draft-filing :approve :file :audit]}
   {:code "SRB" :name "Serbia" :name-local "Србија" :wikidata "Q403" :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-srb"
    :business-id "cloud-itonami-iso3166-srb"
    :maturity :blueprint
    :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
    :optional-technologies []
    :operating-states [:intake :assess-jnportal :verify-apr-registration :draft-filing :approve :file :audit]}
-  {:code "SSD" :name "South Sudan" :wikidata "Q958" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "SSD" :name "South Sudan" :wikidata "Q958"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-ssd"
+   :business-id "cloud-itonami-iso3166-ssd"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-ppda-portal :verify-company-registry :draft-filing :approve :file :audit]}
   {:code "STP" :name "São Tomé and Príncipe" :name-local "São Tomé e Príncipe" :wikidata "Q1039" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "SUR" :name "Suriname" :wikidata "Q730" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "SVK" :name "Slovakia" :name-local "Slovensko" :wikidata "Q214"
