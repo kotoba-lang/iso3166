@@ -256,7 +256,7 @@
   {:code "DNK" :name "Denmark" :wikidata "Q35"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-dnk"
    :business-id "cloud-itonami-iso3166-dnk"
-   :maturity :blueprint
+   :maturity :implemented
    :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
    :optional-technologies []
    :operating-states [:intake :assess-udbud-dk-portal :verify-cvr-registration :draft-filing :approve :file :audit]}
@@ -311,7 +311,7 @@
   {:code "FIN" :name "Finland" :name-local "Suomi" :wikidata "Q33"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-fin"
    :business-id "cloud-itonami-iso3166-fin"
-   :maturity :blueprint
+   :maturity :implemented
    :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
    :optional-technologies []
    :operating-states [:intake :assess-hilma-portal :verify-prh-trade-register :draft-filing :approve :file :audit]}
@@ -356,10 +356,34 @@
    :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
    :optional-technologies []
    :operating-states [:intake :assess-ghaneps-portal :verify-registrar-general-registration :draft-filing :approve :file :audit]}
-  {:code "GIN" :name "Guinea" :name-local "Guinée" :wikidata "Q1006" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
-  {:code "GMB" :name "The Gambia" :wikidata "Q1005" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
-  {:code "GNB" :name "Guinea-Bissau" :name-local "Guiné-Bissau" :wikidata "Q1007" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
-  {:code "GNQ" :name "Equatorial Guinea" :name-local "Guinea Ecuatorial" :wikidata "Q983" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "GIN" :name "Guinea" :wikidata "Q1006"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-gin"
+   :business-id "cloud-itonami-iso3166-gin"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-armp-portal :verify-rccm-registration :draft-filing :approve :file :audit]}
+  {:code "GMB" :name "The Gambia" :wikidata "Q1005"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-gmb"
+   :business-id "cloud-itonami-iso3166-gmb"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-gppa-portal :verify-company-registry :draft-filing :approve :file :audit]}
+  {:code "GNB" :name "Guinea-Bissau" :wikidata "Q1007"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-gnb"
+   :business-id "cloud-itonami-iso3166-gnb"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-armp-portal :verify-rccm-registration :draft-filing :approve :file :audit]}
+  {:code "GNQ" :name "Equatorial Guinea" :wikidata "Q983"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-gnq"
+   :business-id "cloud-itonami-iso3166-gnq"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-procurement-portal :verify-company-registry :draft-filing :approve :file :audit]}
   {:code "GRC" :name "Greece" :name-local "Ελλάδα" :wikidata "Q41" :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-grc"
    :business-id "cloud-itonami-iso3166-grc"
    :maturity :blueprint
@@ -848,8 +872,20 @@
    :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
    :optional-technologies []
    :operating-states [:intake :assess-ufsa-portal :verify-rccm-registration :draft-filing :approve :file :audit]}
-  {:code "MRT" :name "Mauritania" :name-local "موريتانيا" :wikidata "Q1025" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
-  {:code "MUS" :name "Mauritius" :wikidata "Q1027" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "MRT" :name "Mauritania" :name-local "موريتانيا" :wikidata "Q1025"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-mrt"
+   :business-id "cloud-itonami-iso3166-mrt"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-armp-portal :verify-rccm-registration :draft-filing :approve :file :audit]}
+  {:code "MUS" :name "Mauritius" :wikidata "Q1027"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-mus"
+   :business-id "cloud-itonami-iso3166-mus"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-ppo-portal :verify-cbrd-registration :draft-filing :approve :file :audit]}
   {:code "MWI" :name "Malawi" :wikidata "Q1020"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-mwi"
    :business-id "cloud-itonami-iso3166-mwi"
@@ -889,7 +925,7 @@
   {:code "NOR" :name "Norway" :name-local "Norge" :wikidata "Q20"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-nor"
    :business-id "cloud-itonami-iso3166-nor"
-   :maturity :blueprint
+   :maturity :implemented
    :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
    :optional-technologies []
    :operating-states [:intake :assess-doffin-portal :verify-bronnoysund-registration :draft-filing :approve :file :audit]}
@@ -1043,7 +1079,7 @@
   {:code "SWE" :name "Sweden" :name-local "Sverige" :wikidata "Q34"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-swe"
    :business-id "cloud-itonami-iso3166-swe"
-   :maturity :blueprint
+   :maturity :implemented
    :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
    :optional-technologies []
    :operating-states [:intake :assess-tendsign-portal :verify-bolagsverket-registration :draft-filing :approve :file :audit]}
