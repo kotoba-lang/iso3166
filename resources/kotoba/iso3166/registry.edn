@@ -21,7 +21,12 @@
    :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
    :optional-technologies []
    :operating-states [:intake :assess-compr-ar-portal :verify-cuit-registration :draft-filing :approve :file :audit]}
-  {:code "ARM" :name "Armenia" :name-local "Հայաստան" :wikidata "Q399" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "ARM" :name "Armenia" :name-local "Հայաստան" :wikidata "Q399" :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-arm"
+   :business-id "cloud-itonami-iso3166-arm"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-armeps-portal :verify-src-registration :draft-filing :approve :file :audit]}
   {:code "ATG" :name "Antigua and Barbuda" :wikidata "Q781" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "AUS" :name "Commonwealth of Australia" :wikidata "Q408"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-aus"
@@ -54,7 +59,12 @@
    :optional-technologies []
    :operating-states [:intake :assess-e-gp-portal :verify-rjsc-registration :draft-filing :approve :file :audit]}
   {:code "BGR" :name "Bulgaria" :name-local "България" :wikidata "Q219" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
-  {:code "BHR" :name "Bahrain" :name-local "البحرين" :wikidata "Q398" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "BHR" :name "Bahrain" :name-local "البحرين" :wikidata "Q398" :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-bhr"
+   :business-id "cloud-itonami-iso3166-bhr"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-tenderboard-portal :verify-sijilat-registration :draft-filing :approve :file :audit]}
   {:code "BHS" :name "The Bahamas" :wikidata "Q778" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "BIH" :name "Bosnia and Herzegovina" :name-local "Bosna i Hercegovina" :wikidata "Q225" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "BLR" :name "Belarus" :name-local "Беларусь" :wikidata "Q184" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
@@ -91,7 +101,12 @@
    :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
    :optional-technologies []
    :operating-states [:intake :assess-canadabuys-portal :verify-business-number :draft-filing :approve :file :audit]}
-  {:code "CHE" :name "Switzerland" :name-local "Schweiz" :wikidata "Q39" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "CHE" :name "Switzerland" :name-local "Schweiz" :wikidata "Q39" :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-che"
+   :business-id "cloud-itonami-iso3166-che"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-simap-portal :verify-uid-registration :draft-filing :approve :file :audit]}
   {:code "CHL" :name "Chile" :wikidata "Q298"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-chl"
    :business-id "cloud-itonami-iso3166-chl"
@@ -102,7 +117,7 @@
   {:code "CHN" :name "People's Republic of China" :name-local "中华人民共和国" :wikidata "Q148"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-chn"
    :business-id "cloud-itonami-iso3166-chn"
-   :maturity :blueprint
+   :maturity :implemented
    :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
    :optional-technologies []
    :operating-states [:intake :assess-ccgp-portal :verify-uscc-registration :draft-filing :approve :file :audit]}
@@ -618,8 +633,18 @@
    :optional-technologies []
    :operating-states [:intake :assess-e-zamowienia-portal :verify-krs-registration :draft-filing :approve :file :audit]}
   {:code "PRK" :name "North Korea" :name-local "조선" :wikidata "Q423" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
-  {:code "PRT" :name "Portugal" :wikidata "Q45" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
-  {:code "PRY" :name "Paraguay" :wikidata "Q733" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "PRT" :name "Portugal" :wikidata "Q45" :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-prt"
+   :business-id "cloud-itonami-iso3166-prt"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-base-portal :verify-nif-registration :draft-filing :approve :file :audit]}
+  {:code "PRY" :name "Paraguay" :wikidata "Q733" :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-pry"
+   :business-id "cloud-itonami-iso3166-pry"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-dncp-portal :verify-ruc-registration :draft-filing :approve :file :audit]}
   {:code "QAT" :name "Qatar" :name-local "قطر" :wikidata "Q846"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-qat"
    :business-id "cloud-itonami-iso3166-qat"
@@ -668,7 +693,12 @@
   {:code "SLV" :name "El Salvador" :wikidata "Q792" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "SMR" :name "San Marino" :wikidata "Q238" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "SOM" :name "Somalia" :name-local "Soomaaliya" :wikidata "Q1045" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
-  {:code "SRB" :name "Serbia" :name-local "Србија" :wikidata "Q403" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "SRB" :name "Serbia" :name-local "Србија" :wikidata "Q403" :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-srb"
+   :business-id "cloud-itonami-iso3166-srb"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-jnportal :verify-apr-registration :draft-filing :approve :file :audit]}
   {:code "SSD" :name "South Sudan" :wikidata "Q958" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "STP" :name "São Tomé and Príncipe" :name-local "São Tomé e Príncipe" :wikidata "Q1039" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "SUR" :name "Suriname" :wikidata "Q730" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
@@ -738,10 +768,115 @@
   {:code "USA" :name "United States of America" :wikidata "Q30"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-usa"
    :business-id "cloud-itonami-iso3166-usa"
-   :maturity :blueprint
+   :maturity :implemented
    :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
    :optional-technologies []
    :operating-states [:intake :assess-sam-gov-registration :draft-filing :approve :file :audit]}
+  {:code "USA-GSA" :level :agency :parent "USA" :name "General Services Administration" :ooyake-id "gov.usa.gsa"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-usa-gsa"
+   :business-id "cloud-itonami-iso3166-usa-gsa"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "USA-SBA" :level :agency :parent "USA" :name "Small Business Administration" :ooyake-id "gov.usa.sba"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-usa-sba"
+   :business-id "cloud-itonami-iso3166-usa-sba"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "USA-TREASURY" :level :ministry :parent "USA" :name "Department of the Treasury" :ooyake-id "gov.usa.treasury"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-usa-treasury"
+   :business-id "cloud-itonami-iso3166-usa-treasury"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "USA-DOC" :level :ministry :parent "USA" :name "Department of Commerce" :ooyake-id "gov.usa.doc"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-usa-doc"
+   :business-id "cloud-itonami-iso3166-usa-doc"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "USA-DOD" :level :ministry :parent "USA" :name "Department of Defense" :ooyake-id "gov.usa.dod"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-usa-dod"
+   :business-id "cloud-itonami-iso3166-usa-dod"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "USA-DHS" :level :ministry :parent "USA" :name "Department of Homeland Security" :ooyake-id "gov.usa.dhs"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-usa-dhs"
+   :business-id "cloud-itonami-iso3166-usa-dhs"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "USA-DOL" :level :ministry :parent "USA" :name "Department of Labor" :ooyake-id "gov.usa.dol"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-usa-dol"
+   :business-id "cloud-itonami-iso3166-usa-dol"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "USA-HHS" :level :ministry :parent "USA" :name "Department of Health and Human Services" :ooyake-id "gov.usa.hhs"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-usa-hhs"
+   :business-id "cloud-itonami-iso3166-usa-hhs"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "USA-DOT" :level :ministry :parent "USA" :name "Department of Transportation" :ooyake-id "gov.usa.dot"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-usa-dot"
+   :business-id "cloud-itonami-iso3166-usa-dot"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "USA-DOE" :level :ministry :parent "USA" :name "Department of Energy" :ooyake-id "gov.usa.doe"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-usa-doe"
+   :business-id "cloud-itonami-iso3166-usa-doe"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "USA-VA" :level :ministry :parent "USA" :name "Department of Veterans Affairs" :ooyake-id "gov.usa.va"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-usa-va"
+   :business-id "cloud-itonami-iso3166-usa-va"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "USA-EPA" :level :independent-commission :parent "USA" :name "Environmental Protection Agency" :ooyake-id "gov.usa.epa"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-usa-epa"
+   :business-id "cloud-itonami-iso3166-usa-epa"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "USA-FTC" :level :independent-commission :parent "USA" :name "Federal Trade Commission" :ooyake-id "gov.usa.ftc"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-usa-ftc"
+   :business-id "cloud-itonami-iso3166-usa-ftc"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "USA-SEC" :level :independent-commission :parent "USA" :name "Securities and Exchange Commission" :ooyake-id "gov.usa.sec"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-usa-sec"
+   :business-id "cloud-itonami-iso3166-usa-sec"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "USA-FCC" :level :independent-commission :parent "USA" :name "Federal Communications Commission" :ooyake-id "gov.usa.fcc"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-usa-fcc"
+   :business-id "cloud-itonami-iso3166-usa-fcc"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "UZB" :name "Uzbekistan" :name-local "Oʻzbekiston" :wikidata "Q265" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "VCT" :name "Saint Vincent and the Grenadines" :wikidata "Q757" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "VEN" :name "Venezuela" :wikidata "Q717" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}

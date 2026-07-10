@@ -52,7 +52,7 @@ countries stay flat until this pattern is validated.
 | Code | Country | Blueprint |
 |---|---|---|
 | JPN | Japan | **`:implemented`** Independent Public-Sector Market-Entry & Procurement Compliance Service -- Japan |
-| USA | United States of America | Independent Public-Sector Market-Entry & Procurement Compliance Service -- United States |
+| USA | United States of America | **`:implemented`** Independent Public-Sector Market-Entry & Procurement Compliance Service -- United States |
 | DEU | Federal Republic of Germany | Independent Public-Sector Market-Entry & Procurement Compliance Service -- Germany |
 | KEN | Kenya | Independent Public-Sector Market-Entry & Procurement Compliance Service -- Kenya |
 | IND | Republic of India | Independent Public-Sector Market-Entry & Procurement Compliance Service -- India |
@@ -92,7 +92,7 @@ countries stay flat until this pattern is validated.
 | SWE | Sweden | Independent Public-Sector Market-Entry & Procurement Compliance Service -- Sweden |
 | KAZ | Kazakhstan | Independent Public-Sector Market-Entry & Procurement Compliance Service -- Kazakhstan |
 | QAT | Qatar | Independent Public-Sector Market-Entry & Procurement Compliance Service -- Qatar |
-| CHN | People's Republic of China | Independent Public-Sector Market-Entry & Procurement Compliance Service -- China |
+| CHN | People's Republic of China | **`:implemented`** Independent Public-Sector Market-Entry & Procurement Compliance Service -- China |
 | CRI | Costa Rica | Independent Public-Sector Market-Entry & Procurement Compliance Service -- Costa Rica |
 | CZE | Czech Republic | Independent Public-Sector Market-Entry & Procurement Compliance Service -- Czech Republic |
 | UKR | Ukraine | Independent Public-Sector Market-Entry & Procurement Compliance Service -- Ukraine |
@@ -126,18 +126,9 @@ countries stay flat until this pattern is validated.
 | BEL | Belgium | Independent Public-Sector Market-Entry & Procurement Compliance Service -- Belgium |
 | AUT | Austria | Independent Public-Sector Market-Entry & Procurement Compliance Service -- Austria |
 
-**`:implemented` (running actor)**: `JPN` is the first iso3166-family entry
-promoted to `:implemented` — see
-[`cloud-itonami/cloud-itonami-iso3166-jpn`](https://github.com/cloud-itonami/cloud-itonami-iso3166-jpn)
-(`marketentry` actor, Market-Entry Compliance Governor, 24 tests).
+**`:implemented` (running actors)**: `JPN`, `USA`, `CHN` — see the corresponding `cloud-itonami-iso3166-{jpn,usa,chn}` repos (`marketentry` actors).
 
-74/193 countries are at or above `:blueprint` (73 `:blueprint` + 1
-`:implemented`), spanning every populated continent and a mix of
-civil-law, common-law, and mixed legal traditions (see codes above). The
-remaining 119 country entries (full 193/193 current-UN-member coverage)
-are registered at `:maturity :spec` (registry-only stub) for future
-promotion, following the same `:spec` -> `:blueprint` -> `:implemented`
-path `kotoba-industry` / `kotoba-occupation` / `kotoba-cofog` use.
+80/193 countries are at or above `:blueprint` (77 `:blueprint` + 3 `:implemented`). USA now has a deliberate 15-body agency-level extension (parent `USA`), mirroring the Japan coordinator+leaf pattern. Remaining country entries stay `:spec` for future promotion along the same maturity ladder.
 
 Alpha-3 code + English/local name are reused verbatim from
 `com-etzhayyim-ooyake`'s Wikidata-verified `gov-units.*.edn` registries (a
@@ -177,6 +168,31 @@ ADR-2607040400 + ADR-2607040500), spanning all three agency types
 `gov-units.jp-central.seed.edn` / `gov-units.seed.edn` /
 `gov-units.oversight-*.edn` (IDs, names, and official URLs reused verbatim,
 not re-derived).
+
+
+## Current ISO 3166 Blueprints (United States agency level)
+
+Deliberate 15-body subset (not the full federal org chart) spanning cabinet
+departments, agencies, and independent commissions most relevant to public-
+sector market entry (ADR-2607105600).
+
+| Code | Body | Ooyake ID | Focus |
+|---|---|---|---|
+| USA-GSA | General Services Administration | `gov.usa.gsa` | SAM.gov / Schedules |
+| USA-SBA | Small Business Administration | `gov.usa.sba` | set-asides |
+| USA-TREASURY | Department of the Treasury | `gov.usa.treasury` | EIN / tax |
+| USA-DOC | Department of Commerce | `gov.usa.doc` | BIS export control |
+| USA-DOD | Department of Defense | `gov.usa.dod` | DFARS |
+| USA-DHS | Department of Homeland Security | `gov.usa.dhs` | cyber / SCRM |
+| USA-DOL | Department of Labor | `gov.usa.dol` | labor standards |
+| USA-HHS | Department of Health and Human Services | `gov.usa.hhs` | health awards |
+| USA-DOT | Department of Transportation | `gov.usa.dot` | transportation Buy America |
+| USA-DOE | Department of Energy | `gov.usa.doe` | energy procurement |
+| USA-VA | Department of Veterans Affairs | `gov.usa.va` | VA vendor |
+| USA-EPA | Environmental Protection Agency | `gov.usa.epa` | environmental |
+| USA-FTC | Federal Trade Commission | `gov.usa.ftc` | competition |
+| USA-SEC | Securities and Exchange Commission | `gov.usa.sec` | disclosure posture |
+| USA-FCC | Federal Communications Commission | `gov.usa.fcc` | telecom procurement |
 
 ## Test
 

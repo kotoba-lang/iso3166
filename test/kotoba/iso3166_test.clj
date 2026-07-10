@@ -5,7 +5,7 @@
 (deftest registry-loads
   (let [reg (iso3166/registry)]
     (is (= :kotoba/iso3166 (:kotoba.registry/id reg)))
-    (is (= 212 (count (iso3166/countries reg))))))
+    (is (= 227 (count (iso3166/countries reg))))))
 
 (deftest curated-countries-resolve
   (doseq [code ["JPN" "USA" "DEU" "KEN" "IND" "BRA" "GBR" "SGP" "ARE" "AUS" "KOR"
@@ -43,8 +43,8 @@
     (is (every? #(= "JPN" (:parent %)) kids))
     (is (= #{:ministry :agency :independent-commission} (set (map :level kids))))))
 
-(deftest non-jpn-countries-have-no-children-yet
-  (doseq [code ["USA" "DEU" "KEN" "IND" "AFG"]]
+(deftest non-jpn-usa-countries-have-no-children-yet
+  (doseq [code ["DEU" "KEN" "IND" "AFG" "CHN"]]
     (is (empty? (iso3166/children code)))))
 
 (deftest get-country-is-case-insensitive
@@ -59,7 +59,12 @@
 (deftest maturity-tier
   (testing "published blueprint repos are :blueprint"
     (is (= :implemented (iso3166/maturity "JPN")))
-    (is (= :blueprint (iso3166/maturity "USA")))
+    (is (= :implemented (iso3166/maturity "USA")))
+    (is (= :implemented (iso3166/maturity "CHN")))
+    (is (= :blueprint (iso3166/maturity "USA-GSA")))
+    (is (= :blueprint (iso3166/maturity "USA-SBA")))
+    (is (= :blueprint (iso3166/maturity "USA-DOD")))
+    (is (= :implemented (iso3166/maturity "USA")))
     (is (= :blueprint (iso3166/maturity "DEU")))
     (is (= :blueprint (iso3166/maturity "KEN")))
     (is (= :blueprint (iso3166/maturity "IND")))
@@ -118,7 +123,7 @@
     (is (= :blueprint (iso3166/maturity "SWE")))
     (is (= :blueprint (iso3166/maturity "KAZ")))
     (is (= :blueprint (iso3166/maturity "QAT")))
-    (is (= :blueprint (iso3166/maturity "CHN")))
+    (is (= :implemented (iso3166/maturity "CHN")))
     (is (= :blueprint (iso3166/maturity "CRI")))
     (is (= :blueprint (iso3166/maturity "CZE")))
     (is (= :blueprint (iso3166/maturity "UKR")))
@@ -150,20 +155,28 @@
     (is (= :blueprint (iso3166/maturity "KHM")))
     (is (= :blueprint (iso3166/maturity "RUS")))
     (is (= :blueprint (iso3166/maturity "BEL")))
-    (is (= :blueprint (iso3166/maturity "AUT"))))
+    (is (= :blueprint (iso3166/maturity "AUT")))
+    (is (= :blueprint (iso3166/maturity "CHE")))
+    (is (= :blueprint (iso3166/maturity "ARM")))
+    (is (= :blueprint (iso3166/maturity "BHR")))
+    (is (= :blueprint (iso3166/maturity "PRT")))
+    (is (= :blueprint (iso3166/maturity "SRB")))
+    (is (= :blueprint (iso3166/maturity "PRY"))))
   (testing "a registry-only country entry is :spec"
     (is (= :spec (iso3166/maturity "AFG")))
     (is (= :spec (iso3166/maturity "DZA"))))
   (testing "maturity-summary counts tiers"
     (let [m (iso3166/maturity-summary)]
       (is (= (:total m) (+ (:spec m) (:blueprint m) (:implemented m))))
-      (is (= 212 (:total m)))
-      (is (= 92 (:blueprint m)))
-      (is (= 1 (:implemented m)))
-      (is (= 119 (:spec m))))))
+      (is (= 227 (:total m)))
+      (is (= 111 (:blueprint m)))
+      (is (= 3 (:implemented m)))
+      (is (= 113 (:spec m))))))
 
 (deftest maturity-roadmap-next-step
   (is (nil? (:next-step (iso3166/maturity-roadmap "JPN"))))
+  (is (nil? (:next-step (iso3166/maturity-roadmap "USA"))))
+  (is (nil? (:next-step (iso3166/maturity-roadmap "CHN"))))
   (is (= :blueprint (:next-step (iso3166/maturity-roadmap "AFG"))))
   (is (= :implemented (:next-step (iso3166/maturity-roadmap "RUS")))))
 
@@ -183,3 +196,10 @@
 (deftest codes-are-unique
   (let [codes (map :code (iso3166/countries))]
     (is (= (count codes) (count (set codes))))))
+
+(deftest usa-agency-children
+  (let [cs (iso3166/children "USA")]
+    (is (= 15 (count cs)))
+    (is (every? #(= "USA" (:parent %)) cs))
+    (is (some #(= "USA-GSA" (:code %)) cs))))
+
