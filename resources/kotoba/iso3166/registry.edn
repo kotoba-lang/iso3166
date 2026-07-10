@@ -97,7 +97,7 @@
   {:code "BGD" :name "Bangladesh" :name-local "বাংলাদেশ" :wikidata "Q902"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-bgd"
    :business-id "cloud-itonami-iso3166-bgd"
-   :maturity :blueprint
+   :maturity :implemented
    :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
    :optional-technologies []
    :operating-states [:intake :assess-e-gp-portal :verify-rjsc-registration :draft-filing :approve :file :audit]}
@@ -847,7 +847,7 @@
   {:code "KEN" :name "Kenya" :wikidata "Q114"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-ken"
    :business-id "cloud-itonami-iso3166-ken"
-   :maturity :blueprint
+   :maturity :implemented
    :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
    :optional-technologies []
    :operating-states [:intake :assess-agpo-ppra-registration :draft-filing :approve :file :audit]}
@@ -880,9 +880,21 @@
    :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
    :optional-technologies []
    :operating-states [:intake :assess-koneps-portal :verify-business-registration :draft-filing :approve :file :audit]}
-  {:code "KWT" :name "Kuwait" :name-local "الكويت" :wikidata "Q817" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "KWT" :name "Kuwait" :wikidata "Q817"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-kwt"
+   :business-id "cloud-itonami-iso3166-kwt"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-cpt-portal :verify-cr-registration :draft-filing :approve :file :audit]}
   {:code "LAO" :name "Laos" :name-local "ລາວ" :wikidata "Q819" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
-  {:code "LBN" :name "Lebanon" :name-local "لبنان" :wikidata "Q822" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "LBN" :name "Lebanon" :wikidata "Q822"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-lbn"
+   :business-id "cloud-itonami-iso3166-lbn"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-ppma-portal :verify-commercial-registry :draft-filing :approve :file :audit]}
   {:code "LBR" :name "Liberia" :wikidata "Q1014"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-lbr"
    :business-id "cloud-itonami-iso3166-lbr"
@@ -1013,7 +1025,13 @@
    :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
    :optional-technologies []
    :operating-states [:intake :assess-ppda-portal :verify-registrar-general :draft-filing :approve :file :audit]}
-  {:code "MYS" :name "Malaysia" :wikidata "Q833" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "MYS" :name "Malaysia" :wikidata "Q833"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-mys"
+   :business-id "cloud-itonami-iso3166-mys"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-myprocurement-portal :verify-ssm-registration :draft-filing :approve :file :audit]}
   {:code "NAM" :name "Namibia" :wikidata "Q1030"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-nam"
    :business-id "cloud-itonami-iso3166-nam"
@@ -1030,7 +1048,7 @@
   {:code "NGA" :name "Nigeria" :wikidata "Q1033"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-nga"
    :business-id "cloud-itonami-iso3166-nga"
-   :maturity :blueprint
+   :maturity :implemented
    :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
    :optional-technologies []
    :operating-states [:intake :assess-nocopo-portal :verify-cac-registration :draft-filing :approve :file :audit]}
@@ -1070,7 +1088,13 @@
    :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
    :optional-technologies []
    :operating-states [:intake :assess-gets-portal :verify-nzbn-registration :draft-filing :approve :file :audit]}
-  {:code "OMN" :name "Oman" :name-local "عُمان" :wikidata "Q842" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "OMN" :name "Oman" :wikidata "Q842"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-omn"
+   :business-id "cloud-itonami-iso3166-omn"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-tenderboard-portal :verify-cr-registration :draft-filing :approve :file :audit]}
   {:code "PAK" :name "Pakistan" :name-local "پاکستان" :wikidata "Q843"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-pak"
    :business-id "cloud-itonami-iso3166-pak"
@@ -1099,8 +1123,20 @@
    :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
    :optional-technologies []
    :operating-states [:intake :assess-philgeps-portal :verify-dti-sec-registration :draft-filing :approve :file :audit]}
-  {:code "PLW" :name "Palau" :wikidata "Q695" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
-  {:code "PNG" :name "Papua New Guinea" :wikidata "Q691" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "PLW" :name "Palau" :wikidata "Q695"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-plw"
+   :business-id "cloud-itonami-iso3166-plw"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-procurement-portal :verify-company-registry :draft-filing :approve :file :audit]}
+  {:code "PNG" :name "Papua New Guinea" :wikidata "Q691"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-png"
+   :business-id "cloud-itonami-iso3166-png"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-npb-portal :verify-ipa-registration :draft-filing :approve :file :audit]}
   {:code "POL" :name "Poland" :name-local "Polska" :wikidata "Q36"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-pol"
    :business-id "cloud-itonami-iso3166-pol"
@@ -1124,7 +1160,7 @@
   {:code "QAT" :name "Qatar" :name-local "قطر" :wikidata "Q846"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-qat"
    :business-id "cloud-itonami-iso3166-qat"
-   :maturity :blueprint
+   :maturity :implemented
    :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
    :optional-technologies []
    :operating-states [:intake :assess-monaqasat-portal :verify-moci-commercial-registration :draft-filing :approve :file :audit]}
