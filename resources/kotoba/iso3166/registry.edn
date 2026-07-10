@@ -27,7 +27,7 @@
   {:code "ARG" :name "Argentine Republic" :name-local "República Argentina" :wikidata "Q414"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-arg"
    :business-id "cloud-itonami-iso3166-arg"
-   :maturity :blueprint
+   :maturity :implemented
    :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
    :optional-technologies []
    :operating-states [:intake :assess-compr-ar-portal :verify-cuit-registration :draft-filing :approve :file :audit]}
@@ -304,7 +304,13 @@
    :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
    :optional-technologies []
    :operating-states [:intake :assess-unified-procurement-portal :verify-gafi-commercial-registration :draft-filing :approve :file :audit]}
-  {:code "ERI" :name "Eritrea" :name-local "ኤርትራ" :wikidata "Q986" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "ERI" :name "Eritrea" :wikidata "Q986"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-eri"
+   :business-id "cloud-itonami-iso3166-eri"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-procurement-portal :verify-company-registry :draft-filing :approve :file :audit]}
   {:code "ESP" :name "Spain" :name-local "España" :wikidata "Q29"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-esp"
    :business-id "cloud-itonami-iso3166-esp"
@@ -404,7 +410,7 @@
    :operating-states [:intake :assess-procurement-portal :verify-company-registry :draft-filing :approve :file :audit]}
   {:code "GRC" :name "Greece" :name-local "Ελλάδα" :wikidata "Q41" :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-grc"
    :business-id "cloud-itonami-iso3166-grc"
-   :maturity :blueprint
+   :maturity :implemented
    :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
    :optional-technologies []
    :operating-states [:intake :assess-esidis-portal :verify-gemi-registration :draft-filing :approve :file :audit]}
@@ -415,7 +421,13 @@
    :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
    :optional-technologies []
    :operating-states [:intake :assess-guatecompras :verify-nit-registration :draft-filing :approve :file :audit]}
-  {:code "GUY" :name "Guyana" :wikidata "Q734" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "GUY" :name "Guyana" :wikidata "Q734"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-guy"
+   :business-id "cloud-itonami-iso3166-guy"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-npta-portal :verify-company-registry :draft-filing :approve :file :audit]}
   {:code "HND" :name "Honduras" :wikidata "Q783" :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-hnd"
    :business-id "cloud-itonami-iso3166-hnd"
    :maturity :blueprint
@@ -429,7 +441,13 @@
    :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
    :optional-technologies []
    :operating-states [:intake :assess-eojn-portal :verify-sudski-registar :draft-filing :approve :file :audit]}
-  {:code "HTI" :name "Haiti" :name-local "Haïti" :wikidata "Q790" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "HTI" :name "Haiti" :wikidata "Q790"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-hti"
+   :business-id "cloud-itonami-iso3166-hti"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-cnmp-portal :verify-company-registry :draft-filing :approve :file :audit]}
   {:code "HUN" :name "Hungary" :name-local "Magyarország" :wikidata "Q28"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-hun"
    :business-id "cloud-itonami-iso3166-hun"
@@ -1022,7 +1040,7 @@
    :operating-states [:intake :assess-monaqasat-portal :verify-moci-commercial-registration :draft-filing :approve :file :audit]}
   {:code "ROU" :name "Romania" :name-local "România" :wikidata "Q218" :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-rou"
    :business-id "cloud-itonami-iso3166-rou"
-   :maturity :blueprint
+   :maturity :implemented
    :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
    :optional-technologies []
    :operating-states [:intake :assess-seap-portal :verify-onrc-registration :draft-filing :approve :file :audit]}
@@ -1097,7 +1115,13 @@
    :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
    :optional-technologies []
    :operating-states [:intake :assess-ppda-portal :verify-company-registry :draft-filing :approve :file :audit]}
-  {:code "STP" :name "São Tomé and Príncipe" :name-local "São Tomé e Príncipe" :wikidata "Q1039" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "STP" :name "São Tomé and Príncipe" :wikidata "Q1039"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-stp"
+   :business-id "cloud-itonami-iso3166-stp"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-armp-portal :verify-rccm-registration :draft-filing :approve :file :audit]}
   {:code "SUR" :name "Suriname" :wikidata "Q730" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "SVK" :name "Slovakia" :name-local "Slovensko" :wikidata "Q214"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-svk"
@@ -1119,8 +1143,20 @@
    :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
    :optional-technologies []
    :operating-states [:intake :assess-tendsign-portal :verify-bolagsverket-registration :draft-filing :approve :file :audit]}
-  {:code "SWZ" :name "Eswatini" :name-local "eSwatini" :wikidata "Q1050" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
-  {:code "SYC" :name "Seychelles" :wikidata "Q1042" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "SWZ" :name "Eswatini" :wikidata "Q1050"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-swz"
+   :business-id "cloud-itonami-iso3166-swz"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-sppra-portal :verify-company-registry :draft-filing :approve :file :audit]}
+  {:code "SYC" :name "Seychelles" :wikidata "Q1042"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-syc"
+   :business-id "cloud-itonami-iso3166-syc"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-npaa-portal :verify-company-registry :draft-filing :approve :file :audit]}
   {:code "SYR" :name "Syria" :name-local "سوريا" :wikidata "Q858" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "TCD" :name "Chad" :name-local "Tchad / تشاد" :wikidata "Q657" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "TGO" :name "Togo" :wikidata "Q945" :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-tgo"
@@ -1132,7 +1168,7 @@
   {:code "THA" :name "Thailand" :name-local "ประเทศไทย" :wikidata "Q869"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-tha"
    :business-id "cloud-itonami-iso3166-tha"
-   :maturity :blueprint
+   :maturity :implemented
    :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
    :optional-technologies []
    :operating-states [:intake :assess-e-gp-portal :verify-dbd-registration :draft-filing :approve :file :audit]}
