@@ -41,7 +41,7 @@ promotion batches through ADR-2607042800; see the README's blueprint
 table for the current full country list):
 
 - Total entries: 227 (193 countries + 19 Japan agencies + 15 USA agencies)
-- `:implemented` 3 (JPN, USA, CHN) · `:blueprint` 117 · `:spec` 107 · total 227
+- `:implemented` 5 (JPN, USA, CHN, DEU, GBR) · `:blueprint` 121 · `:spec` 101 · total 227
 - Total entries: 227 (193 countries + 19 Japan agencies + 15 USA agencies)
 
 `kotoba.iso3166/children` resolves the agency-level entries under a country
