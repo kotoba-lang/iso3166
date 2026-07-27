@@ -6,7 +6,7 @@
  [{:code "AFG" :name "Afghanistan" :name-local "افغانستان" :wikidata "Q889" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
   {:code "AGO" :name "Angola" :wikidata "Q916" :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-ago"
    :business-id "cloud-itonami-iso3166-ago"
-   :maturity :blueprint
+   :maturity :implemented
    :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
    :optional-technologies []
    :operating-states [:intake :assess-sncp-portal :verify-nif-registration :draft-filing :approve :file :audit]}
@@ -322,7 +322,7 @@
    :operating-states [:intake :assess-dgcp-portal :verify-rnc-registration :draft-filing :approve :file :audit]}
   {:code "DZA" :name "Algeria" :name-local "الجزائر" :wikidata "Q262" :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-dza"
    :business-id "cloud-itonami-iso3166-dza"
-   :maturity :blueprint
+   :maturity :implemented
    :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
    :optional-technologies []
    :operating-states [:intake :assess-bomop-portal :verify-cnrc-registration :draft-filing :approve :file :audit]}
@@ -397,7 +397,7 @@
    :operating-states [:intake :assess-procurement-portal :verify-company-registry :draft-filing :approve :file :audit]}
   {:code "GAB" :name "Gabon" :wikidata "Q1000" :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-gab"
    :business-id "cloud-itonami-iso3166-gab"
-   :maturity :blueprint
+   :maturity :implemented
    :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
    :optional-technologies []
    :operating-states [:intake :assess-dgmp-portal :verify-rccm-registration :draft-filing :approve :file :audit]}
@@ -562,7 +562,7 @@
   {:code "JOR" :name "Jordan" :name-local "الأردن" :wikidata "Q810"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-jor"
    :business-id "cloud-itonami-iso3166-jor"
-   :maturity :blueprint
+   :maturity :implemented
    :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
    :optional-technologies []
    :operating-states [:intake :assess-joneps-portal :verify-ccd-registration :draft-filing :approve :file :audit]}
@@ -851,7 +851,13 @@
    :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
    :optional-technologies []
    :operating-states [:intake :assess-agpo-ppra-registration :draft-filing :approve :file :audit]}
-  {:code "KGZ" :name "Kyrgyzstan" :name-local "Кыргызстан" :wikidata "Q813" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "KGZ" :name "Kyrgyzstan" :wikidata "Q813"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-kgz"
+   :business-id "cloud-itonami-iso3166-kgz"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-zakupki-portal :verify-state-registry :draft-filing :approve :file :audit]}
   {:code "KHM" :name "Cambodia" :name-local "កម្ពុជា" :wikidata "Q424"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-khm"
    :business-id "cloud-itonami-iso3166-khm"
@@ -887,7 +893,13 @@
    :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
    :optional-technologies []
    :operating-states [:intake :assess-cpt-portal :verify-cr-registration :draft-filing :approve :file :audit]}
-  {:code "LAO" :name "Laos" :name-local "ລາວ" :wikidata "Q819" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "LAO" :name "Laos" :wikidata "Q819"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-lao"
+   :business-id "cloud-itonami-iso3166-lao"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-procurement-portal :verify-enterprise-registry :draft-filing :approve :file :audit]}
   {:code "LBN" :name "Lebanon" :wikidata "Q822"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-lbn"
    :business-id "cloud-itonami-iso3166-lbn"
@@ -1024,7 +1036,13 @@
    :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
    :optional-technologies []
    :operating-states [:intake :assess-epps-portal :verify-roc-registration :draft-filing :approve :file :audit]}
-  {:code "MMR" :name "Myanmar" :name-local "မြန်မာ" :wikidata "Q836" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "MMR" :name "Myanmar" :wikidata "Q836"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-mmr"
+   :business-id "cloud-itonami-iso3166-mmr"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-procurement-portal :verify-company-registry :draft-filing :approve :file :audit]}
   {:code "MNE" :name "Montenegro" :wikidata "Q236"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-mne"
    :business-id "cloud-itonami-iso3166-mne"
@@ -1376,8 +1394,20 @@
    :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
    :optional-technologies []
    :operating-states [:intake :assess-e-gp-portal :verify-dbd-registration :draft-filing :approve :file :audit]}
-  {:code "TJK" :name "Tajikistan" :name-local "Тоҷикистон" :wikidata "Q863" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
-  {:code "TKM" :name "Turkmenistan" :name-local "Türkmenistan" :wikidata "Q874" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "TJK" :name "Tajikistan" :wikidata "Q863"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-tjk"
+   :business-id "cloud-itonami-iso3166-tjk"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-procurement-portal :verify-state-registry :draft-filing :approve :file :audit]}
+  {:code "TKM" :name "Turkmenistan" :wikidata "Q874"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-tkm"
+   :business-id "cloud-itonami-iso3166-tkm"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-procurement-portal :verify-state-registry :draft-filing :approve :file :audit]}
   {:code "TLS" :name "Timor-Leste" :wikidata "Q574"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-tls"
    :business-id "cloud-itonami-iso3166-tls"
@@ -1644,7 +1674,13 @@
    :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
    :optional-technologies []
    :operating-states [:intake :assess :draft :approve :file :audit]}
-  {:code "UZB" :name "Uzbekistan" :name-local "Oʻzbekiston" :wikidata "Q265" :maturity :spec :required-technologies [:identity :forms :dmn :bpmn :audit-ledger] :optional-technologies [] :operating-states [:intake :assess :draft :approve :file :audit]}
+  {:code "UZB" :name "Uzbekistan" :wikidata "Q265"
+   :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-uzb"
+   :business-id "cloud-itonami-iso3166-uzb"
+   :maturity :blueprint
+   :required-technologies [:identity :forms :dmn :bpmn :audit-ledger]
+   :optional-technologies []
+   :operating-states [:intake :assess-xarid-portal :verify-state-registry :draft-filing :approve :file :audit]}
   {:code "VCT" :name "Saint Vincent and the Grenadines" :wikidata "Q757"
    :repo "https://github.com/cloud-itonami/cloud-itonami-iso3166-vct"
    :business-id "cloud-itonami-iso3166-vct"
