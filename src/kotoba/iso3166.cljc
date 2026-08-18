@@ -1,36 +1,88 @@
 (ns kotoba.iso3166
-  (:require [clojure.edn :as edn]
-            [clojure.java.io :as io]
-            [clojure.set :as set]
+  "The ISO 3166-1 country registry, portable.
+
+  ## Why this is `.cljc` and not `.clj`
+
+  Two lines made this namespace JVM-only — `(slurp (io/resource …))` for the
+  registry and for the contacts — and `kotoba.technology`, which this
+  requires, had the same one. Between them, every consumer of either was
+  pinned to the JVM. This workspace's runtime order is kotoba-wasm →
+  clojurewasm → ClojureScript → nbb, with the JVM last; a registry of facts
+  is the last thing that should decide a consumer's runtime.
+
+  There is no portable `io/resource`. Under `:clj` this reads the classpath
+  resource; under `:cljs` it reads from disk relative to the process's
+  working directory, which works under nbb and Node and does not work in a
+  browser.
+
+  ## No runtime file access at all
+
+  The obvious `:cljs` substitute for `io/resource` — reading
+  `resources/<path>` relative to the working directory — is right only while
+  this library is the root project. That was measured wrong the same day in
+  `kotoba-lang/technology`: its registry came back nil for all 159 of this
+  library's assertions under nbb, because nbb's cwd was this repo's root and
+  not that one. This library has consumers ahead of it and would have
+  inherited the fault.
+
+  So both resources are compiled in, as the generated
+  `kotoba.iso3166.embedded`, projected from the EDN by
+  `tools/gen-embedded.cljs`. The EDN stays the thing a human edits; `--check`
+  refuses to let them drift.
+
+  **A registry handed in as nil still propagates as nil.** `(into {} …)` over
+  nil yields `{}`, so `by-code` would answer a complete-looking index over no
+  data and `get-country` nil for every code — a caller passing nothing must
+  not receive that."
+  (:require [clojure.set :as set]
             [clojure.string :as str]
+            [kotoba.iso3166.embedded :as embedded]
             [kotoba.technology :as technology]))
 
 (def registry-resource "kotoba/iso3166/registry.edn")
 (def contacts-resource "kotoba/iso3166/contacts.edn")
 
-(defn registry []
-  (edn/read-string (slurp (io/resource registry-resource))))
+(defn registry
+  "The country registry.
+
+  Reads `kotoba.iso3166.embedded`, a GENERATED projection of
+  `resources/kotoba/iso3166/registry.edn`, and touches no file at runtime.
+  See the namespace docstring for why a cwd-relative read was not
+  portability."
+  []
+  embedded/registry-data)
 
 (defn contacts
   "Organization HQ / contact directory keyed by ISO 3166 (or agency) code.
   Values include :official-url, :hq {:line-local :line-en :phone ...},
   and :head-role (institutional office title only — never a personal name)."
   []
-  (:kotoba.iso3166/contacts
-   (edn/read-string (slurp (io/resource contacts-resource)))))
+  (:kotoba.iso3166/contacts embedded/contacts-data))
 
 (defn get-contact
-  "Return the organization contact map for `code`, or nil."
+  "Return the organization contact map for `code`, or nil.
+
+  nil here is two facts — no such contact, and no contacts file. Use
+  `(some? (contacts))` to tell them apart."
   [code]
   (get (contacts) (str/upper-case (str code))))
 
 (defn countries
-  ([] (:iso3166 (registry)))
+  "The country entries, or **nil** when the registry could not be read.
+
+  The zero-arg form goes through the one-arg form rather than duplicating
+  its body, so a guard added to one cannot be skipped by the other."
+  ([] (countries (registry)))
   ([reg] (:iso3166 reg)))
 
 (defn by-code
+  "Countries indexed by `:code`, or **nil** when the registry could not be
+  read. See the namespace docstring: `(into {} …)` over nil yields `{}`, and
+  an empty index answers nil for every code — a missing file wearing the
+  clothes of a complete lookup."
   ([] (by-code (registry)))
-  ([reg] (into {} (map (juxt :code identity) (countries reg)))))
+  ([reg] (when-let [cs (countries reg)]
+           (into {} (map (juxt :code identity)) cs))))
 
 (defn get-country
   ([code] (get-country (registry) code))
