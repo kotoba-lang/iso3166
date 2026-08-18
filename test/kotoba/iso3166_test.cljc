@@ -1,6 +1,7 @@
 (ns kotoba.iso3166-test
   (:require [clojure.test :refer [deftest is testing]]
-            [kotoba.iso3166 :as iso3166]))
+            [kotoba.iso3166 :as iso3166]
+            [kotoba.iso3166.embedded :as embedded]))
 
 (deftest registry-loads
   (let [reg (iso3166/registry)]
@@ -398,3 +399,56 @@
   (let [gsa (iso3166/get-country "USA-GSA")]
     (is (string? (:hq-line-en gsa)))
     (is (string? (:head-role gsa)))))
+
+;; ---------------------------------------------------------------------------
+;; Portability: no runtime file access, and a projection that cannot drift
+;;
+;; This namespace was `.clj` until 2026-08-18. The first fix gave it a `:cljs`
+;; branch reading `resources/` relative to the working directory — and that
+;; was measured wrong the same day in `kotoba-lang/technology`, whose registry
+;; came back nil for all 159 of the assertions above because nbb's cwd was
+;; this repo's root and not its own. A portability fix that works only while
+;; you are the root project is not one, and this library has consumers ahead
+;; of it that would have inherited the fault.
+;;
+;; So both resources are compiled in. `test/run_portable.cljs` runs this suite
+;; under nbb, and it has been run from a foreign working directory as well —
+;; the condition a dependency actually meets.
+;; ---------------------------------------------------------------------------
+
+(deftest the-embedded-registry-matches-the-edn
+  (testing "the EDN is the source of truth and the namespace is a projection.
+            This **fails rather than skips** when it cannot read the EDN,
+            because a check that could not run must not report what a check
+            that ran and found nothing reports"
+    (doseq [[path data] [["resources/kotoba/iso3166/registry.edn"
+                          embedded/registry-data]
+                         ["resources/kotoba/iso3166/contacts.edn"
+                          embedded/contacts-data]]]
+      (let [txt #?(:clj (try (slurp path) (catch Exception _ nil))
+                   :cljs (try (.readFileSync (js/require "fs") path "utf8")
+                              (catch :default _ nil)))]
+        (is (some? txt) (str "could not read " path " — run from the repo root"))
+        (when txt
+          (is (= (#?(:clj clojure.edn/read-string :cljs cljs.reader/read-string) txt)
+                 data)
+              path))))))
+
+(deftest a-registry-handed-in-as-nil-does-not-flatten
+  (testing "`(into {} …)` over nil yields `{}`, so a caller passing nothing
+            would receive a complete-looking index over no data and
+            `get-country` would answer nil for every code in the world"
+    (is (nil? (iso3166/countries nil)))
+    (is (nil? (iso3166/by-code nil)))
+    (is (nil? (iso3166/get-country nil "JPN"))))
+  (testing "and the real registry is not nil, or the above measured nothing"
+    (is (seq (iso3166/countries)))))
+
+(deftest the-registry-does-not-depend-on-the-working-directory
+  (testing "the whole point. `registry` reads a compiled-in projection, so
+            there is no path to be relative to — asserted here as a property
+            of the value rather than only demonstrated by running the suite
+            from /tmp, which is where it was also checked"
+    (is (= (iso3166/countries) (:iso3166 embedded/registry-data)))
+    (is (>= (count (iso3166/countries)) 193)
+        "193 UN member states at minimum, per the registry's own note")))
