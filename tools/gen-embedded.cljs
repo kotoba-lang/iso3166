@@ -17,7 +17,7 @@
 ;; generated namespace is a projection, checked by `--check`, and it is what
 ;; the library reads — no runtime file access, no cwd assumption, works in a
 ;; browser.
-(require '["node:fs" :as fs] '[clojure.string :as str])
+(require '["node:fs" :as fs] '[kotoba.lang.text :as str])
 
 (def sources
   [{:edn "resources/kotoba/iso3166/registry.edn" :sym "registry-data"}
