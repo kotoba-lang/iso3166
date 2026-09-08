@@ -35,7 +35,7 @@
   data and `get-country` nil for every code — a caller passing nothing must
   not receive that."
   (:require [clojure.set :as set]
-            [clojure.string :as str]
+            [kotoba.lang.text :as str]
             [kotoba.iso3166.embedded :as embedded]
             [kotoba.technology :as technology]))
 
@@ -65,7 +65,7 @@
   nil here is two facts — no such contact, and no contacts file. Use
   `(some? (contacts))` to tell them apart."
   [code]
-  (get (contacts) (str/upper-case (str code))))
+  (get (contacts) (str/upper (str code))))
 
 (defn countries
   "The country entries, or **nil** when the registry could not be read.
@@ -86,7 +86,7 @@
 
 (defn get-country
   ([code] (get-country (registry) code))
-  ([reg code] (get (by-code reg) (str/upper-case (str code)))))
+  ([reg code] (get (by-code reg) (str/upper (str code)))))
 
 (defn required-technologies
   ([code] (required-technologies (registry) code))
@@ -101,7 +101,7 @@
   whose :parent is the given country code. Empty for countries with no agency-level
   breakdown yet (JPN and USA as of ADR-2607040100 / ADR-2607105600)."
   ([code] (children (registry) code))
-  ([reg code] (filterv #(= (str/upper-case (str code)) (:parent %)) (countries reg))))
+  ([reg code] (filterv #(= (str/upper (str code)) (:parent %)) (countries reg))))
 
 (defn technology-stack
   "Resolve the required technology records for a country's market-entry business."

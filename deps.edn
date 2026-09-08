@@ -1,5 +1,10 @@
 {:paths ["src" "resources"]
- :deps {io.github.kotoba-lang/technology {:git/url "https://github.com/kotoba-lang/technology.git"
+ :deps {
+        ;; kotoba.lang.text, not clojure.string. Pinned as an explicit floor:
+        ;; tools.deps takes the NEWEST sha it is shown, so without a floor here
+        ;; this repo silently rides whatever a sibling happens to name.
+        io.github.kotoba-lang/text {:git/sha "73bdb13ae7a3d004b44bca08be03a3191157a38f"}
+       io.github.kotoba-lang/technology {:git/url "https://github.com/kotoba-lang/technology.git"
                                      :git/sha "4502d37d25d2939fb665acfb5c85ba4a72c75d28"}}
  :aliases
  {:test {:extra-paths ["test"]
