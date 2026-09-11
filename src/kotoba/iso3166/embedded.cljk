@@ -1,7 +1,7 @@
 ;; GENERATED — do not edit. Sources:
 ;;   resources/kotoba/iso3166/registry.edn
 ;;   resources/kotoba/iso3166/contacts.edn
-;; Regenerate: nbb tools/gen-embedded.cljk   Check: --check
+;; Regenerate: kbb --backend sci tools/gen-embedded.cljk   Check: --check
 ;;
 ;; A projection, not a second source of truth. Hand-edit it and
 ;; `--check` fails, which is the point: two copies that can silently

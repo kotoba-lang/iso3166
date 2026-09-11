@@ -197,5 +197,5 @@ sector market entry (ADR-2607105600).
 ## Test
 
 ```bash
-clojure -M:test
+kbb -M:test
 ```
