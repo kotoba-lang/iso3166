@@ -1,8 +1,8 @@
 #!/usr/bin/env nbb
-;; Generate `src/kotoba/iso3166/embedded.cljc` from the two EDN resources.
+;; Generate `src/kotoba/iso3166/embedded.cljk` from the two EDN resources.
 ;;
-;;   nbb tools/gen-embedded.cljs           # write
-;;   nbb tools/gen-embedded.cljs --check   # exit 1 if stale, 2 if it cannot tell
+;;   nbb tools/gen-embedded.cljk           # write
+;;   nbb tools/gen-embedded.cljk --check   # exit 1 if stale, 2 if it cannot tell
 ;;
 ;; ## Why embed at all
 ;;
@@ -23,12 +23,12 @@
   [{:edn "resources/kotoba/iso3166/registry.edn" :sym "registry-data"}
    {:edn "resources/kotoba/iso3166/contacts.edn" :sym "contacts-data"}])
 
-(def out-path "src/kotoba/iso3166/embedded.cljc")
+(def out-path "src/kotoba/iso3166/embedded.cljk")
 
 (defn- render [texts]
   (str ";; GENERATED — do not edit. Sources:\n"
        (str/join "" (map #(str ";;   " (:edn %) "\n") sources))
-       ";; Regenerate: nbb tools/gen-embedded.cljs   Check: --check\n"
+       ";; Regenerate: nbb tools/gen-embedded.cljk   Check: --check\n"
        ";;\n"
        ";; A projection, not a second source of truth. Hand-edit it and\n"
        ";; `--check` fails, which is the point: two copies that can silently\n"
@@ -52,5 +52,5 @@
         (not check?) (do (fs/writeFileSync out-path want)
                          (println "wrote" out-path (count want) "bytes"))
         (= want have) (println "OK" out-path "matches both sources")
-        :else (do (println "STALE" out-path "— run: nbb tools/gen-embedded.cljs")
+        :else (do (println "STALE" out-path "— run: nbb tools/gen-embedded.cljk")
                   (set! (.-exitCode js/process) 1))))))

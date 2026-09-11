@@ -12,7 +12,7 @@
 ;; measured" and NOT "this library is measured".
 ;;
 ;; ⚠ These mutations drive `clojure -M:test`. The `:cljs` half is exercised
-;; by `test/run_portable.cljs`, which this harness does not run — a mutation
+;; by `test/run_portable.cljk`, which this harness does not run — a mutation
 ;; breaking only a cljs branch survives here. In `kotoba-lang/technology` one
 ;; did exactly that, and it was retargeted rather than deleted.
 ;; ⚠ The first form of the drift mutation renamed the `def` itself, and the
@@ -25,19 +25,19 @@
 ;; harness exists to catch.
 [{:id :the-projection-cannot-drift-unnoticed
   :invariant "the generated namespace matches the EDN a human edits"
-  :file "src/kotoba/iso3166/embedded.cljc"
+  :file "src/kotoba/iso3166/embedded.cljk"
   :find ":code \"JPN\" :name \"Japan\""
   :replace ":code \"JPN\" :name \"Japan-DRIFTED\""}
 
  {:id :the-drift-check-refuses-when-it-cannot-read
   :invariant "a check that could not run must not report a pass"
-  :file "test/kotoba/iso3166_test.cljc"
+  :file "test/kotoba/iso3166_test.cljk"
   :find "#?(:clj (try (slurp path) (catch Exception _ nil))"
   :replace "#?(:clj (try (slurp (str path \".missing\")) (catch Exception _ nil))"}
 
  {:id :by-code-does-not-invent-an-empty-index
   :invariant "(into {} …) over nil yields {} — an index over no data"
-  :file "src/kotoba/iso3166.cljc"
+  :file "src/kotoba/iso3166.cljk"
   :find "  ([reg] (when-let [cs (countries reg)]\n           (into {} (map (juxt :code identity)) cs))))"
   :replace "  ([reg] (into {} (map (juxt :code identity)) (countries reg))))"}
 
@@ -56,12 +56,12 @@
 
  {:id :the-registry-is-the-embedded-one
   :invariant "the library reads the projection and not something else"
-  :file "src/kotoba/iso3166.cljc"
+  :file "src/kotoba/iso3166.cljk"
   :find "  embedded/registry-data)"
   :replace "  {})"}
 
  {:id :contacts-come-from-the-embedded-projection
   :invariant "the contacts directory is compiled in too, not read"
-  :file "src/kotoba/iso3166.cljc"
+  :file "src/kotoba/iso3166.cljk"
   :find "  (:kotoba.iso3166/contacts embedded/contacts-data))"
   :replace "  {})"}]

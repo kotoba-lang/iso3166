@@ -27,7 +27,7 @@
 
   So both resources are compiled in, as the generated
   `kotoba.iso3166.embedded`, projected from the EDN by
-  `tools/gen-embedded.cljs`. The EDN stays the thing a human edits; `--check`
+  `tools/gen-embedded.cljk`. The EDN stays the thing a human edits; `--check`
   refuses to let them drift.
 
   **A registry handed in as nil still propagates as nil.** `(into {} …)` over
