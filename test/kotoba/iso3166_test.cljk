@@ -411,7 +411,7 @@
 ;; you are the root project is not one, and this library has consumers ahead
 ;; of it that would have inherited the fault.
 ;;
-;; So both resources are compiled in. `test/run_portable.cljs` runs this suite
+;; So both resources are compiled in. `test/run_portable.cljk` runs this suite
 ;; under nbb, and it has been run from a foreign working directory as well —
 ;; the condition a dependency actually meets.
 ;; ---------------------------------------------------------------------------
