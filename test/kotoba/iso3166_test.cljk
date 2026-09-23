@@ -1,5 +1,5 @@
 (ns kotoba.iso3166-test
-  (:require [clojure.test :refer [deftest is testing]]
+  (:require [kotoba.test :refer [deftest is testing]]
             [kotoba.iso3166 :as iso3166]
             [kotoba.iso3166.embedded :as embedded]))
 
